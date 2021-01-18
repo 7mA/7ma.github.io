@@ -1,6 +1,6 @@
 ---
 title: LaTeX使用入门
-permalink: LaTeX_beginning/
+permalink: latex-beginning/
 date: 2017-04-03 19:28:49
 tags:
 - LaTeX

@@ -1,6 +1,6 @@
 ---
 title: Spring入门笔记
-permalink: Spring_beginning/
+permalink: spring-beginning/
 date: 2017-03-31 10:29:36
 tags:
 - Spring

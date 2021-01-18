@@ -1,11 +1,11 @@
 ---
 title: 东大情理CS修考备考记录（2017.10.15~2018.5.16）
-permalink: Master_Examination_Log/
+permalink: master-examination-log/
 date: 2017-10-15 21:50:06
 tags:
 - 东京大学
 - 硕士
-- Legacy
+- legacy
 categories:
 - 杂记
 ---

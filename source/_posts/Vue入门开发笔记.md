@@ -1,6 +1,6 @@
 ---
 title: Vue入门开发笔记
-permalink: Vue_Start_Log/
+permalink: vue-beginning/
 date: 2018-06-20 21:22:17
 tags:
 - JavaScript

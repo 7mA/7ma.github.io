@@ -1,6 +1,6 @@
 ---
 title: '[LeetCode]313. Super Ugly Number'
-permalink: LeetCode_313/
+permalink: leetcode-313/
 date: 2017-09-10 14:31:23
 tags:
 - LeetCode

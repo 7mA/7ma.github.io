@@ -1,6 +1,6 @@
 ---
 title: 基数排序(Radix Sort)、计数排序(Counting Sort)与前缀和(Prefix sum)
-permalink: radix_sort_and_counting_sort/
+permalink: radix-sort-and-counting-sort/
 date: 2017-03-16 20:09:21
 tags:
 - 排序
