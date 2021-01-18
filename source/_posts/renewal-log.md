@@ -1,6 +1,6 @@
 ---
 title: Renewal Log
-permalink: renewal-log-2021018/
+permalink: renewal-log-20210118/
 date: 2021-01-18 13:46:27
 tags:
 - Hexo
