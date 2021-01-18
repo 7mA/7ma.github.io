@@ -5,7 +5,7 @@ date: 2017-10-15 21:50:06
 tags:
 - 东京大学
 - 硕士
-- legacy
+- Legacy
 categories:
 - 杂记
 ---
