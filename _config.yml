@@ -109,5 +109,9 @@ deploy:
   branch: gh-pages
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 
-plugins:
- - jekyll-sitemap
+# sitemap:
+#   path: sitemap.xml
+#   template: ./sitemap_template.xml
+#   rel: false
+#   tags: true
+#   categories: true
