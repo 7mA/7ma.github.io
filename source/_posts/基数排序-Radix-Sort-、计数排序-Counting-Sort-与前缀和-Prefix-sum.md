@@ -4,7 +4,7 @@ permalink: radix-sort-and-counting-sort/
 date: 2017-03-16 20:09:21
 tags:
 - 算法
-- 数据结构
+- 排序
 - Legacy
 categories:
 - 技术笔记
