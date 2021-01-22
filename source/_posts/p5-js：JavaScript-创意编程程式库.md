@@ -217,7 +217,7 @@ function draw() {
 }
 ```
 
-与上述鼠标事件结合以后的效果如下：
+与上述鼠标事件示例结合以后的效果如下：
 
 <p class="codepen" data-height="415" data-theme-id="light" data-default-tab="js,result" data-user="7ma" data-slug-hash="MWjdKyV" style="height: 415px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="p5js-key-is-down">
   <span>See the Pen <a href="https://codepen.io/7ma/pen/MWjdKyV">
