@@ -50,7 +50,7 @@ Note:
 
 ### 代码
 
-```C++
+```cpp
 class Solution {
 public:
 	int nthSuperUglyNumber(int n, vector<int>& primes) {
