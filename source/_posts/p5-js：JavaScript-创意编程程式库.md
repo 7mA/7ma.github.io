@@ -5,7 +5,7 @@ tags:
   - 可视化
 categories:
   - 技术笔记
-date: 2021-01-23 10:00:00
+date: 2021-01-23 00:00:00
 permalink: p5js-beginning/
 ---
 # 1.p5.js是什么？
