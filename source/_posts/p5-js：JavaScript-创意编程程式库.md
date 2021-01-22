@@ -187,7 +187,7 @@ function touchMoved(event){
 下面以监听键盘事件为例，实现方向键移动点的逻辑。
 
 监听特定按键是否被按下的信号量函数为`keyIsDown()`，接受单个按键代码为参数。
-可以通过[keycode.info](http://keycode.info/)获取各个案件的代码，或者使用p5.js特有的[特殊按键代码](https://p5js.org/zh-Hans/reference/#p5/keyCode)。
+可以通过[keycode.info](http://keycode.info/)获取各个按键的代码，或者使用p5.js特有的[特殊按键代码](https://p5js.org/zh-Hans/reference/#p5/keyCode)。
 
 ```js
 // 点的初始位置
