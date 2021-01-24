@@ -169,8 +169,8 @@ function draw() {
 }
 
 function touchMoved(event){
-  pointX = event.client.X;
-  pointY = event.client.Y;
+  pointX = event.clientX;
+  pointY = event.clientY;
 }
 ```
 
