@@ -8,6 +8,7 @@ tags:
 - Legacy
 categories:
 - 技术笔记
+author: Kaku
 ---
 最近实验室的微服务项目开坑了，我所在的小组负责SpringCloud的学习和应用。虽然Spring框架并不是一个崭新的框架了，但是自己并没有接触过，所以特地花了三个晚上补了一下Spring的知识。
 

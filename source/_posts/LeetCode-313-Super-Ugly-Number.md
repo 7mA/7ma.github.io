@@ -8,6 +8,7 @@ tags:
 - Legacy
 categories:
 - 技术笔记
+author: Kaku
 ---
 
 > 原题链接：[https://leetcode.com/problems/super-ugly-number/description/](https://leetcode.com/problems/super-ugly-number/description/ "313. Super Ugly Number")

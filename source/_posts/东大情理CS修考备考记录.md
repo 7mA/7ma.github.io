@@ -8,6 +8,7 @@ tags:
 - Legacy
 categories:
 - 杂记
+author: Kaku
 ---
 
 > 放弃幻想，准备战斗。

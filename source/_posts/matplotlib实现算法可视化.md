@@ -7,6 +7,7 @@ categories:
   - 技术笔记
 date: 2021-01-25 00:00:00
 permalink: matplotlib-algorithm-visualization/
+author: Kaku
 ---
 # 1.关于matplotlib
 [**matplotlib**](https://matplotlib.org/index.html)是一个Python语言的2D绘图库。

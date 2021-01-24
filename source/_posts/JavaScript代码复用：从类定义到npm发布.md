@@ -7,4 +7,5 @@ categories:
   - 技术笔记
 date: 2021-01-26 00:00:00
 permalink: javascript-code-reuse/
+author: Kaku
 ---

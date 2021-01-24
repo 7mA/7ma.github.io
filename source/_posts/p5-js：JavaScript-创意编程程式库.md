@@ -7,6 +7,7 @@ categories:
   - 技术笔记
 date: 2021-01-23 00:00:00
 permalink: p5js-beginning/
+author: Kaku
 ---
 # 1.p5.js是什么？
 [**p5.js**](https://p5js.org/zh-Hans/)是一个侧重于图像编程与可视化的JavaScript库，是[Processing](https://processing.org/)的JavaScript移植版本。
