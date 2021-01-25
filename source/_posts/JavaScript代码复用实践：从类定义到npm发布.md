@@ -175,7 +175,7 @@ class Ray{
 
 至此第二个问题也得以解决。
 
-在解决上面两个问题的过程中，可以总结出关于代码复用的两个结论。
+从解决上面两个问题的过程中，可以总结出关于代码复用的两个结论。
 
 - **成员变量中心化**
 
@@ -297,7 +297,7 @@ jsdoc ./src README.md -c ./conf.json
 # 4.发布npm包
 如此一来，本地已经有了源代码和说明文档。为了能够更加方便地运用，放到云端是一个好的措施。
 当然甩到github上，用的时候再复制粘贴好像也能用，毕竟刚开始行数又不多。
-但是在一些云端的开发环境或者在线的编辑器当中，并没有充足的地方来多塞上百行的JS代码，所以果然还是能远程调用的才是最理想的状态。
+但是在一些云端的开发环境或者在线的编辑器当中，并没有充足的地方来多塞上额外的JS代码，所以果然最理想的状态还是能远程调用。
 利用npm将库打包发布以后，就可以使用CDN远程访问了。
 
 打包之前首先要把项目目录初始化成一个npm项目。
@@ -352,3 +352,80 @@ npm publish
 ```bash
 npm i linear-algebra-js-lib
 ```
+
+在npm的`package.json`中有一个`version`字段，表示提交时包的版本。
+npm在版本控制上比较严格，要求提交的版本必须比已发布的版本高。
+所以需要手动更改`package.json`的`version`字段，或者使用`npm version <update_type>`命令。
+
+npm的版本格式为`x.y.z`，被成为“语义化版本（Semantic versioning）”。
+版本的更新应符合以下规则：
+
+1. 修复bug或者小改动，增加`z`，如`1.0.0 -> 1.0.1`
+2. 增加新特性，但是可以向后兼容，增加`y`，如`1.0.1 -> 1.1.0`
+3. 有较大改动，无法向后兼容，增加`x`，如`1.1.1 -> 2.0.0`
+
+可以用`npm version <update_type>`命令按照上述规则自动更改版本。
+`<update_type>`可以为`patch`、`minor`、`major`，分别对应上述三条规则。
+
+成功发布以后，就可以到[jsdelivr](https://www.jsdelivr.com/)搜索查看自己的包，用CDN链接访问JS文件了。
+
+```
+https://cdn.jsdelivr.net/npm/linear-algebra-js-lib@1.1.8/src/linear-algebra-lib.min.js
+```
+
+---
+
+# 5.远程使用
+
+发布成功以后，就可以不受开发环境限制地远程使用自己的包了。
+
+下面是在[CodePen](https://codepen.io/)的在线开发环境中使用`linear-algebra-js-lib`的示例。
+鼠标拖拽可以移动十字中心点的位置，左右方向键可以旋转十字的角度，黄色的点代表蓝色十字与黑色井字的交点。
+通过左下角的Resources按钮可以看到远程调用的JS文件。
+
+<p class="codepen" data-height="405" data-theme-id="light" data-default-tab="js,result" data-user="7ma" data-slug-hash="KKgjzwB" style="height: 405px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="p5js-linear-algebra-lib">
+  <span>See the Pen <a href="https://codepen.io/7ma/pen/KKgjzwB">
+  p5js-linear-algebra-lib</a> by Kaku (<a href="https://codepen.io/7ma">@7ma</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+从上面的示例可以看到，只要知道角度和距离，通过十字中心点来确定四个方向的端点只需要一个`move()`函数就可以解决，不需要关心到底是怎么计算的：
+
+```js
+let vpBeamList = [];
+for(let i = 0 ; i < 4; i++){
+  vpBeamList.push(
+    Ray.getRayFromPoints(
+      vp.pos,
+      vp.pos.move(75, vp.angle + i * PI / 2)
+    )
+  )
+}
+```
+
+绘制交点也不需要实现复杂的运算过程就可以简单完成：
+
+```js
+for(let hl of horizontalLineList){
+  let crossPosVec = vpBeam.intersection(hl);
+  if(crossPosVec){
+    point(crossPosVec.x, crossPosVec.y);
+  }
+}
+```
+
+---
+
+# 6.总结
+说到最后代码复用其实也不是什么华丽的技巧，甚至还略显朴素。
+但是程序的设计就是一点点累计的，小处井井有条，才有能变大的那一天。
+注重代码复用，才能让既存代码积累成日后的经验加成，而不是运用和维护的债务。
+毕竟不是什么程序都可以像hackthon的作品那样做完就扔的。
+
+---
+
+**Reference Source:**
+
+1. [JSDocの書き方・出力メモ](https://qiita.com/zaburo/items/c90ab1a3d7751f610d27)
+2. [打包发布到NPM并通过CDN访问](https://www.jianshu.com/p/69d1949799ea)
