@@ -79,8 +79,8 @@ background('#fae');
 
 因此上述代码的执行结果如下：
 
-<p class="codepen" data-height="447" data-theme-id="light" data-default-tab="html,result" data-user="7ma" data-slug-hash="bGwydxZ" style="height: 447px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="p5js-template">
-  <span>See the Pen <a href="https://codepen.io/7ma/pen/bGwydxZ">
+<p class="codepen" data-height="408" data-theme-id="light" data-default-tab="html,result" data-user="7ma" data-slug-hash="WNGqXPQ" style="height: 408px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="p5js-template">
+  <span>See the Pen <a href="https://codepen.io/7ma/pen/WNGqXPQ">
   p5js-template</a> by Kaku (<a href="https://codepen.io/7ma">@7ma</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
