@@ -139,15 +139,15 @@ class Ray{
 
 如下图所示，线段`f`和线段`g`所在直线`h`和`i`的交点为`P`，但是线段`f`和线段`g`不相交。
 
-![不相交的线段](../javascript-code-reuse/intersection-1.png)
+![不相交的线段](/javascript-code-reuse/intersection-1.png)
 
 下图的线段`g`与线段`f`所在直线`h`的交点为`P`，但是线段`f`和线段`g`也不相交。
 
-![线段与直线相交](../javascript-code-reuse/intersection-2.png)
+![线段与直线相交](/javascript-code-reuse/intersection-2.png)
 
 下图当中的线段`g`与线段`f`相交，交点为`P`。
 
-![线段相交](../javascript-code-reuse/intersection-3.png)
+![线段相交](/javascript-code-reuse/intersection-3.png)
 
 观察图片可以发现只有交点`P`的x坐标同时位于线段`f`的端点`A`与`B`、以及线段`g`的端点`C`和`D`的x坐标之间的时候，点`P`才是线段的交点。
 通过比较交点位置向量的x坐标和两条线段端点的x坐标（`ray.begin.x`、`ray.end.x`）可以判断。

@@ -13,7 +13,7 @@ author: Kaku
 [**matplotlib**](https://matplotlib.org/index.html)是一个Python语言的2D绘图库。
 它支持各种平台，并且功能强大，能够轻易绘制出各种专业的图像，例如：直方图，波谱图，条形图，散点图等。并且，可以非常轻松地实现定制。
 
-![matplotlib](../matplotlib-algorithm-visualization/matplotlib_logo.svg)
+![matplotlib](/matplotlib-algorithm-visualization/matplotlib_logo.svg)
 
 <!--more-->
 
@@ -53,7 +53,7 @@ plt.plot(data) # 将数据映射到坐标系中
 plt.show() # 绘制图像
 ```
 
-![一幅简单的线性图](../matplotlib-algorithm-visualization/Figure_1.png)
+![一幅简单的线性图](/matplotlib-algorithm-visualization/Figure_1.png)
 
 ---
 
@@ -67,7 +67,7 @@ plt.show() # 绘制图像
 
 ## 4.1 问题分析
 
-![棋盘示意图](../bfs-shortest-path-binary-matrix/maze01.gif)
+![棋盘示意图](/bfs-shortest-path-binary-matrix/maze01.gif)
 
 算法的场景是一个方格棋盘，可以看作坐标系上的一个二维矩阵，不同属性的方格用不同的样式表示出来。
 
@@ -146,29 +146,29 @@ saveImage(plt)
 
 棋盘初始化：
 
-![5*5棋盘初始化](../matplotlib-algorithm-visualization/5*5-init.png)
+![5*5棋盘初始化](/matplotlib-algorithm-visualization/5*5-init.png)
 
 其中左上角的蓝色代表起点，右下角的红色代表终点，灰色代表墙壁，白色代表道路。
 
 算法搜索完距离为1的方格以后：
 
-![5*5棋盘第1步](../matplotlib-algorithm-visualization/5*5-1.png)
+![5*5棋盘第1步](/matplotlib-algorithm-visualization/5*5-1.png)
 
 距离为1的方格内添加了文字表示距离。
 
 算法搜索完距离为2的方格以后：
 
-![5*5棋盘第2步](../matplotlib-algorithm-visualization/5*5-2.png)
+![5*5棋盘第2步](/matplotlib-algorithm-visualization/5*5-2.png)
 
 同样，距离为2的方格也表示在图像当中。
 
 继续执行算法：
 
-![5*5棋盘第3步](../matplotlib-algorithm-visualization/5*5-3.png)
+![5*5棋盘第3步](/matplotlib-algorithm-visualization/5*5-3.png)
 
 最后得到结果图，可以看到起点到终点的最短距离为8:
 
-![5*5棋盘结果](../matplotlib-algorithm-visualization/5*5-result.png)
+![5*5棋盘结果](/matplotlib-algorithm-visualization/5*5-result.png)
 
 为了更加直观地表现出算法运算的过程，可以把过程图合成为动图。
 合成动图可以使用[ImageMagick](https://imagemagick.org/script/index.php)。
@@ -185,30 +185,30 @@ convert -delay 50 *.png animated.gif
 
 将算法运行得到的所有过程截图合成为动图如下所示：
 
-![5*5棋盘动画](../matplotlib-algorithm-visualization/5*5-animated.gif)
+![5*5棋盘动画](/matplotlib-algorithm-visualization/5*5-animated.gif)
 
 通过相同方式，还可以得到10*10棋盘的算法执行过程与结果。
 
 10*10棋盘初始状态如下，起点与终点仍分别位于左上角和右下角：
 
-![10*10棋盘初始化](../matplotlib-algorithm-visualization/10*10-init.png)
+![10*10棋盘初始化](/matplotlib-algorithm-visualization/10*10-init.png)
 
 10*10棋盘的运行过程：
 
-![10*10棋盘过程](../matplotlib-algorithm-visualization/10*10-animated.gif)
+![10*10棋盘过程](/matplotlib-algorithm-visualization/10*10-animated.gif)
 
 10*10棋盘的运行结果：
 
-![10*10棋盘结果](../matplotlib-algorithm-visualization/10*10-result.png)
+![10*10棋盘结果](/matplotlib-algorithm-visualization/10*10-result.png)
 
 类似地，20*20棋盘的执行过程与结果如下：
 
-![20*20棋盘过程](../matplotlib-algorithm-visualization/20*20-animated.gif)
+![20*20棋盘过程](/matplotlib-algorithm-visualization/20*20-animated.gif)
 
 可以看到，20*20的情况下，数字已经略显密集了。再增加棋盘大小的话，图像的直观性势必要下降。
 所以，针对规模再大一些的数据，需要对可视化方法进行一点调整。
 
-![20*20棋盘结果](../matplotlib-algorithm-visualization/20*20-result.png)
+![20*20棋盘结果](/matplotlib-algorithm-visualization/20*20-result.png)
 
 ## 4.4 视觉优化
 
@@ -256,56 +256,56 @@ if step % 2 == 0:
 
 为了观察渐变色的效果，先在空棋盘上尝试。
 
-![50*50空棋盘初始化](../matplotlib-algorithm-visualization/50*50-empty-init.png)
+![50*50空棋盘初始化](/matplotlib-algorithm-visualization/50*50-empty-init.png)
 
 其运行过程如下：
 
-![50*50空棋盘过程](../matplotlib-algorithm-visualization/50*50-empty-animated.gif)
+![50*50空棋盘过程](/matplotlib-algorithm-visualization/50*50-empty-animated.gif)
 
 可以看到，结果最后成为了一张“光滑”的渐变色图。
 这也符合广度优先搜索在没有墙壁的棋盘上的执行结果。
 
-![50*50空棋盘结果](../matplotlib-algorithm-visualization/50*50-empty-result.png)
+![50*50空棋盘结果](/matplotlib-algorithm-visualization/50*50-empty-result.png)
 
 下面在随机生成的50*50棋盘上执行。起点位于左下角，终点位于右上角。
 
-![50*50棋盘初始化](../matplotlib-algorithm-visualization/50*50-init.png)
+![50*50棋盘初始化](/matplotlib-algorithm-visualization/50*50-init.png)
 
 运行过程如下：
 
-![50*50棋盘过程](../matplotlib-algorithm-visualization/50*50-animated.gif)
+![50*50棋盘过程](/matplotlib-algorithm-visualization/50*50-animated.gif)
 
 整个过程类似于洪水漫灌的效果，不同的颜色代表洪水到达时机（与起点的最短距离）的不同。
 可以看到因为墙壁的影响，颜色的渐变出现了不均匀的现象。
 但是也正是不同的渐变色直观地表现出方格与起点之间的距离关系。
 
-![50*50棋盘结果](../matplotlib-algorithm-visualization/50*50-result.png)
+![50*50棋盘结果](/matplotlib-algorithm-visualization/50*50-result.png)
 
 当然，也并不是所有的棋盘都能满足起点与终点连通的。
 下面这个就是结果为Fail的例子。
 
-![50*50失败棋盘过程](../matplotlib-algorithm-visualization/50*50-fail-animated.gif)
+![50*50失败棋盘过程](/matplotlib-algorithm-visualization/50*50-fail-animated.gif)
 
 结果图像中终点与其他未填色的方格都是不与起点连通的方格。
 
-![50*50失败棋盘结果](../matplotlib-algorithm-visualization/50*50-fail-result.png)
+![50*50失败棋盘结果](/matplotlib-algorithm-visualization/50*50-fail-result.png)
 
 100*100棋盘的效果如下，起点位于左侧边缘的中点，终点位于右侧边缘的中点。
 
-![100*100棋盘过程](../matplotlib-algorithm-visualization/100*100-animated.gif)
+![100*100棋盘过程](/matplotlib-algorithm-visualization/100*100-animated.gif)
 
 由于数据规模增大，渐变色与距离的差分比例更小，所以渐变色也会更细腻一些。
 
-![100*100棋盘结果](../matplotlib-algorithm-visualization/100*100-result.png)
+![100*100棋盘结果](/matplotlib-algorithm-visualization/100*100-result.png)
 
 当然，宽与高不相等的矩形棋盘也可以适用。起点与中点分别位于左上角与右下角。
 
-![100*50棋盘过程](../matplotlib-algorithm-visualization/100*50-animated.gif)
+![100*50棋盘过程](/matplotlib-algorithm-visualization/100*50-animated.gif)
 
 不难发现，如果在没有墙壁的情况下，左上角到右下角的最短距离应为`height + width - 2`，即一直采取向右或者向下的移动行为。
 因为墙壁的存在，有可能不得不采取向左或者向上的移动策略来形成最短路径，所以距离也有可能随之增加。
 
-![100*50棋盘结果](../matplotlib-algorithm-visualization/100*50-result.png)
+![100*50棋盘结果](/matplotlib-algorithm-visualization/100*50-result.png)
 
 ## 4.5 大规模数据
 
@@ -313,7 +313,7 @@ if step % 2 == 0:
 
 使用matplotlib生成初始化图像：
 
-![1,000*1,000棋盘初始化](../matplotlib-algorithm-visualization/1000*1000-init.png)
+![1,000*1,000棋盘初始化](/matplotlib-algorithm-visualization/1000*1000-init.png)
 
 起点和终点的蓝色与红色早已被淹没在白色和灰色的像素点之间了。
 这里说明一下，以左上角定点为原点，右方向为x轴正方向，下方向为y轴正方向的话，起点位于(100, 100)，终点位于(900, 900)。
@@ -321,7 +321,7 @@ if step % 2 == 0:
 
 放大10倍以后的终点：
 
-![1,000*1,000棋盘终点](../matplotlib-algorithm-visualization/1000*1000-goal.png)
+![1,000*1,000棋盘终点](/matplotlib-algorithm-visualization/1000*1000-goal.png)
 
 需要注意的是，棋盘大小已经达到1,000\*1,000，需要留意单个方格与像素点的关系。
 前文的例子中所有的方格均有灰色边框，由于边框本身就占据像素点，所以开启边框的话，结果很可能就被边框占满像素点，图像变成一片灰色。
@@ -330,14 +330,14 @@ if step % 2 == 0:
 
 由于绘制图像本身的时间成本太高，所以运行算法的过程只截取了确定距离为1,000的方格之后的图像。
 
-![1,000*1,000棋盘过程](../matplotlib-algorithm-visualization/1000*1000-in-processing.png)
+![1,000*1,000棋盘过程](/matplotlib-algorithm-visualization/1000*1000-in-processing.png)
 
 感觉还蛮像花瓣或者墨水滴在纸上的样子，或者星空。
 通过高粒度的差分才能生成如此自然的渐变色，不得不再次感叹自然界的神奇。
 
 算法的最终结果如下：
 
-![1,000*1,000棋盘结果](../matplotlib-algorithm-visualization/1000*1000-result.png)
+![1,000*1,000棋盘结果](/matplotlib-algorithm-visualization/1000*1000-result.png)
 
 方格的颜色从左上到右下以蓝、靛、紫、品红、红的顺序依次渐变，最后停留在右下角的终点处。
 夹杂着的白色方格为被墙壁隔开的不可达区域。
@@ -350,7 +350,7 @@ program complete: 4146 seconds
 
 再次为结果图像的艺术性惊奇的我一时兴起按照专辑封面的风格对其加工了一下：
 
-![1,000*1,000棋盘结果专辑封面风](../matplotlib-algorithm-visualization/1000*1000-result-jacket.jpg)
+![1,000*1,000棋盘结果专辑封面风](/matplotlib-algorithm-visualization/1000*1000-result-jacket.jpg)
 
 # 5.总结
 利用matplotlib进行算法可视化的基本思路与插入log输出的思路类似，无非就是将算法过程中的状态以图片的方式留存下来。

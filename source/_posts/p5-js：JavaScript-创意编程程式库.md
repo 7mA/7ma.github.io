@@ -12,7 +12,7 @@ author: Kaku
 # 1.p5.js是什么？
 [**p5.js**](https://p5js.org/zh-Hans/)是一个侧重于图像编程与可视化的JavaScript库，是[Processing](https://processing.org/)的JavaScript移植版本。
 
-![p5.js](../p5js-beginning/p5js.svg)
+![p5.js](/p5js-beginning/p5js.svg)
 
 <!--more-->
 
