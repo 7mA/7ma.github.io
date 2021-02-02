@@ -122,18 +122,18 @@ class Ray{
 
 在考虑线段相交之前，可以先考虑直线相交。
 
-比如求以下两条直线（<math xmlns='http://www.w3.org/1998/Math/MathML'> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> &#x2260; <!-- not equal to --> </mo> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mo> &#x2227; <!-- logical and --> </mo> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> , </mo> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mo> &#x2208; <!-- element of --> </mo> <mi> R </mi></math>）的交点：
+比如求以下两条直线（{% katex %}t_{1} \neq t_{2} \wedge t_{1}, t_{2} \in R{% endkatex %}）的交点：
 
-- <math xmlns='http://www.w3.org/1998/Math/MathML'> <mi> y </mi> <mo> - </mo> <msub> <mrow> <mi> y </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> = </mo> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mrow> <mo> ( </mo> <mi> x </mi> <mo> - </mo> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> ) </mo> </mrow> </math>
-- <math xmlns='http://www.w3.org/1998/Math/MathML'> <mi> y </mi> <mo> - </mo> <msub> <mrow> <mi> y </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mo> = </mo> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mrow> <mo> ( </mo> <mi> x </mi> <mo> - </mo> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mo> ) </mo> </mrow> </math>
+- {% katex %}y-y_{1}=t_{1}\left(x-x_{1}\right){% endkatex %}
+- {% katex %}y-y_{2}=t_{2}\left(x-x_{2}\right){% endkatex %}
 
-很简单的数学问题，交点<math xmlns='http://www.w3.org/1998/Math/MathML'> <mrow> <mo> ( </mo> <mi> x </mi> <mo> , </mo> <mi> y </mi> <mo> ) </mo> </mrow> </math>的坐标值分别如下：
+很简单的数学问题，交点{% katex %}\left (x, y\right ) {% endkatex %}的坐标值分别如下：
 
-<math xmlns='http://www.w3.org/1998/Math/MathML'> <mi> x </mi> <mo> = </mo> <mfrac> <mrow> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> - </mo> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mo> - </mo> <msub> <mrow> <mi> y </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> + </mo> <msub> <mrow> <mi> y </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> </mrow> <mrow> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> - </mo> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> </mrow> </mfrac> </math>
+{% katex %}x=\frac{t_{1} x_{1}-t_{2} x_{2}-y_{1}+y_{2}}{t_{1}-t_{2}}{% endkatex %}
+<br>
+{% katex %}y=t_{1}\left(x-x_{1}\right)+y_{1}{% endkatex %}
 
-<math xmlns='http://www.w3.org/1998/Math/MathML'> <mi> y </mi> <mo> = </mo> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mrow> <mo> ( </mo> <mi> x </mi> <mo> - </mo> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> ) </mo> </mrow> <mo> + </mo> <msub> <mrow> <mi> y </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> </math>
-
-把上述算式映射到`Ray`类可以发现，<math xmlns='http://www.w3.org/1998/Math/MathML'> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> </math>和<math xmlns='http://www.w3.org/1998/Math/MathML'> <msub> <mrow> <mi> t </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> </math>分别就是方向向量y坐标与x坐标的比值，而定点<math xmlns='http://www.w3.org/1998/Math/MathML'> <mrow> <mo> ( </mo> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> , </mo> <msub> <mrow> <mi> y </mi> </mrow> <mrow> <mn> 1 </mn> </mrow> </msub> <mo> ) </mo> </mrow> </math>和<math xmlns='http://www.w3.org/1998/Math/MathML'> <mrow> <mo> ( </mo> <msub> <mrow> <mi> x </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mo> , </mo> <msub> <mrow> <mi> y </mi> </mrow> <mrow> <mn> 2 </mn> </mrow> </msub> <mo> ) </mo> </mrow> </math>可以用端点的位置向量表示。这样就可以根据上述算式计算出交点的坐标。
+把上述算式映射到`Ray`类可以发现，{% katex %}t_{1}{% endkatex %}和{% katex %}t_{2}{% endkatex %}分别就是方向向量y坐标与x坐标的比值，而定点{% katex %}\left (x_{1}, y_{1}\right ){% endkatex %}和{% katex %}\left (x_{2}, y_{2}\right ){% endkatex %}可以用端点的位置向量表示。这样就可以根据上述算式计算出交点的坐标。
 
 但是上述计算是在直线的前提之下，只要不平行必有交点，但是线段未必。通过上述算式计算出来的交点只是两条线段所在直线的交点，还需要计算交点是否同时位于两条线段上。
 

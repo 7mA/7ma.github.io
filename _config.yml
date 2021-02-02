@@ -92,6 +92,7 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
+  - "js/**"
 exclude:
 ignore:
   - "**/ignore"
@@ -109,9 +110,9 @@ deploy:
   branch: gh-pages
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
 
-# sitemap:
-#   path: sitemap.xml
-#   template: ./sitemap_template.xml
-#   rel: false
-#   tags: true
-#   categories: true
+uglify:
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - \*.min.js
