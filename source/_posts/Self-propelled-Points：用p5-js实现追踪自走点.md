@@ -100,7 +100,11 @@ while(点A没有接触到点B){
 
 视野可以抽象成单个点从某个角度范围接受光线的模型，如下所示：
 
-![视野示意图](/p5js-self-propelled-points/viewline.png)
+<picture>
+    <source type="image/webp" srcset="/p5js-self-propelled-points/viewline.webp">
+    <source type="image/png" srcset="/p5js-self-propelled-points/viewline.png">
+    <img src="/p5js-self-propelled-points/viewline.png" alt="视野示意图" />
+</picture>
 
 其中点A是二维空间中的视点，射线l和m之间所夹的角是点A能看到的视角。
 那么射线l和m之间所有从点A出发的线段都是点A的视线。
@@ -120,7 +124,11 @@ while(点A没有接触到点B){
 
 但是这样会造成下面这种情况：
 
-![回调时机](/p5js-self-propelled-points/if-no-sensor.png)
+<picture>
+    <source type="image/webp" srcset="/p5js-self-propelled-points/if-no-sensor.webp">
+    <source type="image/png" srcset="/p5js-self-propelled-points/if-no-sensor.png">
+    <img src="/p5js-self-propelled-points/if-no-sensor.png" alt="回调时机" />
+</picture>
 
 假如点A在A1的位置，线段IJ为墙壁。由于视野中右侧出现墙壁，所以点A要像左（逆时针）旋转过后，运动至点A2的位置。
 如果在视线不再与墙壁相交时就调整会到点B方向的话，势必会造成刚刚离开视野的墙壁又重新回到视野当中的情况。
@@ -313,7 +321,11 @@ backToBetween0To2Pi = function(angle){
 其实最开始没打算把这个逻辑做成一个完整的应用之类的，可能充其量就搞个代码片段贴到CodePen上看看效果就得了。
 但是没想到最后还是扩展成了一个完整的程序，而且还是以[游戏的形式](https://7ma.github.io/self-propelled-points/)。
 
-![游戏封面](/p5js-self-propelled-points/game.png)
+<picture>
+    <source type="image/webp" srcset="/p5js-self-propelled-points/game.webp">
+    <source type="image/png" srcset="/p5js-self-propelled-points/game.png">
+    <img src="/p5js-self-propelled-points/game.png" alt="游戏封面" />
+</picture>
 
 最开始为了方便测试，给目标点加了一个鼠标拖拽事件的响应函数，能便捷地修改目标点的位置，模拟目标点移动的情况，尝试各种各样的场景。
 同时也是为了提升测试覆盖率，墙壁也是用的随机数生成的。
@@ -434,7 +446,11 @@ while(verticalWallList.length < 7){
 比如像上文提到的敌人在特定位置卡bug的问题，目前确认到的问题当中有这样一种情形：当有两条互相垂直但不相交（程序中只有水平墙壁和垂直墙壁，因此不平行即垂直）、边缘离得比较近的墙壁，敌人将无法自己脱离两个墙壁边缘附近。
 这么说肯定不好明白，下面贴一张图。
 
-![角落bug](/p5js-self-propelled-points/corner-bug.png)
+<picture>
+    <source type="image/webp" srcset="/p5js-self-propelled-points/corner-bug.webp">
+    <source type="image/png" srcset="/p5js-self-propelled-points/corner-bug.png">
+    <img src="/p5js-self-propelled-points/corner-bug.png" alt="角落bug" />
+</picture>
 
 如图所示，线段MN和线段PQ为两条墙壁，两条墙壁互相垂直但不相交，点N与点Q相距比较近，两条线段形成一个有缺口的“L”字。
 点A为自走点，三条虚线代表三条视线，其中左侧和右侧视线与墙壁相交，这也就意味着这种情况下方向调整方式是随机决定的。
@@ -442,7 +458,11 @@ while(verticalWallList.length < 7){
 调整无非就两个方向：向左转或者向右转。
 如果向左转的话，自走点右侧的视线会离开墙壁，而左侧与前方视线会随之与墙壁相交。因为是一个角落，所以一次旋转是无法完全摆脱的，因而就会进入下一次方向调整。
 
-![向左转](/p5js-self-propelled-points/turn-left.png)
+<picture>
+    <source type="image/webp" srcset="/p5js-self-propelled-points/turn-left.webp">
+    <source type="image/png" srcset="/p5js-self-propelled-points/turn-left.png">
+    <img src="/p5js-self-propelled-points/turn-left.png" alt="向左转" />
+</picture>
 
 但是再次审视现在的情况，现在自走点的左侧视线与墙壁相交，右侧视线（和右侧传感器）不与墙壁相交，所以自走点会选择向右旋转。
 但是刚刚左转过来的自走点又向右侧旋转的话，就会又回到刚刚两边视线都与墙壁相交的情况，然后如此循环反复。

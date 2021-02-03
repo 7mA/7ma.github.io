@@ -65,7 +65,11 @@ Vocaloid黎明期的名曲，以樱花纷飞的毕业季为背景。halyosy最�
 n.k于2015年1月19日在niconico和YouTube同步公开的曲子，是其第6首作品，曲子一经公开就被打上高中毒性的标签。这也是n.k第一首niconico播放量过百万的曲子。
 曲子本身的风格也正如歌名那样地有点“ふざけた”的感觉，不管是浮夸鲜艳的角色设计，还是无厘头的歌词，都有点让人摸不到头脑。不光如此，在间奏等没有歌词的地方，n.k还在本来用来放歌词的对话框里塞上了写给观众的话。
 
-![よろしければ一緒にやいや](/japanese-vocaloid-korean-cover-best-10/konofuza.png)
+<picture>
+    <source type="image/webp" srcset="/japanese-vocaloid-korean-cover-best-10/konofuza.webp">
+    <source type="image/png" srcset="/japanese-vocaloid-korean-cover-best-10/konofuza.min.png">
+    <img src="/japanese-vocaloid-korean-cover-best-10/konofuza.min.png" alt="よろしければ一緒にやいや" />
+</picture>
 
 虽然很莫名其妙，不过确实是会忍不住跟着一起哼唱起来的。
 
@@ -194,7 +198,11 @@ Orangestar手下的IA往往偏向高音，甚至有时候会高到留下“掐�
 总的来看是很用心的翻唱作品，完成度很高。
 另外，不知道附带的播放器字幕是不是官方自己添上去的，在尝试对比确认字幕上“ㄹ”的数目与歌手实际发出的声音对不对得上以后感觉自己已经变得不会发“嘟噜噜噜”的音了。
 
-![嘟噜噜噜的正确发音](/japanese-vocaloid-korean-cover-best-10/du-ru-ru.png)
+<picture>
+    <source type="image/webp" srcset="/japanese-vocaloid-korean-cover-best-10/du-ru-ru.webp">
+    <source type="image/png" srcset="/japanese-vocaloid-korean-cover-best-10/du-ru-ru.min.png">
+    <img src="/japanese-vocaloid-korean-cover-best-10/du-ru-ru.min.png" alt="嘟噜噜噜的正确发音" />
+</picture>
 
 ## 2.9 로키 - みきとP feat. Han & 구리리
 
