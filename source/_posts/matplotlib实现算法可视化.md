@@ -185,7 +185,10 @@ convert -delay 50 *.png animated.gif
 
 将算法运行得到的所有过程截图合成为动图如下所示：
 
-![5*5棋盘动画](/matplotlib-algorithm-visualization/5x5-animated.gif)
+<video autoplay loop muted playsinline>  
+  <source src="/matplotlib-algorithm-visualization/5x5-animated.webm" type="video/webm">
+  <source src="/matplotlib-algorithm-visualization/5x5-animated.mp4" type="video/mp4">  
+</video>
 
 通过相同方式，还可以得到10*10棋盘的算法执行过程与结果。
 
@@ -298,7 +301,7 @@ if step % 2 == 0:
 
 ![100*100棋盘结果](/matplotlib-algorithm-visualization/100x100-result.png)
 
-当然，宽与高不相等的矩形棋盘也可以适用。起点与中点分别位于左上角与右下角。
+当然，宽与高不相等的矩形棋盘也可以适用。下图为100*50的棋盘，起点与中点分别位于左上角与右下角。
 
 ![100*50棋盘过程](/matplotlib-algorithm-visualization/100x50-animated.gif)
 
