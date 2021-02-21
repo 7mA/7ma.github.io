@@ -13,8 +13,6 @@ author: Kaku
 [**matplotlib**](https://matplotlib.org/index.html)是一个Python语言的2D绘图库。
 它支持各种平台，并且功能强大，能够轻易绘制出各种专业的图像，例如：直方图，波谱图，条形图，散点图等。并且，可以非常轻松地实现定制。
 
-![matplotlib](/matplotlib-algorithm-visualization/matplotlib_logo.svg)
-
 <!--more-->
 
 ---
