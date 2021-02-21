@@ -185,10 +185,12 @@ convert -delay 50 *.png animated.gif
 
 将算法运行得到的所有过程截图合成为动图如下所示：
 
-<video autoplay loop muted playsinline>  
-  <source src="/matplotlib-algorithm-visualization/5x5-animated.webm" type="video/webm">
-  <source src="/matplotlib-algorithm-visualization/5x5-animated.mp4" type="video/mp4">  
-</video>
+<div class="video-container youtube-container">
+  <video autoplay loop muted playsinline>  
+    <source src="/matplotlib-algorithm-visualization/5x5-animated.webm" type="video/webm">
+    <source src="/matplotlib-algorithm-visualization/5x5-animated.mp4" type="video/mp4">  
+  </video>
+</div>
 
 通过相同方式，还可以得到10*10棋盘的算法执行过程与结果。
 
