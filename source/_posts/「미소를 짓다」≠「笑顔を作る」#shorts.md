@@ -3,6 +3,7 @@ title: 「미소를 짓다」≠「笑顔を作る」#shorts
 tags:
   - 韩语
   - shorts
+  - 惯用表达
 categories:
   - 语言学习
 author: Kaku
