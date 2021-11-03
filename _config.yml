@@ -105,6 +105,6 @@ theme: even
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/7ma/7ma.github.io
+  repo: git@github.com:7ma/7ma.github.io
   branch: gh-pages
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
