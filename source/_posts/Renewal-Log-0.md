@@ -1,5 +1,5 @@
 ---
-title: Renewal Log
+title: Update Log
 tags:
   - Hexo
   - 前端
@@ -7,7 +7,7 @@ categories:
   - 杂记
 author: Kaku
 date: 2021-11-19 23:50:45
-permalink: renewal-log-20211119/
+permalink: update-log-20211119/
 ---
 
 ### 更新内容
