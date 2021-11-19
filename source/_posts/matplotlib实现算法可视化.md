@@ -183,7 +183,7 @@ convert -delay 50 *.png animated.gif
 
 将算法运行得到的所有过程截图合成为动图如下所示：
 
-<div class="video-container youtube-container">
+<div class="video-container">
   <video autoplay loop muted playsinline>  
     <source src="/matplotlib-algorithm-visualization/5x5-animated.webm" type="video/webm">
     <source src="/matplotlib-algorithm-visualization/5x5-animated.mp4" type="video/mp4">  

@@ -31,9 +31,7 @@ permalink: japanese-vocaloid-korean-cover-best-10/
 
 ## 2.1 벚꽃의 비 - halyosy feat. 설레임 & 요이 & 타라맛스
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/iddDSMKl7zY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="iddDSMKl7zY"></lite-youtube>
 
 > https://www.youtube.com/watch?v=iddDSMKl7zY
 投稿日：2016年2月28日
@@ -53,9 +51,7 @@ Vocaloid黎明期的名曲，以樱花纷飞的毕业季为背景。halyosy最�
 
 ## 2.2 이 실없이 멋진 세계는 나를 위해 있어 - n.k feat. 샨곰 & SeeU
 
-<div class="video-container youtube-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/vt1h2sTQk30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="vt1h2sTQk30"></lite-youtube>
 
 > https://www.youtube.com/watch?v=vt1h2sTQk30
 投稿日：2016年12月1日
@@ -78,9 +74,7 @@ n.k于2015年1月19日在niconico和YouTube同步公开的曲子，是其第6首
 
 ## 2.3 망상감상대상연맹 - DECO*27 feat. 휴복
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/I3kd3M2IRu4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="I3kd3M2IRu4"></lite-youtube>
 
 > https://www.youtube.com/watch?v=I3kd3M2IRu4
 投稿日：2017年5月28日
@@ -100,9 +94,7 @@ DECO\*27的曲风自然不用多说，多以“慢性中毒”为主。
 
 ## 2.4 호시아이 - レフティーモンスター feat. 하나나
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/0i4L9BVsWuM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="0i4L9BVsWuM"></lite-youtube>
 
 > https://www.youtube.com/watch?v=0i4L9BVsWuM
 投稿日：2017年10月14日
@@ -120,9 +112,7 @@ DECO\*27的曲风自然不用多说，多以“慢性中毒”为主。
 
 ## 2.5 Snow Fairy Story (Korean Ver.) - 40mP feat. 엔단
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/2RnstjhBbTQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="2RnstjhBbTQ"></lite-youtube>
 
 > https://www.youtube.com/watch?v=2RnstjhBbTQ
 投稿日：2017年12月19日
@@ -141,9 +131,7 @@ DECO\*27的曲风自然不用多说，多以“慢性中毒”为主。
 
 ## 2.6 자상무색 - ねこぼーろ feat. 꽃핀
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/zy9W8V1ICOw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="zy9W8V1ICOw"></lite-youtube>
 
 > https://www.youtube.com/watch?v=zy9W8V1ICOw
 投稿日：2018年5月3日
@@ -161,9 +149,7 @@ DECO\*27的曲风自然不用多说，多以“慢性中毒”为主。
 
 ## 2.7 금요일의 아침인사 - HoneyWorks feat. 지라라
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/zfZEcdKpErA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="zfZEcdKpErA"></lite-youtube>
 
 > https://www.youtube.com/watch?v=zfZEcdKpErA
 投稿日：2018年6月2日
@@ -180,9 +166,7 @@ HoneyWorks于2014年9月26日在YouTube公开了这首曲子。这首歌同时�
 
 ## 2.8 앨리스 in 냉동고 - Orangestar feat. 꽃핀 & 탬탬버린
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/EeHWkj5oCQo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="EeHWkj5oCQo"></lite-youtube>
 
 > https://www.youtube.com/watch?v=EeHWkj5oCQo
 投稿日：2018年10月15日
@@ -206,9 +190,7 @@ Orangestar手下的IA往往偏向高音，甚至有时候会高到留下“掐�
 
 ## 2.9 로키 - みきとP feat. Han & 구리리
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/MVVcWEsbXQw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="MVVcWEsbXQw"></lite-youtube>
 
 > https://www.youtube.com/watch?v=MVVcWEsbXQw
 投稿日：2018年12月24日
@@ -224,9 +206,7 @@ Orangestar手下的IA往往偏向高音，甚至有时候会高到留下“掐�
 
 ## 2.10 망상세 - DECO*27 feat. 쁘띠허브
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/fgz-4bq5vwo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="fgz-4bq5vwo"></lite-youtube>
 
 > https://www.youtube.com/watch?v=fgz-4bq5vwo
 投稿日：2019年2月16日
@@ -250,9 +230,7 @@ DECO\*27的2013年的作品，经由U/M/A/A Inc.的官方频道于2013年9月7�
 
 ## glow (Piano & Strings Acoustic Ver.) - keeno feat. 구리리
 
-<div class="video-container youtube-container">
-  <iframe data-src="https://www.youtube.com/embed/KPlQz48oCxc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<lite-youtube videoid="KPlQz48oCxc"></lite-youtube>
 
 > https://www.youtube.com/watch?v=KPlQz48oCxc
 niconico投稿日：2011年9月18日
