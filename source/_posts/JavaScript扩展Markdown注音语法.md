@@ -41,7 +41,7 @@ permalink: javascript-ruby-grammar-extension/
 
 语法定义好了，下面只需要通过JavaScript来规定从语法到最终显示结果（HTML）之间的正则表达匹配与映射就可以了。
 
-```JavaScript
+```JS
 function markdownRubyExtension(str) {
     return str.replace(/\{([^{}()]+)\}\(([^{}()]+)\)/g, function(match, $1, $2) {
         return '<ruby>' + $1 + '<rt>' + $2 + '</rt></ruby>'
@@ -51,7 +51,7 @@ function markdownRubyExtension(str) {
 
 其中`str`用于指定需要执行语法映射的文字，此处对所有正文适用。
 
-```JavaScript
+```JS
 let posts = document.getElementsByClassName('post-content');
 
 for(let post of posts) {
