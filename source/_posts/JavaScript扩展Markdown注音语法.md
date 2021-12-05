@@ -73,5 +73,5 @@ for(let post of posts) {
 
 **Links:**
 
-1. [JS中使用正则表达式g模式和非g模式的区别_任磊-CSDN博客](https://blog.csdn.net/sinat_36728518/article/details/106146310)
+1. [js 中replace中的回调函数_江木-CSDN博客_js replace 回调函数](https://blog.csdn.net/chjj0904/article/details/83894406)
 2. [各種小説投稿サイトのルビ記法をJavaScriptで実現する - Qiita](https://qiita.com/8amjp/items/d7c46d9dee0da4d530ef)
