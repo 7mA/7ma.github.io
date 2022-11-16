@@ -6,5 +6,5 @@ layout: page
 ---
 # About
 **Name:** Kaku (カク、카쿠)
-**Location:** Tokyo, Japan
+**Location:** Saitama, Japan
 **Contact me:** guodjcn#yahoo.co.jp (# → @)
