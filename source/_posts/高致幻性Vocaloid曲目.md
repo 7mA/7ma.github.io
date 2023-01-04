@@ -5,10 +5,11 @@ tags:
   - Drum 'n' Bass
   - Future Bass
   - Trance
+  - Electronic
 categories:
   - 音乐台
 author: Kaku
-date: 2022-12-11 15:54:20
+date: 2023-01-04 15:54:20
 permalink: vocaloid-as-hallucinogen/
 ---
 
@@ -45,3 +46,25 @@ Miku Dark + DnB。夹杂着一些Drumstep。
 <lite-youtube videoid="6_DWN2XR9oQ"></lite-youtube>
 
 Future Bass的Vocaloid其实还挺少见的。明明Vocaloid很适合拿来做Vocal Sample。
+
+---
+
+**(2023/1/4追加)**
+
+# Uninstall - 상록수 feat. 시유
+
+<lite-youtube videoid="zM559zirWCg"></lite-youtube>
+
+상록수特有的长篇幅的编曲风格。
+
+中间的drops两度出现那首著名的「初音ミクの消失」的片段。
+
+---
+
+# Blue Star - 八王子P feat. 初音ミク
+
+<lite-youtube videoid="sK92X82T3Sk"></lite-youtube>
+
+MIKU EXPO 2016的主题曲。也许正因为这个原因，即使风格上没有特别之处但是定位本身有了一点国际色彩。唯一一次在现场听到这首曲子的经历也是在2019年香港的MIKU EXPO。
+
+幕张也好，札幌也好，想去多少次就能去多少次。但是去海外某一座特定城市举办的MIKU EXPO恐怕真的是一生只会有一次的经历。从这个角度上看，「この瞬間、この場所は、もう2度と来ないから」这句歌词也许真的很适合MIKU EXPO。
