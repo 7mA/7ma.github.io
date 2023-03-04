@@ -1,5 +1,5 @@
 ---
-title: 【유니】유령대행진 - Plum【Original / Korean Vocaloid】
+title: 【유니】유령대행진 - Plum【Korean Vocaloid】
 tags:
   - Vocaloid
   - 摇滚
