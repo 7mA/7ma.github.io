@@ -1,5 +1,5 @@
 ---
-title: 【Limbus Company】사라지네 - 로쟈【OST】
+title: 【Limbus Company】사라지네 - 로쟈(CV:윤아영)【OST】
 tags:
   - 歌词本
   - 韩语
@@ -16,8 +16,8 @@ permalink: limbus-company-salajine-rodya/
 
 <lite-youtube videoid="dM5gOSaX5Xk"></lite-youtube>
 
-노래:**로쟈(CV:윤아영)**
-작곡:**Studio EIM**
+노래: **로쟈(CV:윤아영)**
+작곡: **Studio EIM**
 
 <!--more-->
 
@@ -138,11 +138,11 @@ Project Moon于2023年2月27日上线IOS、Android与Windows的跨平台RPG。�
 
 <lite-youtube videoid="SupBa5JJuO0"></lite-youtube>
 
-> 노래:**그레고르(CV:최한)**
+> 노래: **그레고르(CV:최한)**
 
 <lite-youtube videoid="4l6c1xubWXI"></lite-youtube>
 
-> 노래:**싱클레어(CV:김다올)**
+> 노래: **싱클레어(CV:김다올)**
 
 ---
 
