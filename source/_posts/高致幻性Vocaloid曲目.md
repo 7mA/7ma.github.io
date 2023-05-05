@@ -9,7 +9,7 @@ tags:
 categories:
   - 音乐台
 author: Kaku
-date: 2023-01-04 15:54:20
+date: 2023-05-05 15:54:20
 permalink: vocaloid-as-hallucinogen/
 ---
 
@@ -68,3 +68,33 @@ Future Bass的Vocaloid其实还挺少见的。明明Vocaloid很适合拿来做Vo
 MIKU EXPO 2016的主题曲。也许正因为这个原因，即使风格上没有特别之处但是定位本身有了一点国际色彩。唯一一次在现场听到这首曲子的经历也是在2019年香港的MIKU EXPO。
 
 幕张也好，札幌也好，想去多少次就能去多少次。但是去海外某一座特定城市举办的MIKU EXPO恐怕真的是一生只会有一次的经历。从这个角度上看，「この瞬間、この場所は、もう2度と来ないから」这句歌词也许真的很适合MIKU EXPO。
+
+---
+
+**(2023/5/5追加)**
+
+# Cold Leaf - Aerial Flow feat. 初音ミク
+
+<lite-youtube videoid="04udMvE7c_A"></lite-youtube>
+
+典型的Vocaloid Uplifting Trance。
+
+Aerial Flow、Wahiko、粒子P，其实是同一个人。是不是至少在这篇文章里统一一下比较好……
+
+---
+
+# Addict Love - Blue Twinkle feat. 初音ミク
+
+<lite-youtube videoid="RmXcGfAT28E"></lite-youtube>
+
+simple, yet sweet.
+
+---
+
+# SHIRO - かんざきひろ feat. 初音ミク
+
+<lite-youtube videoid="UPOrWBT0ptQ"></lite-youtube>
+
+drops部分听起来有一种消极的情感，也许和和弦有关。
+
+作词是yuiko。
