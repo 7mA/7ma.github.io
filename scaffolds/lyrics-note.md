@@ -4,7 +4,6 @@ date: {{ date }}
 permalink:
 tags:
 - 歌词本
-- 
 categories:
 - 音乐台
 author: Kaku
