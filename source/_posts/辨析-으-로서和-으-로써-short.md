@@ -1,5 +1,5 @@
 ---
-title: 辨析(으)로서和(으)로써#short
+title: 辨析(으)로서和(으)로써#shorts
 tags:
   - 韩语
   - 助词

@@ -9,10 +9,10 @@
     "server": "hexo clean && hexo generate && hexo server"
   },
   "hexo": {
-    "version": "5.4.0"
+    "version": "5.4.2"
   },
   "dependencies": {
-    "hexo": "^5.4.0",
+    "hexo": "^5.4.2",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
@@ -27,5 +27,8 @@
     "hexo-renderer-swig": "^1.1.0",
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3"
+  },
+  "resolutions": {
+    "node-sass": "^8.0.0"
   }
 }
