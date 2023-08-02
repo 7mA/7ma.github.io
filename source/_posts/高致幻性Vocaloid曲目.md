@@ -6,10 +6,11 @@ tags:
   - Future Bass
   - Trance
   - Electronic
+  - House
 categories:
   - 音乐台
 author: Kaku
-date: 2023-05-05 15:54:20
+date: 2023-08-01 00:54:20
 permalink: vocaloid-as-hallucinogen/
 ---
 
@@ -98,3 +99,31 @@ simple, yet sweet.
 drops部分听起来有一种消极的情感，也许和和弦有关。
 
 作词是yuiko。
+
+---
+
+**(2023/8/1追加)**
+
+# Damnation - Mwk feat. 初音ミク
+
+<lite-youtube videoid="gaUIJEjAVR4"></lite-youtube>
+
+Drum'n Bass!! Drumstep!! Vocaloid!!
+
+和上边那首“Virtual Reality”是同一种风格。调音是モリモリあつし。
+
+---
+
+# リトルパレード - けーだっしゅ feat. 初音ミク
+
+<lite-youtube videoid="VBPlF1AAaLY"></lite-youtube>
+
+各方面都很有特点的一首曲子，ミクさん的声线应该是其中最甚者。
+
+---
+
+# Shooting Star - TeddyLoid feat. IA
+
+<lite-youtube videoid="kdGOWtFXdYI"></lite-youtube>
+
+据说是为纪念IA首场北美Live而作的曲子。
