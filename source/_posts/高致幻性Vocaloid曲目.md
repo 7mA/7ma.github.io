@@ -2,7 +2,7 @@
 title: 高致幻性Vocaloid曲目
 tags:
   - Vocaloid
-  - Drum 'n' Bass
+  - Drum'n'Bass
   - Future Bass
   - Trance
   - Electronic
