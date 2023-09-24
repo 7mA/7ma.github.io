@@ -237,7 +237,7 @@ Vocal: **새빛 (Saebit)**
 http://seasonalcrime.creatorlink.net/
 
 > 通过以下链接可以欣赏含有季节犯罪故事情节的短篇小说。
-> 欣赏小说后再听歌的话可以感受到更丰富的情感。
+> 欣赏小说后再听歌的话可以感受到更加丰富的情感。
 >
 > 《季节犯罪》短篇小说
 http://seasonalcrime.creatorlink.net/
