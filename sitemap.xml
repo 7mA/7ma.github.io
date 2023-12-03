@@ -93,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/index.html</loc>
+    <loc>https://7ma.github.io/categories/index.html</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/index.html</loc>
+    <loc>https://7ma.github.io/tags/index.html</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-dallago-hada/</loc>
+    <loc>https://7ma.github.io/korean-nyago-hada/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-nyago-hada/</loc>
+    <loc>https://7ma.github.io/korean-dallago-hada/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/geuleohge-geuleoge/</loc>
+    <loc>https://7ma.github.io/ktp-20230821/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/ktp-20230821/</loc>
+    <loc>https://7ma.github.io/geuleohge-geuleoge/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -261,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/bfs-shortest-path-binary-matrix/</loc>
+    <loc>https://7ma.github.io/positive-breakcore/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/positive-breakcore/</loc>
+    <loc>https://7ma.github.io/bfs-shortest-path-binary-matrix/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -338,14 +338,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/plum-pendulum/</loc>
+    <loc>https://7ma.github.io/some-some-convenience-store-if-love-has-an-answer/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/some-some-convenience-store-if-love-has-an-answer/</loc>
+    <loc>https://7ma.github.io/plum-pendulum/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -443,13 +443,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/javascript-ruby-grammar-extension/</loc>
-    
-    <lastmod>2023-08-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/latex-beginning/</loc>
     
     <lastmod>2023-08-30</lastmod>
@@ -457,7 +450,7 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/isegye-idol-rewind/</loc>
+    <loc>https://7ma.github.io/javascript-ruby-grammar-extension/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -472,6 +465,13 @@
   
   <url>
     <loc>https://7ma.github.io/update-log-20211119/</loc>
+    
+    <lastmod>2023-08-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/isegye-idol-rewind/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -522,13 +522,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/JavaScript/</loc>
-    <lastmod>2023-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/LaTeX/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
@@ -550,14 +543,7 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E6%AD%8C%E8%AF%8D%E6%9C%AC/</loc>
-    <lastmod>2023-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/tags/%E6%B5%81%E8%A1%8C/</loc>
+    <loc>https://7ma.github.io/tags/JavaScript/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -599,6 +585,20 @@
   </url>
   
   <url>
+    <loc>https://7ma.github.io/tags/%E6%AD%8C%E8%AF%8D%E6%9C%AC/</loc>
+    <lastmod>2023-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/%E6%B5%81%E8%A1%8C/</loc>
+    <lastmod>2023-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://7ma.github.io/tags/Devlog/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
@@ -620,14 +620,7 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/OST/</loc>
-    <lastmod>2023-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/tags/%E8%AF%8D%E7%BC%80/</loc>
+    <loc>https://7ma.github.io/tags/Python/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -641,7 +634,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/Python/</loc>
+    <loc>https://7ma.github.io/tags/OST/</loc>
+    <lastmod>2023-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/%E8%AF%8D%E7%BC%80/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -704,14 +704,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/Funk/</loc>
+    <loc>https://7ma.github.io/tags/Epic/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/Epic/</loc>
+    <loc>https://7ma.github.io/tags/Funk/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -781,13 +781,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</loc>
-    <lastmod>2023-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/Breakcore/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
@@ -796,6 +789,13 @@
   
   <url>
     <loc>https://7ma.github.io/tags/Drum-n-Bass/</loc>
+    <lastmod>2023-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -874,14 +874,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/%E9%9F%B3%E4%B9%90%E5%8F%B0/</loc>
+    <loc>https://7ma.github.io/categories/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/%E6%9D%82%E8%AE%B0/</loc>
+    <loc>https://7ma.github.io/categories/%E9%9F%B3%E4%B9%90%E5%8F%B0/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
