@@ -128,7 +128,7 @@ permalink: plum-little-lalala-only-for-me/
 
 (Chorus 3)
 **그렇게 묶었다 풀었다 반복하며**
-像这样反复着束缚又解绑
+像这样反复着束缚又松绑
 
 **끝나지 않을 작은 라라라**
 无穷无尽的渺小啦啦啦
