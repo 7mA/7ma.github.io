@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/index.html</loc>
+    <loc>https://7ma.github.io/categories/index.html</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/index.html</loc>
+    <loc>https://7ma.github.io/tags/index.html</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/vocaloid-as-hallucinogen/</loc>
+    <loc>https://7ma.github.io/korean-nyago-hada/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-nyago-hada/</loc>
+    <loc>https://7ma.github.io/vocaloid-as-hallucinogen/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/3-random-deep-house/</loc>
+    <loc>https://7ma.github.io/korean-future-forms/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-future-forms/</loc>
+    <loc>https://7ma.github.io/3-random-deep-house/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -303,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-vowel-harmony/</loc>
+    <loc>https://7ma.github.io/korean-chinese-character-words/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-chinese-character-words/</loc>
+    <loc>https://7ma.github.io/korean-vowel-harmony/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -331,14 +331,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/plum-pendulum/</loc>
+    <loc>https://7ma.github.io/some-some-convenience-store-if-love-has-an-answer/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/some-some-convenience-store-if-love-has-an-answer/</loc>
+    <loc>https://7ma.github.io/plum-pendulum/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -443,14 +443,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/latex-beginning/</loc>
+    <loc>https://7ma.github.io/javascript-ruby-grammar-extension/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/javascript-ruby-grammar-extension/</loc>
+    <loc>https://7ma.github.io/latex-beginning/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -464,14 +464,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/update-log-20211119/</loc>
+    <loc>https://7ma.github.io/isegye-idol-rewind/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/isegye-idol-rewind/</loc>
+    <loc>https://7ma.github.io/update-log-20211119/</loc>
     
     <lastmod>2023-08-30</lastmod>
     
@@ -571,20 +571,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/Hexo/</loc>
-    <lastmod>2023-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2023-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/%E6%AD%8C%E8%AF%8D%E6%9C%AC/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
@@ -599,7 +585,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/Devlog/</loc>
+    <loc>https://7ma.github.io/tags/Hexo/</loc>
+    <lastmod>2023-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -614,6 +607,13 @@
   
   <url>
     <loc>https://7ma.github.io/tags/Java/</loc>
+    <lastmod>2023-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/Devlog/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -648,14 +648,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/shorts/</loc>
+    <loc>https://7ma.github.io/tags/%E6%83%AF%E7%94%A8%E8%A1%A8%E8%BE%BE/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E6%83%AF%E7%94%A8%E8%A1%A8%E8%BE%BE/</loc>
+    <loc>https://7ma.github.io/tags/shorts/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -732,6 +732,13 @@
   </url>
   
   <url>
+    <loc>https://7ma.github.io/tags/%E6%B1%89%E5%AD%97%E8%AF%8D/</loc>
+    <lastmod>2023-12-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://7ma.github.io/tags/%E5%85%83%E9%9F%B3%E8%B0%83%E5%92%8C/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
@@ -740,13 +747,6 @@
   
   <url>
     <loc>https://7ma.github.io/tags/%E8%BF%81%E7%A7%BB/</loc>
-    <lastmod>2023-12-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/tags/%E6%B1%89%E5%AD%97%E8%AF%8D/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -874,14 +874,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/%E6%9D%82%E8%AE%B0/</loc>
+    <loc>https://7ma.github.io/categories/%E9%9F%B3%E4%B9%90%E5%8F%B0/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/%E9%9F%B3%E4%B9%90%E5%8F%B0/</loc>
+    <loc>https://7ma.github.io/categories/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2023-12-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
