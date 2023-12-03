@@ -4,6 +4,7 @@ tags:
   - 歌词本
   - 韩语
   - 流行
+  - Vocaloid
 categories:
   - 音乐台
 author: Kaku
