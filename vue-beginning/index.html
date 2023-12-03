@@ -120,7 +120,7 @@
 <span id="more"></span>
 
 <hr>
-<h2 id="1-开始"><a href="#1-开始" class="headerlink" title="1.开始"></a>1.开始</h2><p>Vue（/vjuː/，音同view）是一套用于构建用户界面的渐进式框架。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。在本次开发过程中，我就是用Vue写的界面，然后内嵌到基于Express的Web应用当中。可以直接用<code>&lt;script&gt;</code>标签直接引用Vue.js文件，同时也可以用npm命令安装<code>vue-cli</code>工具来创建基于Vue的单页应用。本次开发我采用的是后者。</p>
+<h2 id="1-开始"><a href="#1-开始" class="headerlink" title="1.开始"></a>1.开始</h2><p>Vue（&#x2F;vjuː&#x2F;，音同view）是一套用于构建用户界面的渐进式框架。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。在本次开发过程中，我就是用Vue写的界面，然后内嵌到基于Express的Web应用当中。可以直接用<code>&lt;script&gt;</code>标签直接引用Vue.js文件，同时也可以用npm命令安装<code>vue-cli</code>工具来创建基于Vue的单页应用。本次开发我采用的是后者。</p>
 <pre><code>npm install --global vue-cli
 </code></pre>
 <p>在安装完毕以后，就可以在自己的工作目录下创建Vue项目了。创建命令如下：</p>
@@ -146,7 +146,7 @@
 <p>这两个命令的具体原理可以从package.json文件中得知。package.json文件中有如下字段：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">	&quot;dev&quot;: &quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;,</span><br><span class="line">	&quot;start&quot;: &quot;npm run dev&quot;,</span><br><span class="line">	&quot;build&quot;: &quot;node build/build.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>其中dev对应的是使用webpack-dev-server打开build/webpack.dev.conf.js，而build对应的是使用node打开build/build.js文件。</p>
+<p>其中dev对应的是使用webpack-dev-server打开build&#x2F;webpack.dev.conf.js，而build对应的是使用node打开build&#x2F;build.js文件。</p>
 <p>当用户执行<code>npm run dev</code>之后，默认设置下可以到 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080/</a> 查看页面效果。而当用户执行<code>npm run build</code>之后，用户可以在dist文件夹下看到新生成的build.js和build.js.map文件。之后只要将这两个文件复制到对应的服务器或者项目的文件夹下，就可以直接部署页面了。</p>
 <hr>
 <h2 id="3-http请求"><a href="#3-http请求" class="headerlink" title="3.http请求"></a>3.http请求</h2><p>在本次开发中，我用到了Vue的http请求，主要用来调用云端暴露出来的API并通过http来进行信息交换。要在Vue当中使用http请求，需要安装vue-resource。</p>
