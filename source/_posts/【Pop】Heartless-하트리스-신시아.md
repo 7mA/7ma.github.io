@@ -1,5 +1,5 @@
 ---
-title: 【Pop】Heartless(하트리스) - 신시아
+title: 【Pop】Heartless(하트리스) - 신시아 (XYNSIA)
 tags:
   - 歌词本
   - 韩语

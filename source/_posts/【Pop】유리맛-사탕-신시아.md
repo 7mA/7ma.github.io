@@ -1,5 +1,5 @@
 ---
-title: 【Pop】유리맛 사탕 - 신시아
+title: 【Pop】유리맛 사탕 - 신시아 (XYNSIA)
 tags:
   - 歌词本
   - 韩语
