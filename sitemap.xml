@@ -16,7 +16,7 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/index.html</loc>
+    <loc>https://7ma.github.io/about/index.html</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/about/index.html</loc>
+    <loc>https://7ma.github.io/categories/index.html</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -65,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/ktp-20230821/</loc>
-    
-    <lastmod>2024-06-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/geuleohge-geuleoge/</loc>
     
     <lastmod>2024-06-14</lastmod>
@@ -79,7 +72,7 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-nyago-hada/</loc>
+    <loc>https://7ma.github.io/ktp-20230821/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -87,6 +80,13 @@
   
   <url>
     <loc>https://7ma.github.io/korean-dallago-hada/</loc>
+    
+    <lastmod>2024-06-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/korean-nyago-hada/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -261,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/same-number-of-subjects-and-predicates-in-korean-and-japanese/</loc>
+    <loc>https://7ma.github.io/korean-honorific-forms/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-honorific-forms/</loc>
+    <loc>https://7ma.github.io/same-number-of-subjects-and-predicates-in-korean-and-japanese/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -317,14 +317,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/some-some-convenience-store-if-love-has-an-answer/</loc>
+    <loc>https://7ma.github.io/plum-pendulum/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/plum-pendulum/</loc>
+    <loc>https://7ma.github.io/some-some-convenience-store-if-love-has-an-answer/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -359,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/renewal-log-20210118/</loc>
+    <loc>https://7ma.github.io/temp-memo/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/temp-memo/</loc>
+    <loc>https://7ma.github.io/renewal-log-20210118/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -457,14 +457,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/xynsia-glass-flavored-candy/</loc>
+    <loc>https://7ma.github.io/sid-sound-first-snow-of-that-year/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/sid-sound-first-snow-of-that-year/</loc>
+    <loc>https://7ma.github.io/xynsia-glass-flavored-candy/</loc>
     
     <lastmod>2024-06-14</lastmod>
     
@@ -529,6 +529,20 @@
 
   
   <url>
+    <loc>https://7ma.github.io/tags/%E9%9F%A9%E8%AF%AD/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/%E7%BF%BB%E8%AF%91%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://7ma.github.io/tags/JavaScript/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
@@ -578,13 +592,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E9%9F%A9%E8%AF%AD/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/%E6%AD%8C%E8%AF%8D%E6%9C%AC/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
@@ -613,20 +620,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E7%BF%BB%E8%AF%91%E7%BB%83%E4%B9%A0/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/tags/Devlog/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/Spring/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
@@ -641,7 +634,7 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
+    <loc>https://7ma.github.io/tags/Devlog/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -662,6 +655,13 @@
   </url>
   
   <url>
+    <loc>https://7ma.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://7ma.github.io/tags/Python/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
@@ -669,14 +669,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/shorts/</loc>
+    <loc>https://7ma.github.io/tags/%E6%83%AF%E7%94%A8%E8%A1%A8%E8%BE%BE/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E6%83%AF%E7%94%A8%E8%A1%A8%E8%BE%BE/</loc>
+    <loc>https://7ma.github.io/tags/shorts/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -753,13 +753,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E6%B1%89%E5%AD%97%E8%AF%8D/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/%E5%85%83%E9%9F%B3%E8%B0%83%E5%92%8C/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
@@ -774,14 +767,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E5%8A%A8%E8%AF%8D%E6%B4%BB%E7%94%A8/</loc>
+    <loc>https://7ma.github.io/tags/%E6%B1%89%E5%AD%97%E8%AF%8D/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E5%8A%A9%E8%AF%8D/</loc>
+    <loc>https://7ma.github.io/tags/%E5%8A%A8%E8%AF%8D%E6%B4%BB%E7%94%A8/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -795,14 +788,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://7ma.github.io/tags/%E5%8A%A9%E8%AF%8D/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</loc>
+    <loc>https://7ma.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -817,6 +810,13 @@
   
   <url>
     <loc>https://7ma.github.io/tags/Drum-n-Bass/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -881,6 +881,13 @@
 
   
   <url>
+    <loc>https://7ma.github.io/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2024-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://7ma.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
@@ -896,13 +903,6 @@
   
   <url>
     <loc>https://7ma.github.io/categories/%E6%9D%82%E8%AE%B0/</loc>
-    <lastmod>2024-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2024-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
