@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="广度优先搜索解决方格棋盘最短路径长度问题" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="算法, 广度优先搜索, ただの書き捨て" />
+
+
+<meta name="baidu-site-verification" content="code-lm6MF8Dhbz" />
+
+
+<meta name="google-site-verification" content="cBAn-eAtzgB7WJGma4W-EoiKXnix6eV5jLcqJziUcGM" />
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/atom.xml" title="ただの書き捨て" type="application/atom+xml">
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://7ma.github.io/bfs-shortest-path-binary-matrix/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>广度优先搜索解决方格棋盘最短路径长度问题 - ただの書き捨て</title>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ただの書き捨て</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">ただの書き捨て</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      广度优先搜索解决方格棋盘最短路径长度问题
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-01-22
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E8%AF%BE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">1.课题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="toc-number">2.</span> <span class="toc-text">2.输入与输出</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text">3.基本思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Python%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.</span> <span class="toc-text">4.Python实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E6%80%9D%E8%80%83%E8%BF%87%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">5.思考过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">6.相关问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="toc-number">7.</span> <span class="toc-text">7.测试数据</span></a></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <h1 id="1-课题"><a href="#1-课题" class="headerlink" title="1.课题"></a>1.课题</h1><p>给定一个列数为M，行数为N的方格棋盘。<br>棋盘上定义起点、终点、道路、墙壁。<br>棋盘上必有一个起点和一个终点，剩余方格必定为道路或者墙壁。<br>现寻求角色从起点到终点的最短路径长度，其中角色只能上下左右移动。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="2-输入与输出"><a href="#2-输入与输出" class="headerlink" title="2.输入与输出"></a>2.输入与输出</h1><p>棋盘信息由文本文件提供。<br>第一行为列数M与行数N，由空格隔开。<br>第二行以后的N行，各为由空格隔开的M个字符。<br>其中，“s”代表起点，“g”代表终点，“0”代表道路，“1”代表墙壁。</p>
+<p><img src="/bfs-shortest-path-binary-matrix/maze01.gif" alt="棋盘示意图"></p>
+<p>通过标准输出，给出从起点到终点的最短长度。<br>如果不存在路径，则输出“Fail”。</p>
+<p><img src="/bfs-shortest-path-binary-matrix/maze02.gif" alt="某一种最短路径"></p>
+<hr>
+<h1 id="3-基本思路"><a href="#3-基本思路" class="headerlink" title="3.基本思路"></a>3.基本思路</h1><p>采用广度优先搜索思路（BFS），从起点出发，计算起点到周围方格的举例，不断扩散范围直至找到终点。<br>定义一个队列，用于存储即将测量其最短路线长度的方格，然后把起点放入队列，并且初始化步数为1。<br>然后循环下列操作：</p>
+<ul>
+<li>从队列中取出一个方格</li>
+<li>该方格上下左右四个方格如果不是墙壁，加入队列</li>
+<li>如果上下左右四个方格为终点，则直接输出步数作为结果，结束程序</li>
+<li>步数加1</li>
+</ul>
+<p>直至队列为空。<br>如果队列为空导致循环结束，则意味着没有路线能连接起点与终点，输出“Fail”。</p>
+<hr>
+<h1 id="4-Python实现"><a href="#4-Python实现" class="headerlink" title="4.Python实现"></a>4.Python实现</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;data.txt&quot;</span>, <span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line">input_line = f.readline()</span><br><span class="line">input_line = input_line.strip(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line">matrix_info = input_line.split(<span class="string">&quot; &quot;</span>)</span><br><span class="line">w = <span class="built_in">int</span>(matrix_info[<span class="number">0</span>])</span><br><span class="line">h = <span class="built_in">int</span>(matrix_info[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">dirs = [(-<span class="number">1</span>, <span class="number">0</span>), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">1</span>, <span class="number">0</span>), (<span class="number">0</span>, -<span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">matrix = []</span><br><span class="line"></span><br><span class="line">start_x = <span class="number">0</span></span><br><span class="line">start_y = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">goal_x = <span class="number">0</span></span><br><span class="line">goal_y = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, h):</span><br><span class="line">    input_line = f.readline()</span><br><span class="line">    input_line = input_line.strip(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    row = input_line.split(<span class="string">&quot; &quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, w):</span><br><span class="line">        <span class="keyword">if</span> row[j] == <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">            start_x = j</span><br><span class="line">            start_y = i</span><br><span class="line">    matrix.append(row)</span><br><span class="line"></span><br><span class="line">q = collections.deque()</span><br><span class="line">q.append((start_x, start_y))</span><br><span class="line">visited = <span class="built_in">set</span>()</span><br><span class="line">visited.add((start_x, start_y))</span><br><span class="line"></span><br><span class="line">step = <span class="number">1</span></span><br><span class="line">flag = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> q:</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(q)):</span><br><span class="line">        x, y = q.popleft()</span><br><span class="line">        <span class="keyword">for</span> dx, dy <span class="keyword">in</span> dirs:</span><br><span class="line">            nx, ny = x + dx, y + dy</span><br><span class="line">            <span class="keyword">if</span> <span class="number">0</span> &lt;= nx &lt; w <span class="keyword">and</span> <span class="number">0</span> &lt;= ny &lt; h <span class="keyword">and</span> matrix[ny][nx] != <span class="string">&#x27;1&#x27;</span> <span class="keyword">and</span> (nx, ny) <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                visited.add((nx, ny))</span><br><span class="line">                q.append((nx, ny))</span><br><span class="line">                <span class="keyword">if</span> matrix[ny][nx] == <span class="string">&#x27;g&#x27;</span>:</span><br><span class="line">                    <span class="built_in">print</span>(step, end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">                    flag = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> flag:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> flag:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    step += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> flag:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Fail&#x27;</span>, end=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="5-思考过程"><a href="#5-思考过程" class="headerlink" title="5.思考过程"></a>5.思考过程</h1><p>最开始拿到这个问题的时候，直观想法是将棋盘抽象为无向图，每一个方格都看作是一个点，可以通行的点（起点、终点、道路）之间具有一条长度为1的边。<br>然后采用迪杰斯特拉算法求起点到终点的最短路径长度，采用Java实现。<br>但是在大规模数据上（大小为1000*1000的棋盘上）出现了Runtime Error。<br>因为是黑盒测试，所以不知道具体数据和错误信息。<br>因为其他普通数据（100*100以下的棋盘）没有问题，所以很难认为是数组越界等实现上的问题，可能还是数据规模过大导致的内存泄漏的原因。</p>
+<p>于是更改思路，尝试了Python实现的A*算法，但是可能与其复杂的数据结构有关，大规模数据上出现了超时（16秒）的问题。<br>最后尝试了广度优先搜索，大规模数据在1.5秒以内运行完毕，成功通过所有测试数据。</p>
+<hr>
+<h1 id="6-相关问题"><a href="#6-相关问题" class="headerlink" title="6.相关问题"></a>6.相关问题</h1><p>在调查的过程中，发现LeetCode上有一道十分类似的问题：<a target="_blank" rel="noopener" href="https://leetcode.com/problems/shortest-path-in-binary-matrix/">1091. Shortest Path in Binary Matrix</a>。<br>只不过这道问题里，角色还可以斜着移动，共有八个移动方向。<br>解决这个问题，只需要把向量集合改成八个方向就可以了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 上下左右四个方向</span><br><span class="line">dirs = [(-<span class="number">1</span>, <span class="number">0</span>), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">1</span>, <span class="number">0</span>), (<span class="number">0</span>, -<span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">// 上下左右+对角线八个方向</span><br><span class="line">dirs = [(-<span class="number">1</span>, -<span class="number">1</span>), (-<span class="number">1</span>, <span class="number">0</span>), (-<span class="number">1</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">1</span>, <span class="number">1</span>), (<span class="number">1</span>, <span class="number">0</span>), (<span class="number">1</span>, -<span class="number">1</span>), (<span class="number">0</span>, -<span class="number">1</span>)]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="7-测试数据"><a href="#7-测试数据" class="headerlink" title="7.测试数据"></a>7.测试数据</h1><p>最后附上随机测试数据生成器：<a target="_blank" rel="noopener" href="https://github.com/7mA/bfs-shortest-path-binary-matrix/blob/master/generator.py">generator.py</a>。</p>
+<hr>
+<p><strong>Reference Source:</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://zhenyu0519.github.io/2020/03/26/lc1091/">1091. Shortest Path in Binary Matrix (Python)</a></li>
+</ol>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+      
+      <a href="/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">广度优先搜索</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/p5js-beginning/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">p5.js：JavaScript创意编程程式库</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/haeyo-hieuh-irregular/">  
+        <span class="next-text nav-default">反客为主的그래요--해요体ㅎ变则盘点</span>  
+        <span class="prev-text nav-mobile">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:guodjcn@yahoo.co.jp" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/7ma" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2017 - 2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">Kaku</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/js/src/lite-yt-embed.js"></script>
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>

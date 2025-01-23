@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="matplotlib实现算法可视化" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="Python, 可视化, ただの書き捨て" />
+
+
+<meta name="baidu-site-verification" content="code-lm6MF8Dhbz" />
+
+
+<meta name="google-site-verification" content="cBAn-eAtzgB7WJGma4W-EoiKXnix6eV5jLcqJziUcGM" />
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/atom.xml" title="ただの書き捨て" type="application/atom+xml">
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://7ma.github.io/matplotlib-algorithm-visualization/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>matplotlib实现算法可视化 - ただの書き捨て</title>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ただの書き捨て</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">ただの書き捨て</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      matplotlib实现算法可视化
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-01-25
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%85%B3%E4%BA%8Ematplotlib"><span class="toc-number">1.</span> <span class="toc-text">1.关于matplotlib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E8%8E%B7%E5%8F%96matplotlib"><span class="toc-number">2.</span> <span class="toc-text">2.获取matplotlib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">3.基础用法示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E7%AE%97%E6%B3%95%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9A%E4%BB%A5%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E4%B8%BA%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">4.算法可视化：以广度优先搜索为例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 问题分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 代码实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 运行结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-%E8%A7%86%E8%A7%89%E4%BC%98%E5%8C%96"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 视觉优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-%E5%A4%A7%E8%A7%84%E6%A8%A1%E6%95%B0%E6%8D%AE"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 大规模数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">5.总结</span></a></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <h1 id="1-关于matplotlib"><a href="#1-关于matplotlib" class="headerlink" title="1.关于matplotlib"></a>1.关于matplotlib</h1><p><a target="_blank" rel="noopener" href="https://matplotlib.org/index.html"><strong>matplotlib</strong></a>是一个Python语言的2D绘图库。<br>它支持各种平台，并且功能强大，能够轻易绘制出各种专业的图像，例如：直方图，波谱图，条形图，散点图等。并且，可以非常轻松地实现定制。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="2-获取matplotlib"><a href="#2-获取matplotlib" class="headerlink" title="2.获取matplotlib"></a>2.获取matplotlib</h1><p>关于如何获取matplotlib，官网有一个专门的<a target="_blank" rel="noopener" href="https://matplotlib.org/users/installing.html">介绍页面</a>。<br>最直接的方法是通过pip安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pip3 install matplotlib</span><br></pre></td></tr></table></figure>
+
+<p>在Python中使用matplotlib，按照需求引用对象（<code>matplotlib.*</code>）或者特定函数（<code>from matplotlib.* import *</code>）即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 引用对象</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 引用函数</span></span><br><span class="line"><span class="keyword">from</span> matplotlib.patches <span class="keyword">import</span> Rectangle</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="3-基础用法示例"><a href="#3-基础用法示例" class="headerlink" title="3.基础用法示例"></a>3.基础用法示例</h1><p>matplotlib最广泛的用途就是在坐标系中绘制各种各样的图。<br>比如下面的代码就可以绘制出一副简单的线性图：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">data = np.arange(<span class="number">100</span>, <span class="number">201</span>)</span><br><span class="line">plt.plot(data) <span class="comment"># 将数据映射到坐标系中</span></span><br><span class="line">plt.show() <span class="comment"># 绘制图像</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/matplotlib-algorithm-visualization/Figure_1.png" alt="一幅简单的线性图"></p>
+<hr>
+<h1 id="4-算法可视化：以广度优先搜索为例"><a href="#4-算法可视化：以广度优先搜索为例" class="headerlink" title="4.算法可视化：以广度优先搜索为例"></a>4.算法可视化：以广度优先搜索为例</h1><p>既然matplotlib可以将运算逻辑中的数据可视化成直观的图像，那么算法的运算过程也同样可以用合理的图直观地表现出来。</p>
+<p>下面以<a href="/bfs-shortest-path-binary-matrix/">广度优先搜索解决方格棋盘最短路径长度问题</a>为例，将算法的运算过程可视化。</p>
+<blockquote>
+<p>源代码：<a target="_blank" rel="noopener" href="https://github.com/7mA/bfs-shortest-path-binary-matrix/blob/master/bfs.py">https://github.com/7mA/bfs-shortest-path-binary-matrix/blob/master/bfs.py</a></p>
+</blockquote>
+<h2 id="4-1-问题分析"><a href="#4-1-问题分析" class="headerlink" title="4.1 问题分析"></a>4.1 问题分析</h2><p><img src="/bfs-shortest-path-binary-matrix/maze01.gif" alt="棋盘示意图"></p>
+<p>算法的场景是一个方格棋盘，可以看作坐标系上的一个二维矩阵，不同属性的方格用不同的样式表示出来。</p>
+<p>算法的过程是从起点通过广度优先搜索的方式求到达终点的最短距离。<br>每增加一次搜索距离，都将有若干个方格的距离得以确定。<br>因此，可以在确定一个方格或者增加一次距离的同时，绘制出当前的确认情况，通过这种方法来获知算法的运算过程。<br>为了直观地表现，不同距离的方格可以用不同方式表示出来。</p>
+<h2 id="4-2-代码实现"><a href="#4-2-代码实现" class="headerlink" title="4.2 代码实现"></a>4.2 代码实现</h2><p>首先在算法的最开始，定义过程图的基本信息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调整过程图的大小</span></span><br><span class="line">plt.figure(figsize=(<span class="number">5</span>, <span class="number">5</span>)) <span class="comment"># 500px * 500px</span></span><br><span class="line"></span><br><span class="line">ax = plt.gca()             <span class="comment"># 获取坐标系对象</span></span><br><span class="line">ax.set_xlim([<span class="number">0</span>, w])        <span class="comment"># 将矩阵宽度设置为x轴最大值</span></span><br><span class="line">ax.set_ylim([<span class="number">0</span>, h])        <span class="comment"># 将矩阵高度设置为y轴最大值</span></span><br></pre></td></tr></table></figure>
+
+<p>之后，在根据输入来初始化棋盘的数据结构的同时，将棋盘上各方格的信息也投射到过程图的坐标系中。<br>投射的时候要注意二维数组的下标与坐标系里的坐标之间的映射关系。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义方格样式与位置</span></span><br><span class="line">rec = Rectangle((j, h - i), width=<span class="number">1</span>, height=<span class="number">1</span>, facecolor=<span class="string">&#x27;b&#x27;</span>, edgecolor=<span class="string">&quot;gray&quot;</span>)</span><br><span class="line"><span class="comment"># 将起点方格加到坐标系中</span></span><br><span class="line">ax.add_patch(rec)</span><br></pre></td></tr></table></figure>
+
+<p>初始化结束以后，对图像布局进行调整。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置图像的坐标轴比例相等并且隐藏坐标轴</span></span><br><span class="line">plt.axis(<span class="string">&#x27;equal&#x27;</span>)</span><br><span class="line">plt.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line"><span class="comment"># 压缩图像边距</span></span><br><span class="line">plt.tight_layout()</span><br></pre></td></tr></table></figure>
+
+<p>之后，在算法逻辑执行的过程中，为了确认算法的运算过程，需要在状态更新的同时更新坐标系中的内容。<br>在广度优先搜索中，算法每更新一个方格的距离信息，坐标系中对应的方格就需要进行更新，同时还可以根据需要保存快照。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方格填充步数</span></span><br><span class="line">plt.text(nx + <span class="number">0.5</span>, h - ny + <span class="number">0.5</span>, step,</span><br><span class="line">  fontsize=<span class="number">7.5</span>, verticalalignment=<span class="string">&quot;center&quot;</span>, horizontalalignment=<span class="string">&quot;center&quot;</span>)</span><br><span class="line"><span class="comment"># 单步保存过程图</span></span><br><span class="line">saveImage(plt)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存图片函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">saveImage</span>(<span class="params">p</span>):</span><br><span class="line">    millis = <span class="built_in">int</span>(<span class="built_in">round</span>(time.time() * <span class="number">1000</span>))</span><br><span class="line">    <span class="comment"># 需要提前准备好/img目录，以毫秒数命名</span></span><br><span class="line">    filename = <span class="string">&#x27;./img/&#x27;</span> + <span class="built_in">str</span>(millis) + <span class="string">&#x27;.png&#x27;</span></span><br><span class="line">    p.savefig(filename)</span><br></pre></td></tr></table></figure>
+
+<p>这里将距离信息直接以文本的形式写到对应方格当中。</p>
+<p>经过反复的运算以后，终点的距离信息得到确定。在最后输出结果的时候，可以保存最终的结果图像，以备参考。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调整y值以调节结果文本位置</span></span><br><span class="line">plt.title(<span class="string">&quot;%s steps&quot;</span> % step, fontsize=<span class="string">&#x27;15&#x27;</span>, fontweight=<span class="string">&#x27;bold&#x27;</span>, y=-<span class="number">0.03</span>)</span><br><span class="line"><span class="comment"># 保存结果图像</span></span><br><span class="line">saveImage(plt)</span><br></pre></td></tr></table></figure>
+
+<p>将上述绘图代码如影随形地插入到算法当中，每执行一次算法，就可以输出当次执行的运算过程。</p>
+<h2 id="4-3-运行结果"><a href="#4-3-运行结果" class="headerlink" title="4.3 运行结果"></a>4.3 运行结果</h2><p>下面以输入为5*5的棋盘的情况为例。</p>
+<p>棋盘初始化：</p>
+<p><img src="/matplotlib-algorithm-visualization/5x5-init.png" alt="5*5棋盘初始化"></p>
+<p>其中左上角的蓝色代表起点，右下角的红色代表终点，灰色代表墙壁，白色代表道路。</p>
+<p>算法搜索完距离为1的方格以后：</p>
+<p><img src="/matplotlib-algorithm-visualization/5x5-1.png" alt="5*5棋盘第1步"></p>
+<p>距离为1的方格内添加了文字表示距离。</p>
+<p>算法搜索完距离为2的方格以后：</p>
+<p><img src="/matplotlib-algorithm-visualization/5x5-2.png" alt="5*5棋盘第2步"></p>
+<p>同样，距离为2的方格也表示在图像当中。</p>
+<p>继续执行算法：</p>
+<p><img src="/matplotlib-algorithm-visualization/5x5-3.png" alt="5*5棋盘第3步"></p>
+<p>最后得到结果图，可以看到起点到终点的最短距离为8:</p>
+<p><img src="/matplotlib-algorithm-visualization/5x5-result.png" alt="5*5棋盘结果"></p>
+<p>为了更加直观地表现出算法运算的过程，可以把过程图合成为动图。<br>合成动图可以使用<a target="_blank" rel="noopener" href="https://imagemagick.org/script/index.php">ImageMagick</a>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install ImageMagick</span><br></pre></td></tr></table></figure>
+
+<p>通过下列命令可以将当前目录下所有png格式的图片合成为名为<code>animated.gif</code>的动图文件，<code>-delay</code>用于控制每张图片的停留时间。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert -delay 50 *.png animated.gif</span><br></pre></td></tr></table></figure>
+
+<p>将算法运行得到的所有过程截图合成为动图如下所示：</p>
+<p><img src="/matplotlib-algorithm-visualization/5x5-animated.gif" alt="5*5棋盘过程"></p>
+<p>通过相同方式，还可以得到10*10棋盘的算法执行过程与结果。</p>
+<p>10*10棋盘初始状态如下，起点与终点仍分别位于左上角和右下角：</p>
+<p><img src="/matplotlib-algorithm-visualization/10x10-init.png" alt="10*10棋盘初始化"></p>
+<p>10*10棋盘的运行过程：</p>
+<p><img src="/matplotlib-algorithm-visualization/10x10-animated.gif" alt="10*10棋盘过程"></p>
+<p>10*10棋盘的运行结果：</p>
+<p><img src="/matplotlib-algorithm-visualization/10x10-result.png" alt="10*10棋盘结果"></p>
+<p>类似地，20*20棋盘的执行过程与结果如下：</p>
+<p><img src="/matplotlib-algorithm-visualization/20x20-animated.gif" alt="20*20棋盘过程"></p>
+<p>可以看到，20*20的情况下，数字已经略显密集了。再增加棋盘大小的话，图像的直观性势必要下降。<br>所以，针对规模再大一些的数据，需要对可视化方法进行一点调整。</p>
+<p><img src="/matplotlib-algorithm-visualization/20x20-result.png" alt="20*20棋盘结果"></p>
+<h2 id="4-4-视觉优化"><a href="#4-4-视觉优化" class="headerlink" title="4.4 视觉优化"></a>4.4 视觉优化</h2><p>对于更大规模的数据，可以使用比数字更加直观的颜色来表示距离，不同的颜色表示不同的距离。</p>
+<p>之前的图中使用蓝色作为起点的颜色，使用红色作为终点的颜色。<br>那么可以考虑用蓝色与红色之间的渐变色来表示与起点与终点之间的距离关系。<br>越接近蓝色代表距离起点越近，越接近红色代表距离终点越近。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 方格填充渐变色</span></span><br><span class="line">rec = Rectangle((nx, h - ny), <span class="number">1</span>, <span class="number">1</span>, color=colorGradient(step, h, w))</span><br><span class="line">ax.add_patch(rec)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">colorGradient</span>(<span class="params">current_step, height, width</span>):</span><br><span class="line">    <span class="comment"># 根据高度和宽度调整适用于颜色渐变的最大步数</span></span><br><span class="line">    gradient_step_threshold = (height + width) * <span class="number">1.1</span></span><br><span class="line"></span><br><span class="line">    color_start = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1.0</span>]  <span class="comment"># color: b(blue)</span></span><br><span class="line">    color_goal = [<span class="number">1.0</span>, <span class="number">0</span>, <span class="number">0</span>]  <span class="comment"># color: r(red)</span></span><br><span class="line">    <span class="keyword">if</span> step &lt; gradient_step_threshold:</span><br><span class="line">        <span class="keyword">return</span> [(color_goal[<span class="number">0</span>] - color_start[<span class="number">0</span>]) * current_step / gradient_step_threshold, <span class="number">0</span>,</span><br><span class="line">                color_start[<span class="number">2</span>] + (color_goal[<span class="number">2</span>] - color_start[<span class="number">2</span>]) * current_step / gradient_step_threshold]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> color_goal</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，广度优先搜索中其实每一次只更新与起点的最短距离，与终点的最短距离是无从得知的。<br>所以这里要设置一个<code>gradient_step_threshold</code>作为预想的渐变极限值，理想效果为当与起点的距离达到这个极限值的时候刚好到达终点。</p>
+<p>当然是不可能事先知道这个最佳的渐变极限值是多少，所以这个值只能大概接近于预想的起点到终点的最短距离。<br>如果实际的最短距离大于渐变极限值，那么距离超过渐变极限值的方格的颜色一律与终点相同。<br>如果实际的最短距离大于渐变极限值，那么终点前一个方格的颜色会与终点的颜色有一个较大的差别。<br>不过上述视觉上的影响在相对准确的预估和大规模数据下可以忽略。</p>
+<p>同时由于数据规模较大，不需要每更新一个方格就保存一次图像，所以可以通过更改保存时机和保存步长来调整过程图的差分。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 整合保存过程图，通过求余除数调整步长</span></span><br><span class="line"><span class="keyword">if</span> step % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">    saveImage(plt)</span><br></pre></td></tr></table></figure>
+
+<p>在做了如上调整以后，对50*50的棋盘运行算法。</p>
+<p>为了观察渐变色的效果，先在空棋盘上尝试。</p>
+<p><img src="/matplotlib-algorithm-visualization/50x50-empty-init.png" alt="50*50空棋盘初始化"></p>
+<p>其运行过程如下：</p>
+<p><img src="/matplotlib-algorithm-visualization/50x50-empty-animated.gif" alt="50*50空棋盘过程"></p>
+<p>可以看到，结果最后成为了一张“光滑”的渐变色图。<br>这也符合广度优先搜索在没有墙壁的棋盘上的执行结果。</p>
+<p><img src="/matplotlib-algorithm-visualization/50x50-empty-result.png" alt="50*50空棋盘结果"></p>
+<p>下面在随机生成的50*50棋盘上执行。起点位于左下角，终点位于右上角。</p>
+<p><img src="/matplotlib-algorithm-visualization/50x50-init.png" alt="50*50棋盘初始化"></p>
+<p>运行过程如下：</p>
+<p><img src="/matplotlib-algorithm-visualization/50x50-animated.gif" alt="50*50棋盘过程"></p>
+<p>整个过程类似于洪水漫灌的效果，不同的颜色代表洪水到达时机（与起点的最短距离）的不同。<br>可以看到因为墙壁的影响，颜色的渐变出现了不均匀的现象。<br>但是也正是不同的渐变色直观地表现出方格与起点之间的距离关系。</p>
+<p><img src="/matplotlib-algorithm-visualization/50x50-result.png" alt="50*50棋盘结果"></p>
+<p>当然，也并不是所有的棋盘都能满足起点与终点连通的。<br>下面这个就是结果为Fail的例子。</p>
+<p><img src="/matplotlib-algorithm-visualization/50x50-fail-animated.gif" alt="50*50失败棋盘过程"></p>
+<p>结果图像中终点与其他未填色的方格都是不与起点连通的方格。</p>
+<p><img src="/matplotlib-algorithm-visualization/50x50-fail-result.png" alt="50*50失败棋盘结果"></p>
+<p>100*100棋盘的效果如下，起点位于左侧边缘的中点，终点位于右侧边缘的中点。</p>
+<p><img src="/matplotlib-algorithm-visualization/100x100-animated.gif" alt="100*100棋盘过程"></p>
+<p>由于数据规模增大，渐变色与距离的差分比例更小，所以渐变色也会更细腻一些。</p>
+<p><img src="/matplotlib-algorithm-visualization/100x100-result.png" alt="100*100棋盘结果"></p>
+<p>当然，宽与高不相等的矩形棋盘也可以适用。下图为100*50的棋盘，起点与中点分别位于左上角与右下角。</p>
+<p><img src="/matplotlib-algorithm-visualization/100x50-animated.gif" alt="100*50棋盘过程"></p>
+<p>不难发现，如果在没有墙壁的情况下，左上角到右下角的最短距离应为<code>height + width - 2</code>，即一直采取向右或者向下的移动行为。<br>因为墙壁的存在，有可能不得不采取向左或者向上的移动策略来形成最短路径，所以距离也有可能随之增加。</p>
+<p><img src="/matplotlib-algorithm-visualization/100x50-result.png" alt="100*50棋盘结果"></p>
+<h2 id="4-5-大规模数据"><a href="#4-5-大规模数据" class="headerlink" title="4.5 大规模数据"></a>4.5 大规模数据</h2><p>下面对大规模数据进行尝试。棋盘大小为1,000*1,000，共有1,000,000个方格。</p>
+<p>使用matplotlib生成初始化图像：</p>
+<p><img src="/matplotlib-algorithm-visualization/1000x1000-init.png" alt="1,000*1,000棋盘初始化"></p>
+<p>起点和终点的蓝色与红色早已被淹没在白色和灰色的像素点之间了。<br>这里说明一下，以左上角定点为原点，右方向为x轴正方向，下方向为y轴正方向的话，起点位于(100, 100)，终点位于(900, 900)。<br>如果把图片放大，就可以找到微小的蓝色与红色像素点。</p>
+<p>放大10倍以后的终点：</p>
+<p><img src="/matplotlib-algorithm-visualization/1000x1000-goal.png" alt="1,000*1,000棋盘终点"></p>
+<p>需要注意的是，棋盘大小已经达到1,000*1,000，需要留意单个方格与像素点的关系。<br>前文的例子中所有的方格均有灰色边框，由于边框本身就占据像素点，所以开启边框的话，结果很可能就被边框占满像素点，图像变成一片灰色。<br>因此在生成1,000*1,000棋盘的图片的时候，我提前把方格边框关掉了。<br>由于需要将1,000,000个方格的信息一个不漏地反映到坐标系中，而且还要以像素为单位地绘制一张分辨率为1,000*1,000以上的图片，matplotlib在生成这张图片的时候就消耗了数分钟的时间。</p>
+<p>由于绘制图像本身的时间成本太高，所以运行算法的过程只截取了确定距离为1,000的方格之后的图像。</p>
+<p><img src="/matplotlib-algorithm-visualization/1000x1000-in-processing.png" alt="1,000*1,000棋盘过程"></p>
+<p>感觉还蛮像花瓣或者墨水滴在纸上的样子，或者星空。<br>通过高粒度的差分才能生成如此自然的渐变色，不得不再次感叹自然界的神奇。</p>
+<p>算法的最终结果如下：</p>
+<p><img src="/matplotlib-algorithm-visualization/1000x1000-result.png" alt="1,000*1,000棋盘结果"></p>
+<p>方格的颜色从左上到右下以蓝、靛、紫、品红、红的顺序依次渐变，最后停留在右下角的终点处。<br>夹杂着的白色方格为被墙壁隔开的不可达区域。<br>最终计算出起点到终点的最短距离为1,644。<br>本来在2秒之内就可以运行完毕的算法，由于绘图逻辑的存在，运行时间超过了一个小时。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">program complete: 4146 seconds</span><br></pre></td></tr></table></figure>
+
+<p>再次为结果图像的艺术性惊奇的我一时兴起按照专辑封面的风格对其加工了一下：</p>
+<p><img src="/matplotlib-algorithm-visualization/1000x1000-result-jacket.jpg" alt="1,000*1,000棋盘结果专辑封面风"></p>
+<h1 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h1><p>利用matplotlib进行算法可视化的基本思路与插入log输出的思路类似，无非就是将算法过程中的状态以图片的方式留存下来。<br>这次的例子中是实时保存截图的方式来获取随时间变化的过程，此外还可以将时间作为图像坐标系的维度之一，将不同时间下的状态反映在同一个坐标系中。<br>因为matplotlib本身也支持3D绘图，所以在需要三维空间表示三维数组的数据演变过程的时候，这种思路同样适用。<br>另外，在获取最短路径的路线这种直到算法最后才知道正确结果的问题中，也可以在算法结束后自定义截图的保存方式，以获得更好的可视化效果。<br>像下面这个例子，在算法运算结束以后路径列表已经全部获取到了，但是为了表现出沿着路径到达终点的动态效果，在最后的绘图逻辑中仍然以遍历路径列表的方式按照单次移动为单位保存截图。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">BuildPath</span>(<span class="params">self, p, ax, plt, start_time</span>):</span><br><span class="line">    path = []</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        path.insert(<span class="number">0</span>, p) <span class="comment"># Insert first</span></span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.IsStartPoint(p):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            p = p.parent</span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> path:</span><br><span class="line">        rec = Rectangle((p.x, p.y), <span class="number">1</span>, <span class="number">1</span>, color=<span class="string">&#x27;g&#x27;</span>)</span><br><span class="line">        ax.add_patch(rec)</span><br><span class="line">        plt.draw()</span><br><span class="line">        <span class="variable language_">self</span>.SaveImage(plt)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>Reference Source:</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://paul.pub/matplotlib-basics/">Python绘图库Matplotlib入门教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54510444">路径规划之 A* 算法</a></li>
+</ol>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/Python/">Python</a>
+      
+      <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">可视化</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/javascript-code-reuse/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">JavaScript代码复用实践：从类定义到npm发布</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/p5js-beginning/">  
+        <span class="next-text nav-default">p5.js：JavaScript创意编程程式库</span>  
+        <span class="prev-text nav-mobile">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:guodjcn@yahoo.co.jp" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/7ma" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2017 - 2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">Kaku</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/js/src/lite-yt-embed.js"></script>
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>

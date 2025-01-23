@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="Vue入门开发笔记" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="JavaScript, Legacy, 前端, ただの書き捨て" />
+
+
+<meta name="baidu-site-verification" content="code-lm6MF8Dhbz" />
+
+
+<meta name="google-site-verification" content="cBAn-eAtzgB7WJGma4W-EoiKXnix6eV5jLcqJziUcGM" />
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/atom.xml" title="ただの書き捨て" type="application/atom+xml">
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://7ma.github.io/vue-beginning/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>Vue入门开发笔记 - ただの書き捨て</title>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ただの書き捨て</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">ただの書き捨て</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      Vue入门开发笔记
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2018-06-20
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BC%80%E5%A7%8B"><span class="toc-number">1.</span> <span class="toc-text">1.开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%80%E5%8F%91%E4%B8%8E%E9%83%A8%E7%BD%B2"><span class="toc-number">2.</span> <span class="toc-text">2.开发与部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-http%E8%AF%B7%E6%B1%82"><span class="toc-number">3.</span> <span class="toc-text">3.http请求</span></a></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <p>5月中旬到6月中旬这段时间，除了整毕设、准备工作以外，还有一件事就是带着俱乐部的学弟学妹们参加了IBM的一个聊天机器人的开发比赛。比赛中我负责Web端实现，第一次尝试使用Vue.js来写界面。这里做一点开发当中的笔记。</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="1-开始"><a href="#1-开始" class="headerlink" title="1.开始"></a>1.开始</h2><p>Vue（&#x2F;vjuː&#x2F;，音同view）是一套用于构建用户界面的渐进式框架。Vue的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。在本次开发过程中，我就是用Vue写的界面，然后内嵌到基于Express的Web应用当中。可以直接用<code>&lt;script&gt;</code>标签直接引用Vue.js文件，同时也可以用npm命令安装<code>vue-cli</code>工具来创建基于Vue的单页应用。本次开发我采用的是后者。</p>
+<pre><code>npm install --global vue-cli
+</code></pre>
+<p>在安装完毕以后，就可以在自己的工作目录下创建Vue项目了。创建命令如下：</p>
+<pre><code>vue init webpack your_project_name
+</code></pre>
+<p>项目名称<code>your_project_name</code>部分可替换。</p>
+<p>输入该命令之后，会进入项目设置阶段。</p>
+<p><code>Project name (test)</code>可以设置项目名称，直接回车就是使用括号里原来指定的名称（test）。</p>
+<p><code>Project description (A Vue.js project)</code>可以设置项目描述，括号里为缺省选项，直接回车即可。</p>
+<p><code>Author (****)</code>可以设置作者，同样括号里为缺省选项，不指定的话回车即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Runtime + Compiler: recommended for most users</span><br><span class="line">Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specific</span><br><span class="line">HTML) are ONLY allowed in .vue files - render functions are required elsewhere</span><br></pre></td></tr></table></figure>
+
+<p>这个选项是选择环境是仅运行时还是运行时+编译器，大部分用户推荐第一个。</p>
+<p><code>Install vue-router? (Y/n)</code>是询问是否安装<code>vue-router</code>。如果项目中需要使用路由的话推荐安装。但是因为本次开发是单页应用，而且之前已经使用Express配置过路由，因此我选择了“n”。</p>
+<p><code>Use ESLint to lint your code? (Y/n)</code>是询问是否使用ESLint管理代码。根据需要选择即可。</p>
+<p><code>Set up unit tests (Y/n)</code>询问是否安装单元测试。</p>
+<p><code>Setup e2e tests with Nightwatch? (Y/n)</code>询问是否安装e2e测试。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Should we run `npm install` for you after the project has been created? (reco</span><br><span class="line">mmended) (Use arrow keys)</span><br><span class="line">Yes, use NPM</span><br><span class="line">Yes, use Yarn</span><br><span class="line">No, I will handle that myself</span><br></pre></td></tr></table></figure>
+
+<p>这里是询问项目创建之后是否自动运行npm命令安装依赖包，推荐选择第一项。</p>
+<hr>
+<h2 id="2-开发与部署"><a href="#2-开发与部署" class="headerlink" title="2.开发与部署"></a>2.开发与部署</h2><p>在开发和部署过程中，我们用到最多的命令就是<code>npm run dev</code>和<code>npm run build</code>了。<code>npm run dev</code>的功能是在开发环境中测试页面，而<code>npm run build</code>的功能是部署当前工程生成build.js文件。在上面的图片中我们也能看到在to get started的指引下也有<code>npm run dev</code>命令。</p>
+<p>这两个命令的具体原理可以从package.json文件中得知。package.json文件中有如下字段：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;dev&quot;</span><span class="punctuation">:</span> <span class="string">&quot;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm run dev&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node build/build.js&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中dev对应的是使用webpack-dev-server打开build&#x2F;webpack.dev.conf.js，而build对应的是使用node打开build&#x2F;build.js文件。</p>
+<p>当用户执行<code>npm run dev</code>之后，默认设置下可以到 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080/</a> 查看页面效果。而当用户执行<code>npm run build</code>之后，用户可以在dist文件夹下看到新生成的build.js和build.js.map文件。之后只要将这两个文件复制到对应的服务器或者项目的文件夹下，就可以直接部署页面了。</p>
+<hr>
+<h2 id="3-http请求"><a href="#3-http请求" class="headerlink" title="3.http请求"></a>3.http请求</h2><p>在本次开发中，我用到了Vue的http请求，主要用来调用云端暴露出来的API并通过http来进行信息交换。要在Vue当中使用http请求，需要安装vue-resource。</p>
+<pre><code>npm install vue-resource
+</code></pre>
+<p>之后需要在项目的main.js文件中添加<code>import VueResource from ‘vue-resource’;</code>，然后用<code>Vue.use(VueResource)</code>来启用插件。</p>
+<p>Vue中的http请求函数如下所示。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//get方式</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">get</span>(<span class="string">&#x27;url&#x27;</span>,&#123;</span><br><span class="line">    <span class="attr">param1</span>:value1,  </span><br><span class="line">    <span class="attr">param2</span>:value2  </span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">response</span>)&#123;  </span><br><span class="line">    <span class="comment">// response.data中获取ResponseData实体</span></span><br><span class="line">&#125;,<span class="keyword">function</span>(<span class="params">response</span>)&#123;  </span><br><span class="line">    <span class="comment">// 发生错误</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//post方式</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">post</span>(<span class="string">&#x27;url&#x27;</span>,&#123;  </span><br><span class="line">    <span class="attr">param1</span>:value1,  </span><br><span class="line">    <span class="attr">param2</span>:value2  </span><br><span class="line">&#125;,&#123;  </span><br><span class="line">    <span class="attr">emulateJSON</span>:<span class="literal">true</span>  </span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">response</span>)&#123;  </span><br><span class="line">    <span class="comment">// response.data中获取ResponseData实体</span></span><br><span class="line">&#125;,<span class="keyword">function</span>(<span class="params">response</span>)&#123;  </span><br><span class="line">    <span class="comment">// 发生错误</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>Reference Source:</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://cn.vuejs.org/" title="https://cn.vuejs.org/">Vue.js</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hl0203/p/7138600.html" title="https://www.cnblogs.com/hl0203/p/7138600.html">关于vue的npm run dev和npm run build</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_21033663/article/details/79141632" title="https://blog.csdn.net/qq_21033663/article/details/79141632">VUE HTTP调用方式总结</a></li>
+</ol>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/JavaScript/">JavaScript</a>
+      
+      <a href="/tags/Legacy/">Legacy</a>
+      
+      <a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/korean-vowel-harmony/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">为什么有워,와,웨,왜，却没有ㅇ+ㅜ+ㅏ? -- 韩语元音的阴阳性与合成原则</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/master-examination-log/">  
+        <span class="next-text nav-default">东大情理CS修考备考记录（2017.10.15~2018.5.16）</span>  
+        <span class="prev-text nav-mobile">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:guodjcn@yahoo.co.jp" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/7ma" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2017 - 2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">Kaku</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/js/src/lite-yt-embed.js"></script>
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>

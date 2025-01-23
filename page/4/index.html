@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+
+<!-- Website keywords -->
+
+
+<meta name="baidu-site-verification" content="code-lm6MF8Dhbz" />
+
+
+<meta name="google-site-verification" content="cBAn-eAtzgB7WJGma4W-EoiKXnix6eV5jLcqJziUcGM" />
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/atom.xml" title="ただの書き捨て" type="application/atom+xml">
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://7ma.github.io/page/4/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>ただの書き捨て</title>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ただの書き捨て</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">ただの書き捨て</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="posts" class="posts">
+  
+  
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/javascript-ruby-grammar-extension/">JavaScript实现Markdown风格注音语法</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-12-05
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="0-原生Markdown实现注音的方式"><a href="#0-原生Markdown实现注音的方式" class="headerlink" title="0.原生Markdown实现注音的方式"></a>0.原生Markdown实现注音的方式</h1><p>原生的Markdown没有注音语法，如果想在Markdown中实现注音的话只能借助HTML的<code>&lt;ruby&gt;</code>标签。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ruby</span>&gt;</span>被注音文字<span class="tag">&lt;<span class="name">rt</span>&gt;</span>注音内容<span class="tag">&lt;/<span class="name">rt</span>&gt;</span><span class="tag">&lt;/<span class="name">ruby</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>实现效果如下：</p>
+<blockquote>
+<p><ruby>被注音文字<rt>注音内容</rt></ruby></p>
+</blockquote>
+<p>但是这种表示方式不仅麻烦，也不符合Markdown“所见即所得”的风格。所以下面借由JavaScript来实现Markdown风格的注音语法。</p>
+    <div class="read-more">
+      <a href="/javascript-ruby-grammar-extension/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/korean-chinese-character-words/">个人认为比较有趣的几个韩语汉字词</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-12-03
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h1><p>韩语作为汉字文化圈内的语言之一，词汇当中自然少不了汉字词的存在。据说韩语中有70%的词汇是汉字词，这个数据本身我没有特别调查过，也不打算作出太多质疑。但是的确的是日常生活中体感上并没有那么多比例的汉字词存在。这大概是因为这个比例毕竟只是从数量的角度考虑，并没有加入使用频率的权重。所以实际上也不怎么会真的出现一句韩语中每10个字就有7个字来源于汉字这种情况。除了上述原因以外，还有一个个人认为有可能的原因。毕竟韩语在表记上已经废除汉字，所以就算有些词汇真的是汉字词，如果不查字典或者不深究词源的话，可能根本也意识不到是汉字词。所以偶然在字典里看到已经十分熟悉的词，才发现是来自于哪几个汉字的时候，不禁会感觉意想不到地有趣。</p>
+<p>接触韩语这么长时间了，自诩应该也有一点词汇量储备了，其中当然也不乏大量的汉字词。包括上面说的那种藏得比较深的类型，这里就从个人角度总结几个感觉比较有趣的韩语汉字词。</p>
+    <div class="read-more">
+      <a href="/korean-chinese-character-words/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/korean-jul-alda-moleuda/">“줄”的知与不知</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-24
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="1-表示“方法”与“事实”的“줄”"><a href="#1-表示“方法”与“事实”的“줄”" class="headerlink" title="1.表示“方法”与“事实”的“줄”"></a>1.表示“方法”与“事实”的“줄”</h1><p>韩语当中有一个词汇“<strong>줄</strong>”，有“方法”与“事实”两层含义，前面可以用连体形接续。这个词通常不会单独出现，而是会和表示知道&#x2F;不知道的“<strong>알다</strong>”和“<strong>모르다</strong>”一起使用。而“<strong>줄</strong>”这个词的两层含义的区分，也恰恰与这两个动词有很大关系。不仅如此，“<strong>줄</strong>”前面的连体形的时态也会影响整个表达的含义。下面对不同形式的表达进行总结。</p>
+    <div class="read-more">
+      <a href="/korean-jul-alda-moleuda/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/korean-kleptocat/">「도둑고양이」≠「泥棒猫」#shorts</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-21
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="1-流浪猫的污名化事件"><a href="#1-流浪猫的污名化事件" class="headerlink" title="1.流浪猫的污名化事件"></a>1.流浪猫的污名化事件</h1><p>韩语里有这么一个词，叫“<strong>도둑고양이</strong>”。它是有表示“盗贼、小偷”的“<strong>도둑</strong>”和表示“猫”的“<strong>고양이</strong>”组成的。</p>
+<p>“小偷”和“猫”这两个词的组合不免让人想到偷吃人家里的食物的馋嘴猫。日语中也有同样构成的「泥棒猫」这个词。不仅如此，日语中的「泥棒猫」还有引申为偷干坏事的人、甚至于破坏他人恋爱或者婚姻关系的女性的负面含义。这么一看，“<strong>도둑고양이</strong>”仿佛也不会是什么好词的样子。</p>
+    <div class="read-more">
+      <a href="/korean-kleptocat/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/update-log-20211119/">Update Log</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-19
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%9D%82%E8%AE%B0/">杂记</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+
+    
+    <h3 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h3><ul>
+<li>以静态CSS与JS的形式引入YouTube嵌入组件优化库<a target="_blank" rel="noopener" href="https://github.com/paulirish/lite-youtube-embed">Lite YouTube Embed</a></li>
+<li>删除旧的YouTube嵌入组件原创样式与脚本</li>
+</ul>
+
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/crest-lovely-girl/">【Touhou / Retro Rock】Lovely Girl - Crest feat. LyuU【Korean Vocal / KR-JP Lyrics】</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-18
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E9%9F%B3%E4%B9%90%E5%8F%B0/">音乐台</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="Track"><a href="#Track" class="headerlink" title="Track"></a>Track</h1><p><lite-youtube videoid="rAuw4vEvlds"></lite-youtube></p>
+<p>Circle: <strong>Crest</strong><br>Origin: <strong>日本中の不思議を集めて（伊弉諾物質 ～ Neo-traditionalism of Japan）</strong><br>Original Composer: <strong>ZUN</strong><br>Arrangement: <strong>JeetSingh</strong><br>Lyrics: <strong>朧彦&amp;LyuU</strong><br>Vocal: <strong>LyuU</strong></p>
+    <div class="read-more">
+      <a href="/crest-lovely-girl/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/korean-declinable-words-base/">语基：封装思路在韩语中的运用典范</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-14
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="1-用言活用形-词干-活用词尾？"><a href="#1-用言活用形-词干-活用词尾？" class="headerlink" title="1.用言活用形 &#x3D; 词干 + 活用词尾？"></a>1.用言活用形 &#x3D; 词干 + 活用词尾？</h1><p>韩语作为黏着语，不可避免地会出现在<strong>用言词干的基础上添加各种各样的词尾</strong>来表示不同含义的情形。比如有比较简单的表并列的“<strong>词干+고</strong>”、状语化的“<strong>词干+게</strong>”这种固定形式的活用词尾，还有形容词现在连体形“<strong>词干+(으)ㄴ</strong>”、表假设的“<strong>词干+(으)면</strong>”这种根据词干末尾的终声有无而产生区分的活用词尾，甚至还有<strong>해요体</strong>以及<strong>해요体词干</strong>（해요体去요，即<strong>해体</strong>）后面加上“<strong>도</strong>”（表让步）、“<strong>라</strong>”（해라体命令式）等等有较为复杂的独自规则的活用词尾。</p>
+<p>韩语的用言词干很容易得到，只要把词典形的다去掉以后就是这个用言的词干。如此看来，似乎只要去厘清各种活用词尾不同的接续规则的话，之后直接把对应的词尾和词干拼接在一起就能得到想要的活用形式了。但是可惜事情并没有那么简单。</p>
+    <div class="read-more">
+      <a href="/korean-declinable-words-base/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/korean-issda-eobsda-gyesida/">名为“存在词”的深渊</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-11
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="1-韩语的存在词（존재사）"><a href="#1-韩语的存在词（존재사）" class="headerlink" title="1.韩语的存在词（존재사）"></a>1.韩语的存在词（존재사）</h1><p>韩语的用言可以分为四类：<strong>动词、形容词、存在词、指定词</strong>。动词与形容词的概念比较好理解，这里不赘述。存在词包含 <strong>“있다”、“없다”、“계시다”</strong>，主要涵盖了存在与否的概念。而指定词包含 <strong>“이다”、“아니다”</strong>，涵盖了是与非的概念。这两种用言由于独立于动词以及形容词，所以在语句成分分析、用言活用等有自己独特的定位与规则。本文针对存在词在这些方面的特性上进行部分性质的总结。</p>
+<p>需要提前说明的是，由于存在词本身定位比较模糊，某些概念甚至还有学术见解上的分歧，所以本文不会深究语言学层面的严谨性，仅就存在词本身的使用习惯进行能够满足自身好奇心的探究。</p>
+    <div class="read-more">
+      <a href="/korean-issda-eobsda-gyesida/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/korean-dallago-hada/">韩语的授受关系命令转述表达</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-10
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="1-授受关系-命令式-转述表达-？"><a href="#1-授受关系-命令式-转述表达-？" class="headerlink" title="1.授受关系 + 命令式 + 转述表达 &#x3D; ？"></a>1.授受关系 + 命令式 + 转述表达 &#x3D; ？</h1><p>在<a href="/korean-haela/#3-4-%E5%91%BD%E4%BB%A4%E8%BD%AC%E8%BF%B0%E8%A1%A8%E8%BE%BE">해라体与韩语转述表达</a>中曾经总结过各种语气的转述表达，其中就有命令转述表达。<br>在那个部分当中举了这么个例子：</p>
+<blockquote>
+<p>주문해 주십시오. 请您点餐。<br>점원이 주문하라고 해요. 店员叫我们点餐。</p>
+</blockquote>
+<p>虽然例子中是针对“주문하다”这个动作进行转述，但是实际上原文当中还有“주다”这个授受关系的标志存在。那么在转述的过程要想保留这个授受关系的话该怎么办呢？可能直观上来看直接改成“주라고 하다”好像就行了，但是实际上背后有更复杂的使用习惯。</p>
+    <div class="read-more">
+      <a href="/korean-dallago-hada/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+  <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/korean-haela/">해라体与韩语转述表达</a>
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-04
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+
+  <div class="post-content">
+    
+    
+    
+    
+    
+
+    
+    <h1 id="1-韩语的해라体（卑阶）"><a href="#1-韩语的해라体（卑阶）" class="headerlink" title="1.韩语的해라体（卑阶）"></a>1.韩语的해라体（卑阶）</h1><p>在<a href="/korean-honorific-forms/#2-%E5%B0%8A%E6%95%AC%E9%98%B6%EF%BC%88Formal-polite%EF%BC%89%E4%B8%8E%E5%B0%8A%E7%A7%B0%E8%AF%8D%E5%B0%BE%EF%BC%88Honorific%EF%BC%89">从动词活用的角度来看韩语敬语</a>一文当中曾经提到韩语当中有四个阶，分别是尊敬阶（합쇼体）、准尊敬阶（해요体）、不定阶（해体）、卑阶（해라体）。前三个阶可以说在日常生活中经常遇到，而해라体相对用得少一些。</p>
+<p>해라体通常用于与自己地位低的对象或者十分亲近的关系之间的会话当中，此外还会出现在书籍、新闻等客观叙述的语句当中。与其他阶一样，해라体也有对应的各种<a href="/korean-honorific-forms/#3-%E7%BB%88%E7%BB%93%E8%AF%8D%E5%B0%BE%EF%BC%88Sentence-final-forms%EF%BC%89">终结词尾</a>。下图以하다为例列举了해라体的5种终结词尾。</p>
+    <div class="read-more">
+      <a href="/korean-haela/" class="read-more-link">Read more..</a>
+    </div>
+    
+    
+  </div>
+
+  
+
+  
+
+</article>
+  
+    
+  <nav class="pagination">  
+      
+      <a class="prev" href="/page/3/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/page/5/">  
+        <span class="next-text">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  
+</section>
+        </div>
+          
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:guodjcn@yahoo.co.jp" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/7ma" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2017 - 2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">Kaku</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/js/src/lite-yt-embed.js"></script>
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>

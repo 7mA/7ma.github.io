@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="基数排序(Radix Sort)、计数排序(Counting Sort)与前缀和(Prefix sum)" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="Legacy, 算法, 排序, ただの書き捨て" />
+
+
+<meta name="baidu-site-verification" content="code-lm6MF8Dhbz" />
+
+
+<meta name="google-site-verification" content="cBAn-eAtzgB7WJGma4W-EoiKXnix6eV5jLcqJziUcGM" />
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/atom.xml" title="ただの書き捨て" type="application/atom+xml">
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://7ma.github.io/radix-sort-and-counting-sort/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>基数排序(Radix Sort)、计数排序(Counting Sort)与前缀和(Prefix sum) - ただの書き捨て</title>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ただの書き捨て</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">ただの書き捨て</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      基数排序(Radix Sort)、计数排序(Counting Sort)与前缀和(Prefix sum)
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2017-03-16
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E4%BA%8E%E6%AF%94%E8%BE%83%E7%9A%84%E6%8E%92%E5%BA%8F%E4%B8%8E%E9%9D%9E%E5%9F%BA%E4%BA%8E%E6%AF%94%E8%BE%83%E7%9A%84%E6%8E%92%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">1.基于比较的排序与非基于比较的排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F-Radix-Sort"><span class="toc-number">2.</span> <span class="toc-text">2.基数排序(Radix Sort)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F-Counting-Sort-%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C-Prefix-sum"><span class="toc-number">3.</span> <span class="toc-text">3.计数排序(Counting Sort)与前缀和(Prefix sum)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%9F%BA%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 基数的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%89%8D%E7%BC%80%E5%92%8C%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 前缀和的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%BC%80%E5%A7%8B%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 开始计数排序</span></a></li></ol></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <p>最近我在扩展英语的课上读了一篇与在多核GPU上优化排序算法相关的文章。由于本人对排序并没有过多研究，对于排序算法的了解恐怕只停留在数据结构课程涉及的那些，因此读文章时发现对一些排序算法的原理也是知之甚少。因此特地做一些笔记，以备后用。</p>
+<span id="more"></span>
+
+<h2 id="1-基于比较的排序与非基于比较的排序"><a href="#1-基于比较的排序与非基于比较的排序" class="headerlink" title="1.基于比较的排序与非基于比较的排序"></a>1.基于比较的排序与非基于比较的排序</h2><p>在谈排序算法之前，有两个概念需要了解：<strong>基于比较的排序</strong> <em>(Comparison-based sorting)</em> 和 <strong>非基于比较的排序</strong> <em>(Non-Comparison-based sorting)</em> 。如字面解释，基于比较的排序就是通过比较集合中的元素，通过比较两个元素的键值来决定位置（如数字的大小顺序，字母的字母表顺序），最后达到排序的目的。比如最简单的冒泡排序、选择排序都是典型的基于比较的排序。之所以说它们简单，一方面实现很简单，相信很多工科专业的同学在接触C时，都会做过实现冒泡排序的练习题；另一方面，从逻辑上来看， <strong>比较是最符合人类思维的排序方式。</strong> 无论是挑水果，还是挑女朋友，相信每个人都会从比较开始得出三六九等的。这些行为抽象出来的事物就是排序。因此我们接触排序，大多是从基于比较的排序开始的。</p>
+<p>那么非基于比较的排序又是什么呢？显然，既然基于比较的排序是通过比较键值来决定位置，那么非基于比较的排序的排序就是通过其他方式决定位置。事实上，非基于比较的排序是根据键值本身的定位特征来决定位置的，因此就不需要根据其键值的比较来决定其前后位置关系。后面提到的计数排序、基数排序都属于非基于比较的排序的范畴之内的。相比于基于比较的排序反复迭代的运算过程，<strong>非基于比较的排序的时间复杂度通常要比前者低</strong>。即便是快速排序，其在时间复杂度上的表现也不及本文提到的两个非基于比较的排序算法(O(nlgn)&gt;O(n))。但是，这通常是一种以空间换时间的后果（下文将详细说明）。</p>
+<h2 id="2-基数排序-Radix-Sort"><a href="#2-基数排序-Radix-Sort" class="headerlink" title="2.基数排序(Radix Sort)"></a>2.基数排序(Radix Sort)</h2><p>基数排序是非基于比较的排序算法，算法的时间复杂度是O(n+k)。相比于快速排序的O(nlgn)，从表面上看具有不小的优势。但事实上可能有些出入，因为基数排序的n可能具有比较大的基数k。因此在具体的应用中，应首先对这个排序函数的效率进行评估。</p>
+<p>基数排序的主要思路是，将所有待比较数值（<strong>注意，必须是正整数</strong>）统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次<strong>稳定排序</strong>。这样从最低位排序一直到最高位排序完成以后，数列就变成一个有序序列。<strong>因为整个过程并不是直接比较数值大小，而是通过对数值的各个数位排序来获得最终顺序，因此它是一个非基于比较的排序算法。</strong></p>
+<p>比如我们要对以下数列从小到大排序：621，497，961，16。以下是排序过程（粗体是排序位）。</p>
+<p>排序前：</p>
+<ul>
+<li>6 2 1</li>
+<li>4 9 7</li>
+<li>9 6 1</li>
+<li>0 1 6</li>
+</ul>
+<p>第一次排序（个位）：</p>
+<ul>
+<li>6 2 <strong>1</strong></li>
+<li>9 6 <strong>1</strong></li>
+<li>0 1 <strong>6</strong></li>
+<li>4 9 <strong>7</strong></li>
+</ul>
+<p>第二次排序（十位）：</p>
+<ul>
+<li>0 <strong>1</strong> 6</li>
+<li>6 <strong>2</strong> 1</li>
+<li>9 <strong>6</strong> 1</li>
+<li>4 <strong>9</strong> 7</li>
+</ul>
+<p>第三次排序（百位）：</p>
+<ul>
+<li><strong>0</strong> 1 6</li>
+<li><strong>4</strong> 9 7</li>
+<li><strong>6</strong> 2 1</li>
+<li><strong>9</strong> 6 1</li>
+</ul>
+<p>排序结果即为：16，497，621，961。</p>
+<p>两个问题:</p>
+<blockquote>
+<p><font color="black">“为什么要从低位到高位排序？”</p>
+</blockquote>
+<p>如果要从高位排序，那么次高位的排序会影响高位已经排好的大小关系。在数学中，数位越高，数位值对数的大小的影响就越大。从低位开始排序，就是对这种影响的排序。<strong>数位按照影响力从低到高的顺序排序，数位影响力相同则比较数位值</strong>。</p>
+<blockquote>
+<p><font color="black">“为什么要保证稳定排序？”</p>
+</blockquote>
+<p>稳定排序的意思是指，待排序<strong>相同</strong>元素之间的相对前后关系，在各次排序中不会改变。比如如果我们要排序的数列中有这样两个数字：128和164。当十位排序之后，128的位置会在164前面。当进行百位排序时，为了保证128和164两个数字的正确顺序，我们需要保证百位相同的这两个数能够保留十位的排序。因此我们需要使用稳定排序。</p>
+<h2 id="3-计数排序-Counting-Sort-与前缀和-Prefix-sum"><a href="#3-计数排序-Counting-Sort-与前缀和-Prefix-sum" class="headerlink" title="3.计数排序(Counting Sort)与前缀和(Prefix sum)"></a>3.计数排序(Counting Sort)与前缀和(Prefix sum)</h2><p>在刚刚谈到的基数排序中，我跳过了一个细节，即特定数位的排序的算法。当然，四个十进制数字在我们看来排起序来很简单，你可以用任何一种熟悉而又简单的稳定排序算法。<strong>目前比较流行的一种算法就是计数排序</strong>，与基数排序一样，这也是一种非基于比较的排序。</p>
+<p>计数排序是一个非基于比较的排序算法，该算法于1954年由 Harold H. Seward 提出。它的优势在于在对一定范围内的整数排序时，它的复杂度为Ο(n+k)（其中k是整数的范围，即基数），快于任何比较排序算法。当然这是一种牺牲空间换取时间的做法，而且当O(n+k)&gt;O(nlgn)的时候其效率反而不如基于比较的排序。</p>
+<h3 id="3-1-基数的概念"><a href="#3-1-基数的概念" class="headerlink" title="3.1 基数的概念"></a>3.1 基数的概念</h3><p>在说明计数排序的具体原理之前，先说明一个基本概念：<strong>基数</strong> *(radix)*。相信熟悉排序算法的同学对这个概念不会陌生。这其实集合系统中的概念。Wiki对基数这个概念给出了如下解释：</p>
+<blockquote>
+<p>In mathematical numeral systems, the radix or base is the number of unique digits, including zero, used to represent numbers in a positional numeral system. For example, for the decimal system (the most common system in use today) the radix is ten, because it uses the ten digits from 0 through 9.</p>
+</blockquote>
+<p>简单的说，就是某个数位上的可能出现的数字个数。如十进制下的基数就是10，因为十进制下的一个数位可能出现的数字是0~9共10个数字。所以我们可以说十进制是基10（radix-10）的。同理，基2、基4也是同理。<del>不要和我提八进制！</del></p>
+<h3 id="3-2-前缀和的概念"><a href="#3-2-前缀和的概念" class="headerlink" title="3.2 前缀和的概念"></a>3.2 前缀和的概念</h3><p>在计数排序中，我们还会使用到一个概念：<strong>前缀和</strong> *(prefix sum)*。</p>
+<p>Wiki上的前缀和：</p>
+<blockquote>
+<p>In computer science, the prefix sum, cumulative sum, inclusive scan, or simply scan of a sequence of numbers x0, x1, x2, … is a second sequence of numbers y0, y1, y2, …, the sums of prefixes (running totals) of the input sequence:<br>y0 &#x3D; x0<br>y1 &#x3D; x0 + x1<br>y2 &#x3D; x0 + x1+ x2<br>…</p>
+</blockquote>
+<p>比如自然数的前缀和如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">input numbers</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">…</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">prefix sum</td>
+<td align="center">1</td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">10</td>
+<td align="center">15</td>
+<td align="center">21</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+<p>我们主要用到的是数组前缀和。即：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s[<span class="number">1</span>]=a[<span class="number">1</span>]</span><br><span class="line">s[<span class="number">2</span>]=a[<span class="number">1</span>]+a[<span class="number">2</span>]</span><br><span class="line">s[<span class="number">3</span>]=a[<span class="number">1</span>]+a[<span class="number">2</span>]+a[<span class="number">3</span>]</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-开始计数排序"><a href="#3-3-开始计数排序" class="headerlink" title="3.3 开始计数排序"></a>3.3 开始计数排序</h3><p>了解了基数和前缀和的概念，我们就可以开始考虑计数排序的算法了。之前提到，计数排序是一种以空间换时间的算法，原因就在相较于基于比较的排序算法，它所需要的内存空间更多一些（如计数数组）。下面通过一个例子来阐述计数排序的原理。</p>
+<p>比如，我们要对6，2，8，6，2，4，9这个十进制数字数列进行从小到大的计数排序。</p>
+<p>首先我们要申请一个长度为基数的数组，在这个例子我们要申请的就是长度为10的数组<code>r[10]</code>。这个数组是对数列中出现的数字进行计数。比如数列出现了一个1，我们让<code>r[1]</code>自加1。</p>
+<p>之后我们要对待排数列进行一次扫描（pass），扫描过程中我们同时也对数组<code>r[10]</code>进行修改。这个例子中的<code>r[10]</code>在扫描过后的值如下所示。</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>n</code></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>r[n]</code></td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+<p>这样我们就获得了数列中每个数字的出现次数。</p>
+<p>接下来我们就要使用<code>r[10]</code>的前缀和来确定待排数列元素的位置。</p>
+<p>前缀和数组<code>s[n]</code>：</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>n</code></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>s[n]</code></td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">7</td>
+</tr>
+</tbody></table>
+<p>根据前缀和数组，我们可以获知的信息是小于某个大于0的数字<code>n</code>的数字个数<code>s[n-1]</code>（如果是0，小于0的数字个数自然是0，以下的<code>n</code>均大于0）。比如，我们想要知道待排数列中小于6的数字有几个，我们就可以查看<code>s[5]</code>，即3个。</p>
+<p>如此一来，知道了前面有几个小于<code>n</code>的数字个数(<code>s[n-1]</code>)，自然就知道了值为<code>n</code>应该在排序序列的第几个（从第几个开始，有几个放几个）。</p>
+<p>排序过程如下：</p>
+<p>（扫描0、1后，根据<code>r[0]</code>和<code>r[1]</code>获知原数组没有0和1，新数组均无变化，扫描2以后，<code>r[2]==2</code>，将两个2放入新数组）</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>n</code></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>a[n]</code></td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<p>（同理，扫描3、4以后）</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>n</code></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>a[n]</code></td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<p>（扫描5、6）</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>n</code></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>a[n]</code></td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">6</td>
+<td align="center">6</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<p>…</p>
+<p>最后结果：</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>n</code></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>a[n]</code></td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">6</td>
+<td align="center">6</td>
+<td align="center">8</td>
+<td align="center">9</td>
+</tr>
+</tbody></table>
+<hr>
+<p>看到这里想必很多人都明白为什么基数排序中的数位排序多使用计数排序了。基数排序的每一数位的排序都是针对某一进制下的单位数字进行排序，这与计数排序的应用范围十分吻合。再加上计数排序良好的时间复杂度，使得计数排序成为了基数排序最佳损友<del>简称基友</del>之一。当然也有很多其他排序也可以应用到基数排序中，如桶排序等。</p>
+<p>当然，也有一些不适用计数排序的场合。计数排序的时间复杂度是O(n+k)，其中n是待排数列长度，而k则是对应进制的基数。如果这个基数足够大，则很有可能导致时间复杂度很大，甚至大于一些基于比较的排序时，那么显然计数排序就不是最好的选择了。</p>
+<p>好了，以上就是基数排序与计数排序的基本概念与原理。关于基数排序的并行化，以及更多深入的性能分析，本文均未涉及。不过日后可能还会继续研究吧，毕竟也是手头这篇文章的研究方向。</p>
+<p>什么？你说代码实现呢？我还是先搞定扩展英语的weekly assignment再说吧……<del>其实就是懒</del></p>
+<hr>
+<p><strong>Reference Source:</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/sun/archive/2008/06/26/1230095.html" title="http://www.cnblogs.com/sun/archive/2008/06/26/1230095.html">算法总结系列之五: 基数排序(Radix Sort)</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Radix" title="https://en.wikipedia.org/wiki/Radix">Radix - Wikipedia</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Prefix_sum" title="https://en.wikipedia.org/wiki/Prefix_sum">Prefix sum - Wikipedia</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Counting_sort" title="https://en.wikipedia.org/wiki/Counting_sort">Counting sort - Wikipedia</a></li>
+</ol>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/Legacy/">Legacy</a>
+      
+      <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+      
+      <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/spring-beginning/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">Spring入门笔记</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:guodjcn@yahoo.co.jp" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/7ma" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2017 - 2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">Kaku</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/js/src/lite-yt-embed.js"></script>
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>

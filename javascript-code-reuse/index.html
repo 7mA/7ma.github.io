@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="JavaScript代码复用实践：从类定义到npm发布" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="JavaScript, npm, ただの書き捨て" />
+
+
+<meta name="baidu-site-verification" content="code-lm6MF8Dhbz" />
+
+
+<meta name="google-site-verification" content="cBAn-eAtzgB7WJGma4W-EoiKXnix6eV5jLcqJziUcGM" />
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/atom.xml" title="ただの書き捨て" type="application/atom+xml">
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://7ma.github.io/javascript-code-reuse/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>JavaScript代码复用实践：从类定义到npm发布 - ただの書き捨て</title>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ただの書き捨て</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">ただの書き捨て</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      JavaScript代码复用实践：从类定义到npm发布
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-01-26
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%8A%A8%E6%9C%BA"><span class="toc-number">1.</span> <span class="toc-text">1.动机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%93%AA%E4%BA%9B%E4%BB%A3%E7%A0%81%E8%AF%A5%E6%8B%BF%E6%9D%A5%E5%A4%8D%E7%94%A8%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">2.哪些代码该拿来复用？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E4%B8%8E%E6%96%87%E6%A1%A3%E7%94%9F%E6%88%90"><span class="toc-number">3.</span> <span class="toc-text">3.代码实现与文档生成</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%8F%91%E5%B8%83npm%E5%8C%85"><span class="toc-number">4.</span> <span class="toc-text">4.发布npm包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E8%BF%9C%E7%A8%8B%E4%BD%BF%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">5.远程使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">6.总结</span></a></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <h1 id="1-动机"><a href="#1-动机" class="headerlink" title="1.动机"></a>1.动机</h1><p>代码复用的概念自然不必赘述，因为本身就是十分自然的行为。把写过的代码复制粘贴过来，或者直接到网上抄，都算是代码复用。<br>代码复用的最终目的是为了减少重复劳动，提升效率，毕竟不需要重新敲同样的代码了。<br>不过上面这些属于体力劳动，好的代码复用还能减少重复的脑力劳动，让思路更清晰，把精力放在更需要创造性的地方。<br>说出来是很简单直白的道理，面向对象编程的概念也是老生常谈了。但是实际开发中好像确实没怎么有意识地思考过这个问题。<br>这次就通过自己整理的<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/linear-algebra-js-lib">线性代数JS库</a>，实践了一次JavaScript的代码复用过程。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="2-哪些代码该拿来复用？"><a href="#2-哪些代码该拿来复用？" class="headerlink" title="2.哪些代码该拿来复用？"></a>2.哪些代码该拿来复用？</h1><p>考虑二维坐标系中两条线段交点的问题。<br>这个问题有两个要素：</p>
+<ul>
+<li>如何得到线段</li>
+<li>如何求相交问题</li>
+</ul>
+<p>第一个问题，线段可以由两个端点确定。<br>所以对于线段，可以用下列类的伪代码表示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Ray&#123;</span><br><span class="line">  number x1,</span><br><span class="line">  number y1,</span><br><span class="line">  number x2,</span><br><span class="line">  number y2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>由于一个线段有两个端点，二维坐标系中一个点需要用两个数字表示其坐标，所以线段类需要维护4个成员变量（properties）。</p>
+<p>但是其实其中<code>x1</code>和<code>y1</code>描述的是同一个端点，其两者之间的关系要比与剩下两个的要更紧密。<br>所以可以进一步整合成员变量，将关系相近的变量两两整合成新的类，这里用向量表示。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Vector&#123;</span><br><span class="line">  number x,</span><br><span class="line">  number y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Ray&#123;</span><br><span class="line">  Vector v1,</span><br><span class="line">  Vector v2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如此一来就得到了两个类：线段类与向量类。<br>线段类中的成员变量缩减成了两个端点的位置向量了。</p>
+<p>不过，上面只思考了端点这一个重要属性。对于线段而言，还有一个重要属性，那就是长度。<br>如果用<code>Ray</code>类来求线段长度的话，方法是求两个端点的位置向量的差的模，涉及到幂与方根的运算。</p>
+<p>线段的长度这个很基本的属性，每次都需要这样运算的话，显然程序整体的运行过程不够精简。</p>
+<p>另外，对于两个平行线段而言，平行这一重要特征，也没有办法在端点的位置向量上直观体现出来，只能去运算模与端点单侧坐标差值的比值才能确定是否平行。</p>
+<p>也就是说，<strong>这个线段类的成员变量应该重新考虑</strong>。</p>
+<p>如果知道线段的一个端点的话，可以大体知道线段的位置，但是还有不知道的信息：</p>
+<ul>
+<li>线段的长度</li>
+<li>从端点出发延伸的角度，即线段的角度</li>
+</ul>
+<p>将这两个信息整合起来形成一个新的成员变量的话，就是线段的方向变量。</p>
+<p>重新设计线段类：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Vector&#123;</span><br><span class="line">  number x,</span><br><span class="line">  number y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Ray&#123;</span><br><span class="line">  Vector pos,</span><br><span class="line">  Vector way</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用线段其中一个端点的位置变量<code>pos</code>来确定线段的位置，用线段的方向变量<code>way</code>来表示线段的方向。</p>
+<p>这样，只需要计算<code>way</code>的模就可以确认线段的长度，比较两个线段是否平行也只需要比较<code>way</code>就可以了。</p>
+<p>但是还是会有不少想要获取线段端点位置的时候，线段端点位置直观上也算是线段的某一个属性。<br>但是线段的另一个端点的位置变量其实是可以通过<code>pos</code>和<code>way</code>计算出来的，如果再把它塞进到成员变量的话就会造成冗余和双主值的问题。</p>
+<p>这个时候最好的做法是用存取器（accessors）来表示这种可以用成员变量派生出来的属性。<br>存取器分为赋值器（setter）与取值器（getter），线段的端点通常是固定的，所以只使用取值器来表示。</p>
+<p>在线段类内添加端点位置的存取器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Vector&#123;</span><br><span class="line">  number x,</span><br><span class="line">  number y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Ray&#123;</span><br><span class="line">  Vector pos,</span><br><span class="line">  Vector way</span><br><span class="line"></span><br><span class="line">  get begin()&#123;&#125;</span><br><span class="line">  get end()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以用调用成员变量的方式（<code>ray.begin</code>）的方式来获取派生出来的属性了。</p>
+<p>第一个问题解决了，下面是第二个问题：如何求相交问题。</p>
+<p>在考虑线段相交之前，可以先考虑直线相交。</p>
+<p>比如求以下两条直线（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>1</mn></msub><mo mathvariant="normal">≠</mo><msub><mi>t</mi><mn>2</mn></msub><mo>∧</mo><msub><mi>t</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>t</mi><mn>2</mn></msub><mo>∈</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">t_{1} \neq t_{2} \wedge t_{1}, t_{2} \in R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span>）的交点：</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><msub><mi>t</mi><mn>1</mn></msub><mrow><mo fence="true">(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">y-y_{1}=t_{1}\left(x-x_{1}\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>−</mo><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><msub><mi>t</mi><mn>2</mn></msub><mrow><mo fence="true">(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>2</mn></msub><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">y-y_{2}=t_{2}\left(x-x_{2}\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span></li>
+</ul>
+<p>很简单的数学问题，交点<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\left (x, y\right ) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span>的坐标值分别如下：</p>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><msub><mi>t</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><msub><mi>t</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><msub><mi>y</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>−</mo><msub><mi>t</mi><mn>2</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">x=\frac{t_{1} x_{1}-t_{2} x_{2}-y_{1}+y_{2}}{t_{1}-t_{2}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.321764em;vertical-align:-0.44509999999999994em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8766639999999999em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.44509999999999994em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>
+<br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><msub><mi>t</mi><mn>1</mn></msub><mrow><mo fence="true">(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>1</mn></msub><mo fence="true">)</mo></mrow><mo>+</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">y=t_{1}\left(x-x_{1}\right)+y_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
+
+<p>把上述算式映射到<code>Ray</code>类可以发现，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">t_{1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">t_{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>分别就是方向向量y坐标与x坐标的比值，而定点<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\left (x_{1}, y_{1}\right )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\left (x_{2}, y_{2}\right )</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span>可以用端点的位置向量表示。这样就可以根据上述算式计算出交点的坐标。</p>
+<p>但是上述计算是在直线的前提之下，只要不平行必有交点，但是线段未必。通过上述算式计算出来的交点只是两条线段所在直线的交点，还需要计算交点是否同时位于两条线段上。</p>
+<p>如下图所示，线段<code>f</code>和线段<code>g</code>所在直线<code>h</code>和<code>i</code>的交点为<code>P</code>，但是线段<code>f</code>和线段<code>g</code>不相交。</p>
+<picture>
+    <source type="image/webp" srcset="/javascript-code-reuse/intersection-1.webp">
+    <source type="image/png" srcset="/javascript-code-reuse/intersection-1.min.png">
+    <img src="/javascript-code-reuse/intersection-1.min.png" alt="不相交的线段" />
+</picture>
+
+<p>下图的线段<code>g</code>与线段<code>f</code>所在直线<code>h</code>的交点为<code>P</code>，但是线段<code>f</code>和线段<code>g</code>也不相交。</p>
+<picture>
+    <source type="image/webp" srcset="/javascript-code-reuse/intersection-2.webp">
+    <source type="image/png" srcset="/javascript-code-reuse/intersection-2.min.png">
+    <img src="/javascript-code-reuse/intersection-2.min.png" alt="线段与直线相交" />
+</picture>
+
+<p>下图当中的线段<code>g</code>与线段<code>f</code>相交，交点为<code>P</code>。</p>
+<picture>
+    <source type="image/webp" srcset="/javascript-code-reuse/intersection-3.webp">
+    <source type="image/png" srcset="/javascript-code-reuse/intersection-3.min.png">
+    <img src="/javascript-code-reuse/intersection-3.min.png" alt="线段相交" />
+</picture>
+
+<p>观察图片可以发现只有交点<code>P</code>的x坐标同时位于线段<code>f</code>的端点<code>A</code>与<code>B</code>、以及线段<code>g</code>的端点<code>C</code>和<code>D</code>的x坐标之间的时候，点<code>P</code>才是线段的交点。<br>通过比较交点位置向量的x坐标和两条线段端点的x坐标（<code>ray.begin.x</code>、<code>ray.end.x</code>）可以判断。</p>
+<blockquote>
+<p>可以通过<a target="_blank" rel="noopener" href="https://www.geogebra.org/calculator/fenefjxu">GeoGebra</a>修改线段位置和长短来查看效果。</p>
+</blockquote>
+<p>将上述逻辑通过<code>intersection(Ray)</code>方法实现：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Vector&#123;</span><br><span class="line">  number x,</span><br><span class="line">  number y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Ray&#123;</span><br><span class="line">  Vector pos,</span><br><span class="line">  Vector way</span><br><span class="line"></span><br><span class="line">  get begin()&#123;&#125;</span><br><span class="line">  get end()&#123;&#125;</span><br><span class="line"></span><br><span class="line">  Vec intersection(Ray)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>至此第二个问题也得以解决。</p>
+<p>从解决上面两个问题的过程中，可以总结出关于代码复用的两个结论。</p>
+<ul>
+<li><strong>成员变量中心化</strong></li>
+</ul>
+<p>定义成员变量的时候，要考虑从这个成员变量到达各个派生出来的属性或者特定值的“最远距离”是不是比较均匀。<br>比如定义<code>Ray</code>类的时候，如果选用两个端点作为成员变量的时候，或许在位置计算上比较方便，但是在方向方面的运算比较复杂。<br>如果运用场景中恰恰又是方向运算多的话，就显得不灵活了。</p>
+<p>中心化往往伴随着直观化。回想在纸上画线段的样子，是不是也是从一个点起笔，沿着某个方向画下去？<br>或许数学上的定义突出两个端点的重要性，但是位置与方向是线段两个最直观的属性，两者兼顾的成员变量可以让类的方法实现显得更灵活，无论是成员变量还是方法，复用性都会得到提升。</p>
+<ul>
+<li><strong>繁琐逻辑黑盒化</strong></li>
+</ul>
+<p>上述求线段交点的问题中，谁都没法否认这是很简单的数学问题，但是同样谁也没法否认需要拿笔算算、拿纸画画才能得出结果。<br>这种数学原理简单但是运算繁琐的逻辑，如果每次都要重新考虑实现的话，会造成思维上、心理上的压力。<br>而且，还有随之而来的临界值问题，如果线段与坐标轴平行怎么办？两条线段平行的话怎么办？数值过大导致越界怎么办？<br>如果不是每次都能做到完整的临界值分析的话很容易出现错误。<br>将相同的逻辑集中在一个地方管理，那么再遇到类似问题不需要考虑内部逻辑直接使用即可，即使出错了集中对应以后也可以一劳永逸。</p>
+<p>综上，个人认为能够达到上述要求的代码适合实施代码复用。</p>
+<hr>
+<h1 id="3-代码实现与文档生成"><a href="#3-代码实现与文档生成" class="headerlink" title="3.代码实现与文档生成"></a>3.代码实现与文档生成</h1><p>在完善一些基本运算函数的基础之上，按照上述思路用JavaScript实现逻辑。</p>
+<blockquote>
+<p>源代码：<a target="_blank" rel="noopener" href="https://github.com/7mA/linear-algebra-js-lib/blob/master/src/linear-algebra-lib.js">https://github.com/7mA/linear-algebra-js-lib/blob/master/src/linear-algebra-lib.js</a></p>
+</blockquote>
+<p>虽然在实现之前就能把所有函数都能考虑到并且设计出来是理想状态，但是往往不太可能。<br>比如<code>Vec</code>类的<code>move()</code>方法就是在实际使用过以后才追加的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 移动向量</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; distance 移动距离</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; angle 移动角度</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">Vec</span>&#125; 移动以后的向量</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="title function_">move</span>(<span class="params">distance, angle</span>)&#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">add</span>(<span class="keyword">new</span> <span class="title class_">Vec</span>(<span class="title function_">cos</span>(angle), <span class="title function_">sin</span>(angle)).<span class="title function_">multi</span>(distance));</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到<code>move()</code>方法用到了已经定义好的<code>add()</code>和<code>multi()</code>方法。<br>追加的方法用到已经定义好的方法并不是冗余，相反正是复用性的体现。<br>的确沿某一个方向移动一定距离就可以看作是与该方向的单位向量与距离的积求和的过程。<br>但是在给定角度与距离之后，每一次都需要这样一次思考，显然是无意义的反复。<br>所以这里追加一个方法就可以省掉这样一步变换。</p>
+<p>另外关于是否需要更加细化，比如加一个<code>moveToLeft()</code>的方法表示向左移动的问题，我个人的看法是，行为是方法化的对象，怎样做行为应该交由参数来决定。这是为了增加方法的通用性，同时也是最大化复用性的做法。</p>
+<p>既然是用于复用的代码，清晰易懂的注释是必不可少的，同时还可以通过规范化的注释块来生成API的说明文档。</p>
+<p>首先类的注释块中需要说明类的逻辑定义和成员变量（properties）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 向量类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@prop</span> &#123;<span class="type">number</span>&#125; x 向量横坐标</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@prop</span> &#123;<span class="type">number</span>&#125; y 向量纵坐标</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<p>方法（methods）的注释块中除了函数说明以外，还需要说明参数和返回值的型与逻辑定义：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 计算两个向量的和</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">Vec</span>&#125; b 向量和运算对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">Vec</span>&#125; 向量的和</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<p>存取器（accessors）的注释块与方法的有区别，指定的不是返回值而是型：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 线段起点的位置向量</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@type</span> &#123;<span class="type">Vec</span>&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@readonly</span></span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<p>因为<code>Ray</code>类里的起点和终点位置变量只设置了取值器（getter），所以注释中增加了<code>@Readonly</code>注解。</p>
+<p>在填写完足够的注释以后，可以用<a target="_blank" rel="noopener" href="https://jsdoc.app/">JSDoc</a>生成API说明文档。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g jsdoc</span><br></pre></td></tr></table></figure>
+
+<p>到项目根目录里使用下列命令生成文档：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsdoc ./src README.md -c ./conf.json</span><br></pre></td></tr></table></figure>
+<p>其中<code>./src</code>和<code>README.md</code>为生成文档的对象，JSDoc会到<code>./src</code>目录下寻找所有的js文件并且生成html格式的文档，并且将<code>README.md</code>内的内容显示在首页。<br><code>-c</code>选项为指定配置文件，以下是配置文件的内容举例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;opts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;template&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node_modules/tui-jsdoc-template&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;destination&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./docs/&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;templates&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;liner-algebra-js-lib API Docs&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中<code>opts.template</code>可以设置生成页面使用的模版，<code>opts.destination</code>可以指定生成的页面文件的目录。默认值为<code>./out/</code>。<br><code>templates</code>选项下可以设置模版内的相关内容，比如<code>templates.name</code>设置的是页面的共通标题。</p>
+<p>生成效果可以参考<a href="https://7ma.github.io/linear-algebra-js-lib/">liner-algebra-js-lib API Docs</a>。</p>
+<hr>
+<h1 id="4-发布npm包"><a href="#4-发布npm包" class="headerlink" title="4.发布npm包"></a>4.发布npm包</h1><p>如此一来，本地已经有了源代码和说明文档。为了能够更加方便地运用，放到云端是一个好的措施。<br>当然甩到github上，用的时候再复制粘贴好像也能用，毕竟刚开始行数又不多。<br>但是在一些云端的开发环境或者在线的编辑器当中，并没有充足的地方来多塞上额外的JS代码，所以果然最理想的状态还是能远程调用。<br>利用npm将库打包发布以后，就可以使用CDN远程访问了。</p>
+<p>打包之前首先要把项目目录初始化成一个npm项目。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line"></span><br><span class="line">name: (linear-algebra-js-lib)</span><br><span class="line">version: (1.0.0)</span><br><span class="line">description:</span><br><span class="line">entry point: (index.js)</span><br><span class="line"><span class="built_in">test</span> <span class="built_in">command</span>:</span><br><span class="line">git repository:</span><br><span class="line">keywords:</span><br><span class="line">author:</span><br><span class="line">license: (ISC) MIT</span><br></pre></td></tr></table></figure>
+
+<p>按照实际情况填写各字段，括号内为默认值。</p>
+<p>之后需要到<a target="_blank" rel="noopener" href="https://www.npmjs.com/">npm官网</a>注册账号。<br>注册完毕以后，就可以在本地登陆了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm adduser    </span><br><span class="line"></span><br><span class="line">Username:</span><br><span class="line">Password:</span><br><span class="line">Email:</span><br></pre></td></tr></table></figure>
+
+<p>最后可以用<code>npm who am i</code>来确认一下登陆状态，登陆成功就可以开始发布操作了。</p>
+<p>在打包发布之前需要定义一下<code>.npmignore</code>文件。与<code>.gitignore</code>文件类似，其中定义了项目目录下不会被打包上传的内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/**/*</span><br><span class="line">!src/linear-algebra-lib.js</span><br><span class="line">!ACKNOWLEDGEMENT</span><br></pre></td></tr></table></figure>
+
+<p>上述配置意味着除了<code>src/linear-algebra-lib.js</code>以外的内容都不会被打包上传。</p>
+<p>使用下列命令打包发布：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></table></figure>
+
+<p>之后可以到npm的个人主页上查看自己的包是否发布成功，或者干脆直接用安装命令试试能不能安装也可以。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i linear-algebra-js-lib</span><br></pre></td></tr></table></figure>
+
+<p>在npm的<code>package.json</code>中有一个<code>version</code>字段，表示提交时包的版本。<br>npm在版本控制上比较严格，要求提交的版本必须比已发布的版本高。<br>所以需要手动更改<code>package.json</code>的<code>version</code>字段，或者使用<code>npm version &lt;update_type&gt;</code>命令。</p>
+<p>npm的版本格式为<code>x.y.z</code>，被成为“语义化版本（Semantic versioning）”。<br>版本的更新应符合以下规则：</p>
+<ol>
+<li>修复bug或者小改动，增加<code>z</code>，如<code>1.0.0 -&gt; 1.0.1</code></li>
+<li>增加新特性，但是可以向后兼容，增加<code>y</code>，如<code>1.0.1 -&gt; 1.1.0</code></li>
+<li>有较大改动，无法向后兼容，增加<code>x</code>，如<code>1.1.1 -&gt; 2.0.0</code></li>
+</ol>
+<p>可以用<code>npm version &lt;update_type&gt;</code>命令按照上述规则自动更改版本。<br><code>&lt;update_type&gt;</code>可以为<code>patch</code>、<code>minor</code>、<code>major</code>，分别对应上述三条规则。</p>
+<p>成功发布以后，就可以到<a target="_blank" rel="noopener" href="https://www.jsdelivr.com/">jsdelivr</a>搜索查看自己的包，用CDN链接访问JS文件了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/npm/linear-algebra-js-lib@1.1.8/src/linear-algebra-lib.min.js</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="5-远程使用"><a href="#5-远程使用" class="headerlink" title="5.远程使用"></a>5.远程使用</h1><p>发布成功以后，就可以不受开发环境限制地远程使用自己的包了。</p>
+<p>下面是在<a target="_blank" rel="noopener" href="https://codepen.io/">CodePen</a>的在线开发环境中使用<code>linear-algebra-js-lib</code>的示例。<br>鼠标拖拽可以移动十字中心点的位置，左右方向键可以旋转十字的角度，黄色的点代表蓝色十字与黑色井字的交点。<br>通过左下角的Resources按钮可以看到远程调用的JS文件。</p>
+<p class="codepen" data-height="405" data-theme-id="light" data-default-tab="js,result" data-user="7ma" data-slug-hash="KKgjzwB" style="height: 405px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="p5js-linear-algebra-lib">
+  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/7ma/pen/KKgjzwB">
+  p5js-linear-algebra-lib</a> by Kaku (<a target="_blank" rel="noopener" href="https://codepen.io/7ma">@7ma</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+<p>从上面的示例可以看到，只要知道角度和距离，通过十字中心点来确定四个方向的端点只需要一个<code>move()</code>函数就可以解决，不需要关心到底是怎么计算的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vpBeamList = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span> ; i &lt; <span class="number">4</span>; i++)&#123;</span><br><span class="line">  vpBeamList.<span class="title function_">push</span>(</span><br><span class="line">    <span class="title class_">Ray</span>.<span class="title function_">getRayFromPoints</span>(</span><br><span class="line">      vp.<span class="property">pos</span>,</span><br><span class="line">      vp.<span class="property">pos</span>.<span class="title function_">move</span>(<span class="number">75</span>, vp.<span class="property">angle</span> + i * <span class="variable constant_">PI</span> / <span class="number">2</span>)</span><br><span class="line">    )</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>绘制交点也不需要实现复杂的运算过程就可以简单完成：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> hl <span class="keyword">of</span> horizontalLineList)&#123;</span><br><span class="line">  <span class="keyword">let</span> crossPosVec = vpBeam.<span class="title function_">intersection</span>(hl);</span><br><span class="line">  <span class="keyword">if</span>(crossPosVec)&#123;</span><br><span class="line">    <span class="title function_">point</span>(crossPosVec.<span class="property">x</span>, crossPosVec.<span class="property">y</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h1><p>说到最后代码复用其实也不是什么华丽的技巧，甚至还略显朴素。<br>但是程序的设计就是一点点累积的，小处井井有条，才有能变大的那一天。<br>注重代码复用，才能让既存代码积累成日后的经验加成，而不是运用和维护的债务。<br>毕竟不是什么程序都可以像hackthon的作品那样做完就扔的。</p>
+<hr>
+<p><strong>Reference Source:</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://qiita.com/zaburo/items/c90ab1a3d7751f610d27">JSDocの書き方・出力メモ</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/69d1949799ea">打包发布到NPM并通过CDN访问</a></li>
+</ol>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/JavaScript/">JavaScript</a>
+      
+      <a href="/tags/npm/">npm</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/p5js-self-propelled-points/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">Self-propelled Points：用p5.js实现追踪自走点</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/matplotlib-algorithm-visualization/">  
+        <span class="next-text nav-default">matplotlib实现算法可视化</span>  
+        <span class="prev-text nav-mobile">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:guodjcn@yahoo.co.jp" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/7ma" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2017 - 2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">Kaku</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/js/src/lite-yt-embed.js"></script>
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>

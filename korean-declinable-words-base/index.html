@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="语基：封装思路在韩语中的运用典范" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="韩语, 动词活用, 语基, 面向对象设计, ただの書き捨て" />
+
+
+<meta name="baidu-site-verification" content="code-lm6MF8Dhbz" />
+
+
+<meta name="google-site-verification" content="cBAn-eAtzgB7WJGma4W-EoiKXnix6eV5jLcqJziUcGM" />
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/atom.xml" title="ただの書き捨て" type="application/atom+xml">
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://7ma.github.io/korean-declinable-words-base/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>语基：封装思路在韩语中的运用典范 - ただの書き捨て</title>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ただの書き捨て</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">ただの書き捨て</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      语基：封装思路在韩语中的运用典范
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2021-11-14
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">语言学习</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%94%A8%E8%A8%80%E6%B4%BB%E7%94%A8%E5%BD%A2-%E8%AF%8D%E5%B9%B2-%E6%B4%BB%E7%94%A8%E8%AF%8D%E5%B0%BE%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">1.用言活用形 &#x3D; 词干 + 活用词尾？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E8%AF%AD%E5%9F%BA%EF%BC%9A%E8%AF%8D%E5%B9%B2%E4%B8%8E%E6%B4%BB%E7%94%A8%E5%BD%A2%E7%9A%84%E4%B8%AD%E9%97%B4%E5%BD%A2%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">2.语基：词干与活用形的中间形式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E7%AC%ACI%E8%AF%AD%E5%9F%BA"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 第I语基</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E7%AC%ACII%E8%AF%AD%E5%9F%BA"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 第II语基</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E7%AC%ACIII%E8%AF%AD%E5%9F%BA"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 第III语基</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E8%AF%AD%E5%9F%BA%E7%9A%84%E6%89%A9%E5%B1%95%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">3.语基的扩展应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E8%AF%AD%E5%9F%BA%E4%B8%8E%E6%B4%BB%E7%94%A8%E8%AF%8D%E5%B0%BE%E7%9A%84%E5%B9%B6%E8%AE%B0%E5%BD%A2%E5%BC%8F"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 语基与活用词尾的并记形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%B4%BB%E7%94%A8%E8%AF%8D%E5%B0%BE%E7%9A%84%E8%AF%AD%E5%9F%BA"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 活用词尾的语基</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E8%AF%AD%E5%9F%BA%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text">4.语基的一些局限性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E4%B8%A4%E6%9D%A1%E2%80%9C%E6%BC%8F%E7%BD%91%E4%B9%8B%E9%B1%BC%E2%80%9D"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 两条“漏网之鱼”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E2%80%9C%E6%9C%9D%E4%B8%89%E6%9A%AE%E5%9B%9B%E2%80%9D%E4%B9%8B%E5%AB%8C"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 “朝三暮四”之嫌</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E8%AF%AD%E5%9F%BA%E5%BA%94%E7%94%A8%E6%A1%88%E4%BE%8B%EF%BC%9A%E4%BB%8E%E8%AF%AD%E5%9F%BA%E8%A7%92%E5%BA%A6%E7%9C%8B%E7%94%A8%E8%A8%80%E7%BC%A9%E7%95%A5%E8%AF%AD%E7%9A%84%E6%B4%BB%E7%94%A8%E9%99%90%E5%88%B6"><span class="toc-number">5.</span> <span class="toc-text">5.语基应用案例：从语基角度看用言缩略语的活用限制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-%E8%AF%AD%E5%9F%BA%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F"><span class="toc-number">6.</span> <span class="toc-text">6.语基的前世今生</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-%E4%B8%AA%E4%BA%BA%E8%AE%A4%E4%B8%BA%E8%AF%AD%E5%9F%BA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-number">7.</span> <span class="toc-text">7.个人认为语基优秀的地方</span></a></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <h1 id="1-用言活用形-词干-活用词尾？"><a href="#1-用言活用形-词干-活用词尾？" class="headerlink" title="1.用言活用形 &#x3D; 词干 + 活用词尾？"></a>1.用言活用形 &#x3D; 词干 + 活用词尾？</h1><p>韩语作为黏着语，不可避免地会出现在<strong>用言词干的基础上添加各种各样的词尾</strong>来表示不同含义的情形。比如有比较简单的表并列的“<strong>词干+고</strong>”、状语化的“<strong>词干+게</strong>”这种固定形式的活用词尾，还有形容词现在连体形“<strong>词干+(으)ㄴ</strong>”、表假设的“<strong>词干+(으)면</strong>”这种根据词干末尾的终声有无而产生区分的活用词尾，甚至还有<strong>해요体</strong>以及<strong>해요体词干</strong>（해요体去요，即<strong>해体</strong>）后面加上“<strong>도</strong>”（表让步）、“<strong>라</strong>”（해라体命令式）等等有较为复杂的独自规则的活用词尾。</p>
+<p>韩语的用言词干很容易得到，只要把词典形的다去掉以后就是这个用言的词干。如此看来，似乎只要去厘清各种活用词尾不同的接续规则的话，之后直接把对应的词尾和词干拼接在一起就能得到想要的活用形式了。但是可惜事情并没有那么简单。</p>
+<span id="more"></span>
+
+<p>关于用言活用的特殊规则，在此之前不止一篇文章有涉及到，其中最典型的当属<a href="/korean-pronunciation-drop/">脱落规则</a>了。也就是说拿到词干与对应词尾以后，在把它们拼接在一起之前，还需要根据特定的发音脱落规则进行调整，之后才能得到正确的形式。</p>
+<p>除了这种“微调”性质的规则以外，也千万不能忘记“实力劝退初学者”的<a href="/haeyo-habnida-summary/#2-%ED%95%B4%EC%9A%94%E4%BD%93">해요体以及其背后各种各样的变则</a>。해요体的活用词尾看似可以写成“<strong>아&#x2F;어요</strong>”，但是由于发音缩略以及种类繁多的变则的存在，“<strong>아&#x2F;어요</strong>”这个词尾形式并不能起到充分的概括作用。</p>
+<p>上述两点虽然在用言活用中是需要格外注意的地方，但是好在这些都是初级内容的重点部分，而且各自都有比较成型的规则体系。所以只要充分练习足够熟练的话，实际运用中倒也可以达到得心应手的程度。而且无论是脱落规则还是해요体，在适用过特殊规则以后，反观其活用形式大体上还是符合“<strong>词干+（经过调整的）活用词尾</strong>”的形式的。</p>
+<p>然而这种“<strong>词干+活用词尾</strong>”的思维方式在一些变则下则会显得很不灵活。下面观察一下“<strong>무겁다</strong>（沉重）”与表假设的“ <strong>(으)면</strong> ”相接续的例子。</p>
+<p>무겁다这个词的词干是“<strong>무겁</strong>”，词干结尾有终声，按照基本规则应当和“<strong>으면</strong>”相结合。ㅂ也不触发脱落规则，所以结果大概应当是“무겁으면”。</p>
+<p>但是实际上正确的形式是“<strong>무거우면</strong>”。上面的问题在于忽略了<strong>ㅂ变则</strong>。ㅂ变则这个概念在해요体出现过，比如무겁다的해요体适用ㅂ变则（ㅂ -&gt; 워요），应当是“<strong>무거워요</strong>”。这个ㅂ变则实际上在其他活用中也存在。</p>
+<ul>
+<li><strong>쉽다 + (으)시다 -&gt; 쉬우시다</strong></li>
+<li><strong>무겁다 + (으)ㄴ -&gt; 무거운</strong></li>
+<li><strong>돕다 + (으)ㅁ -&gt; 도움</strong></li>
+</ul>
+<p>看到这里不免会产生疑惑，明明词尾形式是“(으)면”，那这个“우면”是不是该算作“(으)면”的一个变种？也许可以根据ㅂ变则另定一个词尾形式叫“우면”，但是这样的话是不是上面列举出来的所有活用都要添一个“우시”、“운”、“움”这样的特殊形式呢？不仅如此，“词干”部分的“무거”是不是又要加一个什么“ㅂ遇우脱落”的规则呢？</p>
+<p>可以看到“用言活用形 &#x3D; 词干 + 活用词尾”这个构成法，在适用变则的时候普适性比较差。那么有没有什么其他让规则更整齐的思维方式呢？</p>
+<hr>
+<h1 id="2-语基：词干与活用形的中间形式"><a href="#2-语基：词干与活用形的中间形式" class="headerlink" title="2.语基：词干与活用形的中间形式"></a>2.语基：词干与活用形的中间形式</h1><p>回头仔细观察一下上面这些适用ㅂ变则的用言与活用词尾，它们之间似乎有一个共性：用言的词干似乎都是在经过“<strong>ㅂ -&gt; 우</strong>”的变形以后再加上活用词尾的，而且这些活用词尾都是“<strong>以(으)开头</strong>”的。如果把这个经过“<strong>ㅂ -&gt; 우</strong>”变形以后的部分看作一种“进阶形词干”的话，活用词尾的接续都是直接适用词干结尾无终声的形式（“면”、“시다”、“ㄴ”等）。那么针对这种共性，就可以将这个为了适用某一类活用词尾而进行特定变形的“进阶形词干”抽离出来，这就是韩语用言的“<strong>语基（어기、base）</strong>”。</p>
+<p>可以看出，语基分类的关键在于活用词尾的归类。看似数量庞大种类繁多的韩语用言活用，其实可以简单地分成三类：以“고”、“게”为代表的<strong>直接用词干接续的活用</strong>、以“(으)면”、“(으)시”为代表的<strong>词尾以“(으)”开头的活用</strong>、以“아&#x2F;어도”、“아&#x2F;어라”为代表的<strong>用해요体词干（해体）接续的活用</strong>。上面三类活用对应的语基分别称为<strong>第I语基、第II语基、第III语基</strong>。</p>
+<p>三种语基有各自的构造方式，也需要考量各种变则。但是语基一经构造以后，可以<strong>适用于其对应类别下的所有活用词尾</strong>，可以说是 <strong>词干适配活用词尾以后的“中间形式”</strong>。而且以“(으)”开头或者해요体词干接续的活用词尾当中的那些变化因素，其实都只与语基有关。所以甚至都<strong>可以将으的有无、해요体里的元音阴阳性这些不确定因素通通放入用言的语基当中，将活用词尾统一化</strong>。下面详细说明三种语基的构造方式。</p>
+<h2 id="2-1-第I语基"><a href="#2-1-第I语基" class="headerlink" title="2.1 第I语基"></a>2.1 第I语基</h2><p>第I语基适用于直接用词干接续的活用，所以第I语基的构造方式比较简单，就是<strong>在考虑ㄹ脱落规则以后的词干</strong>。</p>
+<p>用语基来看待活用的话，可以认为定言式活用是“<strong>第I语基 + 겠</strong>”，表并列的活用是“<strong>第I语基 + 고</strong>”，动词现在连体形是“<strong>第I语基 + 는</strong>”。</p>
+<p>如果把第I语基看作是一个独立概念的话，用言的词典形也可以看作是“<strong>第I语基 + 다</strong>”得来的。</p>
+<p>上文说到第I语基是在考虑ㄹ脱落规则以后的词干，也就是说第I语基其实还是会根据活用词尾的初声发生ㄹ脱落现象的。比如울다这个词，在定言式活用（第I语基 + 겠）中第I语基是词干本身“<strong>울</strong>”（울 + 겠），但是在现在连体形（第I语基 + 는）里第I语基就是ㄹ脱落以后的“<strong>우</strong>”（우 + 는，适用SPOrN法则）。</p>
+<h2 id="2-2-第II语基"><a href="#2-2-第II语基" class="headerlink" title="2.2 第II语基"></a>2.2 第II语基</h2><p>第II语基适用于词尾以“(으)”开头的活用。根据前文的例子可以得知，不同用言的第II语基也会有很大变化。</p>
+<p>首先来看不适用任何变则的正则形式，基于“<strong>将活用词尾统一化</strong>”的目的，首先可以将으的有无直接归到第II语基当中。如此一来，词干结尾无终声的用言的第II语基就是词干本身，而词干结尾有终声的用言的第II语基是“<strong>词干 + 으</strong>”。</p>
+<ul>
+<li><strong>먹다 -&gt; 먹으</strong></li>
+<li><strong>받다 -&gt; 받으</strong></li>
+<li><strong>보다 -&gt; 보</strong></li>
+<li><strong>주다 -&gt; 주</strong></li>
+</ul>
+<p>如此一来，所有原本词尾以“(으)”开头的活用都可以变成“<strong>第II语基+去掉‘(으)’的活用词尾</strong>”的形式了。例如“词干 + (으)ㄴ”可以写成“<strong>第II语基 + ㄴ</strong>”，“词干 + (으)면”可以写成“<strong>第II语基 + 면</strong>”，使活用词尾统一化。</p>
+<p>与第I语基一样，第II语基亦需要考量脱落规则。</p>
+<ul>
+<li><strong>그렇다 -&gt; 그러</strong>（ㅎ与으相消）</li>
+<li><strong>울다 -&gt; 우(ㄹ)</strong> （으遇ㄹ脱落，ㄹ遵循SPOrN法则）</li>
+</ul>
+<p>例如表假设的“<strong>第II语基 + 면</strong>”和尊称活用“<strong>第II语基 + 시</strong>”，同样是适用第II语基的活用，울다的表假设的活用形式为“<strong>울면</strong>”，第II语基为“울”，而尊称活用形式为“<strong>우시</strong>”，第II语基为“우”。</p>
+<p>下面考虑变则。变则在해요体中已经提到过了，像ㅎ变则本质上是脱落规则，으变则和르变则不适用于해요体以外的活用，所以第II语基涉及到的变则基本上只包含<strong>ㄷ变则、ㅂ变则、ㅅ变则</strong>。与해요体中的对应规则类似，第II语基的各种变则可以总结如下。</p>
+<ul>
+<li>ㄷ变则：<strong>ㄷ -&gt; ㄹ으</strong>（例：<strong>듣다 -&gt; 들으</strong>）</li>
+<li>ㅂ变则：<strong>ㅂ -&gt; 去ㅂ + 우</strong>（例：<strong>뜨겁다 -&gt; 뜨거우</strong>）</li>
+<li>ㅅ变则：<strong>ㅅ -&gt; 去ㅅ + 으</strong>（例：<strong>짓다 -&gt; 지으</strong>）</li>
+</ul>
+<p>可以看到，即使是涉及到了变则，各种活用仍然符合“<strong>第II语基+去掉‘(으)’的活用词尾</strong>”的形式。</p>
+<ul>
+<li>尊称活用：<strong>듣다 -&gt; 들으시</strong>（第II语基 + 시）</li>
+<li>表假设：<strong>뜨겁다 -&gt; 뜨거우면</strong>（第II语基 + 면）</li>
+<li>表目的：<strong>짓다 - &gt;지으러</strong>（第II语基 + 러）</li>
+</ul>
+<p>如此一来，不仅有效简化了活用词尾的形式，甚至还让本身就与用言自身有关的变则与活用词尾隔离开来，排除了复杂化活用词尾的因素，同时使变则的适用范围局限于语基内部。</p>
+<h2 id="2-3-第III语基"><a href="#2-3-第III语基" class="headerlink" title="2.3 第III语基"></a>2.3 第III语基</h2><p>第III语基适用于用해요体词干（해体）接续的活用，所以第III语基一言以蔽之，就是<strong>해요体词干（해体）本身</strong>。</p>
+<p>当然，能一言以蔽之的原因绝对不是因为第III语基简单，而是<strong>各种变则已经被包含在해요体的活用规则当中了</strong>。所以只要能够正确理解并使用해요体的话，第III语基的构造就不在话下了。</p>
+<p>将第III语基看作一个独立概念的话，해요体也可以用“<strong>第III语基 + 요</strong>”的形式来表示。此外，过去式活用也可以用“<strong>第III语基 + ㅆ</strong>”的形式表示，表原因的活用可以用“<strong>第III语基 + 서</strong>”的形式表示。</p>
+<hr>
+<h1 id="3-语基的扩展应用"><a href="#3-语基的扩展应用" class="headerlink" title="3.语基的扩展应用"></a>3.语基的扩展应用</h1><h2 id="3-1-语基与活用词尾的并记形式"><a href="#3-1-语基与活用词尾的并记形式" class="headerlink" title="3.1 语基与活用词尾的并记形式"></a>3.1 语基与活用词尾的并记形式</h2><p>上文中分别列举了三种语基对应的活用案例，可以看到在规定了语基的应用范围以后，以前的活用分类方法似乎就有点“过时”了。比如，用第II语基来表示活用时，活用词尾开头的“(으)”这个用来下定义的特征都消失了，这还怎么去反过来规定第II语基对应哪些活用呢？亦或是해요体本身都是“第III语基 + 요”了，再用해요体来定义第III语基的话就有嵌套定义之嫌了。事实上，在导入语基概念以后，可以采用“ <strong>[语基编号]-[活用词尾]</strong> ”这种语基与活用词尾并记的形式，从活用本身定义的层面上去规定该使用哪种语基。举例如下：</p>
+<ul>
+<li>动词现在连体形：第I语基 + 는 -&gt; <strong>I-는</strong></li>
+<li>动词过去连体形：第II语基 + ㄴ -&gt; <strong>II-ㄴ</strong></li>
+<li>形容词过去连体形：第III语基 + ㅆ던 -&gt; <strong>III-ㅆ던</strong></li>
+<li>未来连体形：第II语基 + ㄹ -&gt; <strong>II-ㄹ</strong></li>
+</ul>
+<p>和“词干 + (으)ㄴ”、“았&#x2F;었던”等传统记法相比，<strong>语基与活用词尾的并记形式不仅在表述上精简了不少，在定义上也因为语基的存在而涵盖了脱落、变则等特殊规则</strong>。</p>
+<h2 id="3-2-活用词尾的语基"><a href="#3-2-活用词尾的语基" class="headerlink" title="3.2 活用词尾的语基"></a>3.2 活用词尾的语基</h2><p>语基除了一般的用言以外，还可以应用在一部分活用词尾上。</p>
+<p>比如尊称活用“II-시”，还可以接着构造活用词尾“시”的三种语基。</p>
+<ul>
+<li>第I语基：<strong>시</strong></li>
+<li>第II语基：<strong>시</strong></li>
+<li>第III语基：<strong>시어(셔&#x2F;세)</strong></li>
+</ul>
+<p>那么接下来就可以用这三种语基去构造更复杂的尊称表达了，下面以주다为例。</p>
+<ul>
+<li>尊称活用해요体（<strong>II-시 + III-요 &#x3D; II-세요</strong>）：<strong>주다 -&gt; 주 -&gt; 주시 -&gt; 주세요</strong></li>
+<li>用尊敬语询问意愿（<strong>II-시 + II-ㄹ래요 &#x3D; II-실래요</strong>）：<strong>주다 -&gt; 주 -&gt; 주시 -&gt; 주실래요</strong></li>
+</ul>
+<p>类似的还有定言式活用“I-겠”，过去式活用“III-ㅆ”，其各自的活用词尾的语基分别如下。</p>
+<p><img src="/korean-declinable-words-base/01.png" alt="겠与ㅆ的语基"></p>
+<p>这样就可以去构造定言式或者过去式的各种表达了。</p>
+<ul>
+<li>알다 + 하쇼体定言式（<strong>I-겠 + I-습니다 &#x3D; I-겠습니다</strong>）：<strong>알다 -&gt; 알 -&gt; 알겠 -&gt; 알겠습니다</strong></li>
+<li>아프다 + 表原因的过去式（<strong>III-ㅆ + II-니까 &#x3D; III-ㅆ으니까</strong>）：<strong>아프다 -&gt; 아파 -&gt; 아팠 -&gt; 아팠으니까</strong></li>
+</ul>
+<hr>
+<h1 id="4-语基的一些局限性"><a href="#4-语基的一些局限性" class="headerlink" title="4.语基的一些局限性"></a>4.语基的一些局限性</h1><h2 id="4-1-两条“漏网之鱼”"><a href="#4-1-两条“漏网之鱼”" class="headerlink" title="4.1 两条“漏网之鱼”"></a>4.1 两条“漏网之鱼”</h2><p>看似可以提高韩语用言活用规则整合性的语基系统，很可惜的是依然有无法用单一形式表示出来的活用。这样的“漏网之鱼”有两个：<strong>动词해라体陈述式和하쇼体陈述式</strong>。</p>
+<p>回顾一下动词해라体陈述式的规则：</p>
+<ul>
+<li>词干末尾有ㄹ以外的终声：<strong>词干 + 는다</strong></li>
+<li>词干末尾无终声&#x2F;终声为ㄹ：<strong>词干 + ㄴ다</strong></li>
+</ul>
+<p>看似是直接词干接续活用词尾的形式，两种活用词尾的差分，也就是开头的“느”，却无法和词干拼在一起凑成三种语基中的任何一种。也就是说，<strong>不存在一种语基与活用词尾的并记形式，可以用来表述动词해라体陈述式的活用的</strong>。这种情况只能退而求其次，表述成如下形式：</p>
+<ul>
+<li>动词해라体陈述式：<strong>I-는다&#x2F;II-ㄴ다</strong></li>
+</ul>
+<p>当词干末尾无终声时，第II语基与第I语基相同。词干末尾终声为ㄹ时，原本第II语基末尾会出现的으因为遇到ㄹ而脱落，这样第II语基还是会退化成第I语基。所以II-ㄴ다也可以表述成<strong>I-ㄴ다</strong>。</p>
+<p>类似地，再来看看하쇼体陈述式（也就是广为人知的합니다体）的规则：</p>
+<ul>
+<li>词干末尾有ㄹ以外的终声：<strong>词干 + 습니다</strong></li>
+<li>词干末尾无终声&#x2F;终声为ㄹ：<strong>词干 + ㅂ니다</strong></li>
+</ul>
+<p>与动词해라体陈述式类似，两种活用词尾的差分“스”无法并入词干凑成语基，所以하쇼体陈述式的语基与活用词尾的并记形式为：</p>
+<ul>
+<li>하쇼体陈述式：<strong>I-습니다&#x2F;II-ㅂ니다</strong></li>
+</ul>
+<p>同样，无论是词干末尾无终声还是终声为ㄹ，第II语基与第I语基都相同，所以II-ㅂ니다也可以写成<strong>I-ㅂ니다</strong>。</p>
+<p>说到这，不免会有这个疑问：<strong>既然第II语基与第I语基都相同，为什么首选写成II-ㅂ니다而不是I-ㅂ니다呢？</strong></p>
+<p>这一点其实在<a href="/korean-pronunciation-drop/#4-%E3%84%B9%E8%84%B1%E8%90%BD%E4%B8%8E%E2%80%9CSPOrN%E2%80%9D%E6%B3%95%E5%88%99">韩语脱落现象盘点</a>也稍稍触及了一些。在过去的韩语当中，在词干末尾有终声的情况下也有将하쇼体陈述式表述成“<strong>词干 + 읍니다</strong>”的情况。这样一来，与词干末尾无终声的“<strong>词干 + ㅂ니다</strong>”结合来看的话，“II-ㅂ니다”这个表记方法是可以涵盖住这两种活用词尾的。所以为了兼顾这一历史渊源，这里也沿用了“II-ㅂ니다”的形式。由此来看，之所以会出现“漏网之鱼”，也许也与语言的演变本身有关。</p>
+<h2 id="4-2-“朝三暮四”之嫌"><a href="#4-2-“朝三暮四”之嫌" class="headerlink" title="4.2 “朝三暮四”之嫌"></a>4.2 “朝三暮四”之嫌</h2><p>整篇文章写到这里，仿佛无意中会造成一个假象：好像用言活用被简化了，只要考虑“<strong>语基+单一模式的活用词尾</strong>”就行。但是需要注意的是，<strong>变则、脱落，该用到的特殊规则一点也没有简化</strong>。相反，集中于语基内部的规则，反而会导致在构造语基时令人感觉更加繁杂的结果。这样，等到真的自己动脑开始构造新词汇的语基时就会不禁觉得：<strong>这不就是朝三暮四吗？这种障眼法实际上又有什么意义？</strong></p>
+<p>首先需要承认的是，<strong>语基本身的复杂性是语基的局限性之一</strong>。无论是语基系统，还是传统的“词干+活用词尾”的思维模式，需要面对的语法规则的数量是相同的，同一个用言的活用形式也一定是相同的，这是一个殊途同归的过程。区别仅仅在于<strong>在得到活用形式的过程中如何“收纳”这些规则</strong>而已。传统的“词干+活用词尾”的思维模式，需要在活用词尾上反映出词干末尾终声有无导致的规则变化，还需要在构造过程中根据词干与词尾的搭配考虑脱落、变则这类特殊规则。而语基系统相当于把上面这些变化过程一股脑儿地扔进语基里，构建语基的复杂程度也就可想而知了。</p>
+<p>但是还有一点不可忽视的是，<strong>语基的构造具有一劳永逸的特点</strong>。将脱落、变则等等概念与语基绑定在一起的话，那么再遇到对应的活用词尾的时候，只要简单地做一个“语基+活用词尾”的加法就可以了，剩下的变化都是在语基内部完成的。反观“词干+活用词尾”的思路，很难说成是一个简单的相加思路吧。既然해요体那么复杂，为什么上文中对第III语基的解释还是可以一笔带过？就是因为在해요体中，变则与活用本身已经紧紧绑定在一起了，所以再遇到用到해요体词干（해体）的活用时，自然就可以省掉一部分构造过程了。不难看出，语基最大的意义果然还是第II语基的出现，语基概念的诞生无非就是把“<strong>해요体词干（해体） -&gt; 第III语基</strong>”这个思路推广到所有活用上罢了。</p>
+<hr>
+<h1 id="5-语基应用案例：从语基角度看用言缩略语的活用限制"><a href="#5-语基应用案例：从语基角度看用言缩略语的活用限制" class="headerlink" title="5.语基应用案例：从语基角度看用言缩略语的活用限制"></a>5.语基应用案例：从语基角度看用言缩略语的活用限制</h1><p>下面尝试用语基的思路去看待一个以前探究过的语法现象：<a href="/korean-abbreviated-verbs-conjugations/">用言缩略语的活用限制</a>。</p>
+<p>在上面那篇文章已经得出结论：<strong>用言缩略语不能与元音开头的活用词尾相结合</strong>。那么这个结论的语基版本是什么呢？</p>
+<p><img src="/korean-abbreviated-verbs-conjugations/summary.png" alt="summary"></p>
+<p>上表是5个用言缩略语与其各自对应的原形的活用一览。10个词汇×10个活用举例，整整100个单元格。虽然远远没有达到能涵盖所有活用的程度，但是借此其实就能看出一些规律了。</p>
+<p>前4列的活用（“고”、“는”、“지”、“니?”）都是直接词干加活用词尾的形式（ <strong>I-[活用词尾]</strong> ），虽然过程会发生ㄹ脱落现象，但是前后都不抵触“用言缩略语不能与元音开头的活用词尾相结合”这个规则，所以可以看到这些缩略语都可以适用这些活用。也就是说，<strong>这些用言缩略语的第I语基都是存在的</strong>。</p>
+<p>再看后4列的活用（“(으)니”、“(으)면”、“(으)ㄴ”、“(으)ㅁ”），都是词尾“以(으)开头”的活用（ <strong>II-[活用词尾]</strong> ）。可以看到5个用言缩略语当中，갖다和딛다不存在对应活用，而머물다、서둘다、서툴다则存在对应活用。这背后的原因，在上面那篇文章也有提到。虽然这些活用词尾以(으)开头，但是如果依照脱落规则导致으脱落以后，这些活用就不以元音开头，进而可以适用于用言缩略语了。머물다、서둘다、서툴다的词干以ㄹ结尾，所以으会脱落，而갖다和딛다的词干末尾的终声并不能让으脱落，活用词尾会保持元音开头的状态。这就是前者三个词汇可以适用，后者两个词汇不可以适用的原因。这也就意味着，<strong>머물다、서둘다、서툴다的第II语基是存在的，而갖다和딛다的第II语基是不存在的</strong>。</p>
+<p>最后看第5、6列的情况。可以看到第5列的活用“아&#x2F;어”本身就是第III语基本身（可以表示为 <strong>III-∅</strong> ），而第6列“았&#x2F;었”就是过去式活用 <strong>III-ㅆ</strong>。由于活用词尾都是以元音开头的，所以5个用言缩略语都不存在对应的活用。这也就是说，<strong>这些用言缩略语的第III语基都是不存在的</strong>。</p>
+<p>这样就可以从语基角度来将这些用言的活用限制总结成表如下。</p>
+<p><img src="/korean-declinable-words-base/02.png" alt="用言缩略语的语基"></p>
+<p>可以看到，原本用活用词尾的话10列都概括不全的规则，现在用语基来区分的话3列就可以全部涵盖住了，<strong>孰优孰劣一目了然</strong>。</p>
+<p>如果观察一下那些不存在的“语基”的话，可以发现它们都有一个特点，就是它们的最后一个音节都是单独的元音（으, 어, 아）。所以如果模仿“用言缩略语不能与元音开头的活用词尾相结合”来总结一个属于语基角度的结论的话，就是<strong>用言缩略语的语基只有在最后一个音节不是单独的元音时才成立</strong>。</p>
+<hr>
+<h1 id="6-语基的前世今生"><a href="#6-语基的前世今生" class="headerlink" title="6.语基的前世今生"></a>6.语基的前世今生</h1><p>这么一个别具一格的语法思路，还有一个神奇的地方。那就是，<strong>其实绝大部分的Korean native speaker根本不知道有语基这个概念</strong>。不是说没有听说过这个语法术语，而是连这个构词思路都未曾有过，Korean native speaker普遍还是以“词干 + 活用词尾”的思路为主。这背后其实也与“语基”这个概念复杂的历史有关。（由于涉及到历史，仅限本节以“朝鲜语”称呼Korean language）</p>
+<p>朝鲜语的语基这个概念最早诞生在近现代的日本，是日本的语言学家根据日语用言的六个活用形（未然形・连用形・终止形・连体形・假定形・命令形）的思路，将朝鲜语用言的活用形式进行分类总结而得出来的体系。</p>
+<p>首先先回顾一下日语的活用形的概念。以「読む」为例，下文列出各种活用形式的构造过程：</p>
+<ul>
+<li>否定形：<strong>よま</strong>（未然形） + ない　→　読まない</li>
+<li>ます形：<strong>よみ</strong>（连用形） + ます　→　読みます</li>
+<li>て形：<strong>よん</strong>（连用形） + で　→　読んで</li>
+<li>表假设：<strong>よめ</strong>（假定形） + ば　→　読めば</li>
+</ul>
+<p>可以看到，日语用言的活用形式的构成是“<strong>活用形 + 接尾辞</strong>”的思路。其中活用形与接尾辞以及最后要获得到的形式和含义有特定的绑定关系，比如否定形必须要用未然形的「よま」来接续否定接尾辞「ない」，两者缺一不可。也就是说日语的用言活用有以下特点：</p>
+<ul>
+<li><strong>用言本身有若干种活用形，根据不同情况有特定的使用区分</strong></li>
+<li><strong>根据后面的接尾辞使用哪一种活用需要遵循特定规则</strong></li>
+</ul>
+<p>那么在回过头来看看朝鲜语传统的活用思路。“<strong>词干 + 活用词尾</strong>”当中的词干，是直接从词典形去掉다得到的形态。也就是说一个用言的词干是只会有一种形式的。活用形式的区别仅仅在于活用词尾的不同。但是上文的种种例子也说明了，活用词尾与词干接续的过程中，一些依存于用言本身特征的规则也被归到活用词尾当中的话，势必就会造成活用词尾的复杂化。所以将这些依存于用言本身特征的规则抽象出来，模仿日语中的活用形的思路将这些规则与用言词干相结合，根据活用词尾特征进行分类并构造若干个新的形式，规定新形式与活用词尾的绑定关系，这样就得到今天所看到的语基体系了。</p>
+<p>语基这个概念在朝鲜半岛也曾经占有一席之地。日占时期，朝鲜半岛曾经实行过一系列的朝鲜语规范化政策与运动。其中主导“朝鲜语学研究会”的朴胜彬曾经提倡过以语基思路来考虑词干定位的观点。但是由于在与同为语言学家的周时经的学术争论中败下阵来，所以自此语基这个概念就没有得到半岛本土的重视。</p>
+<p>类似语基的思路并不只在日本与朝鲜半岛上出现过。1954年，前苏联的朝鲜语学者哈拉多维奇（Холодович）也在自己的《朝鲜语语法概论（Очерк грамматики корейского языка）》中提到将用言词干分为“第1词干”、”第2词干”、“第3词干”的观点，其背后的思路也与语基如出一辙。</p>
+<p>但是，随着二战结束，朝鲜半岛南北分治，双方的官方语言管理机构（此外还包括中国的朝鲜语规范委员会）在规范朝鲜语时均没有采用语基这一思路，而是继续用传统的“词干 + 活用词尾”的方式来看待用言活用。所以今天朝鲜语的“语基”这个概念也仅仅在日本国内的外语学术界和一部分朝鲜语学习者之间才会被提及到。</p>
+<hr>
+<h1 id="7-个人认为语基优秀的地方"><a href="#7-个人认为语基优秀的地方" class="headerlink" title="7.个人认为语基优秀的地方"></a>7.个人认为语基优秀的地方</h1><p>下面仅就个人看法来谈谈语基这个思路优秀在哪里。首先语基这个概念在日本仍然存在，原因除了有学术意义上的历史价值以外，还有一个就是通过语基来构造活用形式这个思路与日语的“活用形”这个概念很类似，贴合日语母语者的思维习惯。所以在日本的一部分韩语教学当中语基还是会作为一个便利的教学工具而被使用，这也是日本的一部分韩语使用者推崇语基这一概念的原因。但是就我个人而言，首先并不是日语母语者，而且在学习日语的时候根本没有像日本的国语课当中那样学习过活用形之类的，所以从“思维习惯”角度上来看很难说语基有什么利好与辅助作用。</p>
+<p>但是随着接触到的语法越来越多，需要记住的活用词尾也多起来以后，我才开始感受到了语基的便利之处。之前也有说过，传统的“词干+活用词尾”的思路意味着特殊规则的概念都落到了各个活用词尾上，也就意味着每个活用都有一套属于自己的特殊规则，每次变形都要套用一次。但是其实这些规则是有共性的，何不把有共性的部分提前拿出来，等到需要用的时候直接就用呢？语基其实做的就是这件事情。传统思路与语基思路的活用过程可以分别总结成如下伪代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 传统（词干+活用词尾）</span><br><span class="line">function 获得活用形式(用言, 活用词尾)&#123;</span><br><span class="line">  词干 = 用言.取词干();</span><br><span class="line">  if 词干末尾无终声 &#123;</span><br><span class="line">    活用词尾形式 = 活用词尾的无终声形式;</span><br><span class="line">    return 词干 + 活用词尾形式;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    switch(词干末尾终声)&#123;</span><br><span class="line">      case ㄹ/ㅎ:</span><br><span class="line">        // 适用脱落规则</span><br><span class="line">        词干 = 适用脱落规则(词干, 活用词尾);</span><br><span class="line">        活用词尾形式 = 活用词尾.根据脱落规则取活用词尾形式(词干末尾终声);</span><br><span class="line">        break;</span><br><span class="line">      case ㅅ/ㄷ/ㅂ:</span><br><span class="line">        // 适用变则</span><br><span class="line">        变则 = 活用词尾.取变则规则(词干末尾终声);</span><br><span class="line">        词干 = 适用变则(词干, 变则);</span><br><span class="line">        活用词尾形式 = 活用词尾.根据变则取活用词尾形式(词干末尾终声); //变则适用后活用词尾形式和词干末尾终声的有无没有直接关系</span><br><span class="line">        break;</span><br><span class="line">      default:</span><br><span class="line">        活用词尾形式 = 活用词尾的有终声形式;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">    return 词干 + 活用词尾形式;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 语基思路</span><br><span class="line">function 获得活用形式(用言, 活用词尾)&#123;</span><br><span class="line">  语基 = 用言.取语基(活用词尾);</span><br><span class="line">  if 语基以ㄹ结尾 &#123;</span><br><span class="line">    语基 = 适用ㄹ脱落规则(语基, 活用词尾); // 只有ㄹ脱落是有可能发生在语基与词尾之间的脱落现象</span><br><span class="line">  &#125;</span><br><span class="line">  return 语基 + 活用词尾;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写成伪代码的话就能够看出，如果把根据“词干末尾有没有终声、是什么终声”判断活用规则这个具有一定共性的思维过程提取出来的话，就不需要每碰到一个新活用就重复进行类似判断了，这是一个提高语法<strong>复用性</strong>的过程。此外，词干末尾的终声怎样这个问题本来就与用言本身的关系更大一些，所以把这部分的判断交给用言本身来做的话，可以提升<strong>聚合度</strong>、降低<strong>耦合度</strong>。最后，将这个结合抽象成一个不依赖活用词尾的“语基”概念，并且在其他活用中直接引用，这也就达到了<strong>封装</strong>的目的。用 <strong>面向对象设计（OOD）</strong> 的思路重新看待语基的话，也许就能形象地理解语基到底优秀在哪里了。<strong>语基的诞生过程可以说是封装思路的典型实践。</strong></p>
+<p>当然和其他应用了OOD的系统一样，语基的优点也是建立在复用次数多的基础之上的。就像如果只需要算一个“1+1&#x3D;2”的话，自然就不需要写一个相加函数，但是如果是成千上万次类似的运算的话，当然还是抽象成一个函数比较好。<strong>语基的优点也只有接触了足够多的语法与活用词尾之后才能显现出来</strong>。此外，除了本文列出来的例子以外，语基内部还有其他各种各样的变则存在，这些变则的复用程度也各有不同。所以就算是同一个语基，<strong>那些用得不多的内部规则也没有必要达到像常用规则那样熟练</strong>。这也是为什么整篇文章从头到尾我都没有列出一个通用的“用言语基一览”之类的表格的原因。</p>
+<p>语基的确不算是韩语语法的核心概念，有没有语基都不影响整个韩语语法体系，语基也不会直接简化韩语语法的复杂程度。但是语基背后的思路却很适合推广到整个语言习得的过程中：<strong>通过接触与模仿来观察哪些内容是重复使用的，牢记那些重复使用的内容，并且尽量不把思维活动花费在这些重复内容的构造上</strong>。如此一来，无论是语法规则还是整个语言才能工具化起来，让有限的思维资源更多地分配到自己想要表达的东西上。</p>
+<hr>
+<p><strong>Links:</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="http://encykorea.aks.ac.kr/Contents/Item/E0035903">어기(語基) - 한국민족문화대백과사전</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.tufs.ac.jp/ts/personal/choes/kouza/yoketu/goki.html">要訣・朝鮮語 ― 語基</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.tufs.ac.jp/ts/personal/choes/cgi-bin/chilpan/clfvks.cgi?no=26&reno=25&oya=25&mode=msgview&page=10">研究室の黒板</a></li>
+<li><a target="_blank" rel="noopener" href="https://aichiu.repo.nii.ac.jp/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=7820&item_no=1&page_id=13&block_id=17">植民地期朝鮮における親日派の民族運動　──朴勝彬の自治・文化運動を中心に──</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.penguin99.com/04_grammar/gobi/type_miscellaneous/mnida_seumnida.html">初級までの朝鮮語・初級から先の朝鮮語｜文法の特効薬：ㅂ니다と습니다について</a></li>
+<li><a href="www.tufs.ac.jp/ts/personal/choes/korean/shojiten/katuyo.html">用言活用一覧表</a></li>
+</ol>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/%E9%9F%A9%E8%AF%AD/">韩语</a>
+      
+      <a href="/tags/%E5%8A%A8%E8%AF%8D%E6%B4%BB%E7%94%A8/">动词活用</a>
+      
+      <a href="/tags/%E8%AF%AD%E5%9F%BA/">语基</a>
+      
+      <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1/">面向对象设计</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/crest-lovely-girl/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">【Touhou / Retro Rock】Lovely Girl - Crest feat. LyuU【Korean Vocal / KR-JP Lyrics】</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/korean-issda-eobsda-gyesida/">  
+        <span class="next-text nav-default">名为“存在词”的深渊</span>  
+        <span class="prev-text nav-mobile">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:guodjcn@yahoo.co.jp" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/7ma" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2017 - 2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">Kaku</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/js/src/lite-yt-embed.js"></script>
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>

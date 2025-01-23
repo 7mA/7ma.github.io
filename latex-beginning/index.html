@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="LaTeX使用入门" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="LaTeX, 论文, Legacy, ただの書き捨て" />
+
+
+<meta name="baidu-site-verification" content="code-lm6MF8Dhbz" />
+
+
+<meta name="google-site-verification" content="cBAn-eAtzgB7WJGma4W-EoiKXnix6eV5jLcqJziUcGM" />
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/atom.xml" title="ただの書き捨て" type="application/atom+xml">
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="https://7ma.github.io/latex-beginning/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>LaTeX使用入门 - ただの書き捨て</title>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">ただの書き捨て</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+    <a href="/archives/">
+      <li class="mobile-menu-item">
+        
+        
+        Archives              </li>
+    </a>
+    
+    <a href="/tags/">
+      <li class="mobile-menu-item">
+        
+        
+        Tags              </li>
+    </a>
+    
+    <a href="/categories/">
+      <li class="mobile-menu-item">
+        
+        
+        Categories              </li>
+    </a>
+    
+    <a href="/about/">
+      <li class="mobile-menu-item">
+        
+        
+        About              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">ただの書き捨て</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/archives/">  
+              
+              
+              Archives  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/tags/">  
+              
+              
+              Tags  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/categories/">  
+              
+              
+              Categories  
+              
+          </a>  
+        </li>  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/about/">  
+              
+              
+              About  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      LaTeX使用入门
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2017-04-03
+      </span>
+      
+      <span class="post-author">
+        / Kaku
+      </span>
+      
+      
+      <span class="post-category">
+        
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a>
+        
+      </span>
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">1.准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BC%80%E5%A7%8B"><span class="toc-number">2.</span> <span class="toc-text">2.开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BC%96%E8%AF%91"><span class="toc-number">3.</span> <span class="toc-text">3.编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%8F%92%E5%85%A5%E6%A0%87%E9%A2%98%E4%B8%8E%E4%BD%9C%E8%80%85"><span class="toc-number">4.</span> <span class="toc-text">4.插入标题与作者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%8D%A2%E8%A1%8C%E4%B8%8E%E7%BC%A9%E8%BF%9B"><span class="toc-number">5.</span> <span class="toc-text">5.换行与缩进</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%8F%92%E5%85%A5%E7%AE%97%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">6.插入算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="toc-number">7.</span> <span class="toc-text">7.插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%85%B6%E4%BB%96"><span class="toc-number">8.</span> <span class="toc-text">8.其他</span></a></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <p><strong>LaTeX</strong>（正式名称：L<sup>A</sup>T<sub>E</sub>X，音：&#x2F;ˈleɪtɛk&#x2F;)，相信每一个研究生以上学历的人或者是做过科研的高年级本科生都很熟悉了。它是一个基于<strong>TeX</strong>的排版系统，由美国计算机学家莱斯利·兰伯特（Leslie Lamport）在 20 世纪 80 年代初期开发。利用这种格式，即使使用者没有排版和程序设计的知识也可以充分发挥由 TeX 所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。上到论文，下到简历，LaTeX都会成为一个有力的帮手。</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h2><p>TeX系统遍布于各个平台，包括Linux、Windows、OS X等。常见的Unix&#x2F;Linux下的TEX系统是teTeX，Windows下则有MiKTeX和fpTeX。</p>
+<p><strong>CTeX 中文套装</strong>是基于 Windows 下的 MiKTeX 系统，集成了编辑器 WinEdt 和 PostScript 处理软件 Ghostscript 和 GSview 等主要工具。CTeX 中文套装在 MiKTeX 的基础上增加了对中文的完整支持。</p>
+<blockquote>
+<p>CTeX官网：<a target="_blank" rel="noopener" href="http://www.ctex.org/HomePage">http://www.ctex.org/HomePage</a></p>
+</blockquote>
+<p>注意：<em>安装程序在某些情况下可能覆盖 path 环境变量，原因不明。请在安装前注意备份 path 环境变量。</em> <del>更博的时候发现node、git全不好用的时候才在官网看到这句话</del></p>
+<hr>
+<h2 id="2-开始"><a href="#2-开始" class="headerlink" title="2.开始"></a>2.开始</h2><p>打开安装目录下的WinEdt，File-&gt;New，我们就得到一个空白文档。</p>
+<p>LaTeX文档分为宏定义与正文两部分。在开始一篇文档之前，我们需要添加一些必要的宏定义。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;              <span class="comment">%定义文档为article类型</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;CJK&#125;                     <span class="comment">%中文支持包</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;indentfirst&#125;             <span class="comment">%首行缩进2em</span></span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\parindent</span>&#125;&#123;2em&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;geometry&#125;                <span class="comment">%页边距设置</span></span><br><span class="line"><span class="keyword">\geometry</span>&#123;left=1.0cm, right=1.0cm, top=1.0cm, bottom=1.0cm&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来就是LaTeX的正文部分，正文需要一组<code>\begin&#123;document&#125;</code>和<code>\end&#123;document&#125;</code>。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line">Hello, LaTeX!</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果正文包含中文，则需要一组<code>\begin&#123;CJK*&#125;</code>和<code>\end&#123;CJK*&#125;</code>。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;CJK*&#125;&#123;GBK&#125;&#123;song&#125;   <span class="comment">%GBK表示汉字编码字符集，song表示宋体</span></span><br><span class="line">你好，LaTeX！</span><br><span class="line"><span class="keyword">\end</span>&#123;CJK*&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-编译"><a href="#3-编译" class="headerlink" title="3.编译"></a>3.编译</h2><p>选中编译，文件保存为.tex格式。之后单击红色框图标就可以查看生成文档了。</p>
+<hr>
+<h2 id="4-插入标题与作者"><a href="#4-插入标题与作者" class="headerlink" title="4.插入标题与作者"></a>4.插入标题与作者</h2><p>我们可以在正文指定文档标题和作者。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\title</span>&#123;LaTeX测试文本<span class="keyword">\footnote</span>&#123;标题可以添加脚注，以“*”为标记&#125;&#125;</span><br><span class="line"><span class="keyword">\date</span>&#123;&#125;        <span class="comment">%手动定义文档日期，不写参数则不显示日期</span></span><br><span class="line"><span class="keyword">\author</span>&#123;7mA&#125;</span><br><span class="line"><span class="keyword">\maketitle</span>     <span class="comment">%maketitle把标题和作者插入到生成的文本中</span></span><br></pre></td></tr></table></figure>
+
+<p>此外，LaTeX也支持正文中的多级标题，最多支持三级，标题序号由系统自动生成。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\section</span>&#123;一级标题&#125;</span><br><span class="line">	<span class="keyword">\subsection</span>&#123;二级标题&#125;</span><br><span class="line">		<span class="keyword">\subsubsection</span>&#123;三级标题&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-换行与缩进"><a href="#5-换行与缩进" class="headerlink" title="5.换行与缩进"></a>5.换行与缩进</h2><p>和Markdown类似，在编辑器里直接回车换行，生成的文档不会换行缩进，需要空一行才可以。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;CJK*&#125;&#123;GBK&#125;&#123;song&#125;</span><br><span class="line">你好，LaTeX！</span><br><span class="line">很高兴认识你！      <span class="comment">%不会换行</span></span><br><span class="line"></span><br><span class="line">你好，LaTeX！</span><br><span class="line"></span><br><span class="line">很高兴认识你！      <span class="comment">%换行缩进</span></span><br><span class="line"><span class="keyword">\end</span>&#123;CJK*&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="6-插入算法"><a href="#6-插入算法" class="headerlink" title="6.插入算法"></a>6.插入算法</h2><p>LaTeX最重要的功能之一就是插入算法了。插入算法之前，我们需要在宏定义部分添加两个包。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;algorithmic&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;algorithm&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你的文档是中文的，那么需要在<code>\begin&#123;CJK*&#125;</code>加上一个更名操作<code>\floatname&#123;algorithm&#125;&#123;算法&#125;</code>。</p>
+<p>算法的结构如下，算法的序号自动生成。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;algorithm&#125;[H]                  <span class="comment">%[H]代表排版方式为当前位置</span></span><br><span class="line">	<span class="keyword">\caption</span>&#123;直接选择排序&#125;</span><br><span class="line">	<span class="keyword">\label</span>&#123;alg:sel&#125;               <span class="comment">%引用标识</span></span><br><span class="line">	<span class="keyword">\begin</span>&#123;algorithmic&#125;[1]        <span class="comment">%[n]代表每n行生成一个行号</span></span><br><span class="line">		<span class="keyword">\STATE</span> template <span class="built_in">$</span>&lt;<span class="built_in">$</span>class Record<span class="built_in">$</span>&gt;<span class="built_in">$</span>      <span class="comment">%$中间的字符按数学符号的形式生成</span></span><br><span class="line">		<span class="keyword">\STATE</span> void SelectSort(Record Array[], int n)<span class="keyword">\&#123;</span></span><br><span class="line">			<span class="keyword">\STATE</span> int i, j, Smallest;</span><br><span class="line">			<span class="keyword">\FOR</span>&#123;(<span class="built_in">$</span>i=0<span class="built_in">$</span>; <span class="built_in">$</span>i&lt;n-1<span class="built_in">$</span>; <span class="built_in">$</span>i++<span class="built_in">$</span>)&#125;</span><br><span class="line">				<span class="keyword">\STATE</span> Smallest=i;</span><br><span class="line">				<span class="keyword">\FOR</span>&#123;(<span class="built_in">$</span>j=i+1<span class="built_in">$</span>; <span class="built_in">$</span>j&lt;n<span class="built_in">$</span>; <span class="built_in">$</span>j++<span class="built_in">$</span>)&#125;</span><br><span class="line">					<span class="keyword">\IF</span>&#123;(Array[j]<span class="built_in">$</span>&lt;<span class="built_in">$</span>Array[Smallest])&#125;</span><br><span class="line">						<span class="keyword">\STATE</span> Smallest=j;</span><br><span class="line">					<span class="keyword">\ENDIF</span></span><br><span class="line">				<span class="keyword">\ENDFOR</span></span><br><span class="line">				<span class="keyword">\STATE</span> swap(Array, i, Smallest);</span><br><span class="line">			<span class="keyword">\ENDFOR</span></span><br><span class="line">		<span class="keyword">\STATE</span> <span class="keyword">\&#125;</span>             <span class="comment">%注意大括号需要用“\”转义</span></span><br><span class="line">	<span class="keyword">\end</span>&#123;algorithmic&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;algorithm&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此外，你还可以在其他文本中引用这个算法。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">直接选择排序算法如算法<span class="keyword">\ref</span>&#123;alg:sel&#125;所示。</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="7-插入图片"><a href="#7-插入图片" class="headerlink" title="7.插入图片"></a>7.插入图片</h2><p>LaTeX 文档支持多种图片格式，如.jpg，.eps，.tif 等，不同的图片格式需要用不同的方式编译。下面以.jpg为例。</p>
+<p>LaTeX 中插入图片需要使用 graphicx 包。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;graphicx&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你的文档是中文的，那么需要在<code>\begin&#123;CJK*&#125;</code>加上一个更名操作<code>\renewcommand\figurename&#123;图&#125;</code>。</p>
+<p>插入方式如下，注意图片所在目录与.tex文件相同。如不相同，则需要在宏定义里指定路径。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[H]                                        <span class="comment">%[H]代表排版方式为当前位置</span></span><br><span class="line">	<span class="keyword">\centering</span></span><br><span class="line">	<span class="keyword">\includegraphics</span>[width=0.3<span class="keyword">\textwidth</span>]&#123;test.jpg&#125;  <span class="comment">%width指定图片宽度</span></span><br><span class="line">	<span class="keyword">\caption</span>&#123;这是一张测试图&#125;</span><br><span class="line">	<span class="keyword">\label</span>&#123;fig:examp&#125;                                <span class="comment">%引用标记</span></span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="8-其他"><a href="#8-其他" class="headerlink" title="8.其他"></a>8.其他</h2><p>关于页码，LaTeX会自动在每一页页脚生成页码，可以在正文开头使用<code>\pagestyle&#123;empty&#125;</code>取消页脚页码。</p>
+<p>使用了<code>\maketitle</code>的页不会受<code>\pagestyle&#123;empty&#125;</code>影响，因此需要在该页另加一句<code>\thispagestyle&#123;empty&#125;</code>。</p>
+<p>LaTeX还支持表格、公式的插入，也可以插入相应期刊会议的模板，生成标准的格式。</p>
+<hr>
+<p><strong>Reference Source:</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="http://www.ctex.org/CTeX" title="CTeX 套装">CTeX 套装</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/lqhbupt/article/details/24812993" title="Latex强制图片位置">Latex强制图片位置</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.newsmth.net/nForum/#!article/Unix/7033" title="Re: 在latex中如何删除页码？">Re: 在latex中如何删除页码？</a></li>
+</ol>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/LaTeX/">LaTeX</a>
+      
+      <a href="/tags/%E8%AE%BA%E6%96%87/">论文</a>
+      
+      <a href="/tags/Legacy/">Legacy</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/leetcode-313/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">[LeetCode]313. Super Ugly Number</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/spring-beginning/">  
+        <span class="next-text nav-default">Spring入门笔记</span>  
+        <span class="prev-text nav-mobile">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:guodjcn@yahoo.co.jp" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/7ma" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2017 - 2025      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">Kaku</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+<script src="/js/src/lite-yt-embed.js"></script>
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>
