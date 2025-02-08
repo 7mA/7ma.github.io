@@ -3,6 +3,8 @@ title: 【Pop】INNOCENT EYES - S.I.D-Sound (시드 사운드)
 
 tags:
   - 歌词本
+  - 韩语
+  - 流行
 categories:
   - 音乐台
 author: Kaku
