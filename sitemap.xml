@@ -23,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/index.html</loc>
+    <loc>https://7ma.github.io/tags/index.html</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/index.html</loc>
+    <loc>https://7ma.github.io/categories/index.html</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -65,6 +65,13 @@
   </url>
   
   <url>
+    <loc>https://7ma.github.io/geuleohge-geuleoge/</loc>
+    
+    <lastmod>2025-01-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://7ma.github.io/ktp-20230821/</loc>
     
     <lastmod>2025-01-22</lastmod>
@@ -73,13 +80,6 @@
   
   <url>
     <loc>https://7ma.github.io/ida-abbreviation/</loc>
-    
-    <lastmod>2025-01-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/geuleohge-geuleoge/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -149,14 +149,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-future-forms/</loc>
+    <loc>https://7ma.github.io/korean-ji-conjugation/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-ji-conjugation/</loc>
+    <loc>https://7ma.github.io/korean-future-forms/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -219,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-issda-eobsda-gyesida/</loc>
+    <loc>https://7ma.github.io/korean-japanese-pidgin-chikta/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-japanese-pidgin-chikta/</loc>
+    <loc>https://7ma.github.io/korean-issda-eobsda-gyesida/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -310,14 +310,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-jpop-pick-up/</loc>
+    <loc>https://7ma.github.io/master-examination-log/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/master-examination-log/</loc>
+    <loc>https://7ma.github.io/korean-jpop-pick-up/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -366,14 +366,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/plum-driver/</loc>
+    <loc>https://7ma.github.io/crest-lovely-girl/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/crest-lovely-girl/</loc>
+    <loc>https://7ma.github.io/plum-driver/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -422,13 +422,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/korean-kleptocat/</loc>
-    
-    <lastmod>2025-01-22</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/korean-jul-alda-moleuda/</loc>
     
     <lastmod>2025-01-22</lastmod>
@@ -436,7 +429,7 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/renewal-log-20210118/</loc>
+    <loc>https://7ma.github.io/korean-kleptocat/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -444,6 +437,13 @@
   
   <url>
     <loc>https://7ma.github.io/p5js-beginning/</loc>
+    
+    <lastmod>2025-01-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/renewal-log-20210118/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -492,14 +492,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/javascript-ruby-grammar-extension/</loc>
+    <loc>https://7ma.github.io/latex-beginning/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/latex-beginning/</loc>
+    <loc>https://7ma.github.io/javascript-ruby-grammar-extension/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -634,6 +634,13 @@
   </url>
   
   <url>
+    <loc>https://7ma.github.io/tags/Devlog/</loc>
+    <lastmod>2025-03-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://7ma.github.io/tags/Spring/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
@@ -642,13 +649,6 @@
   
   <url>
     <loc>https://7ma.github.io/tags/Java/</loc>
-    <lastmod>2025-03-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/tags/Devlog/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -683,14 +683,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/shorts/</loc>
+    <loc>https://7ma.github.io/tags/%E6%83%AF%E7%94%A8%E8%A1%A8%E8%BE%BE/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E6%83%AF%E7%94%A8%E8%A1%A8%E8%BE%BE/</loc>
+    <loc>https://7ma.github.io/tags/shorts/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -718,13 +718,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/Vocaloid/</loc>
-    <lastmod>2025-03-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/%E4%B8%9C%E6%96%B9Project/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
@@ -733,6 +726,13 @@
   
   <url>
     <loc>https://7ma.github.io/tags/%E6%97%A5%E8%AF%AD/</loc>
+    <lastmod>2025-03-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/Vocaloid/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -774,20 +774,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/%E5%8A%A8%E8%AF%8D%E6%B4%BB%E7%94%A8/</loc>
-    <lastmod>2025-03-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/tags/%E5%8A%A9%E8%AF%8D/</loc>
-    <lastmod>2025-03-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/%E5%85%83%E9%9F%B3%E8%B0%83%E5%92%8C/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
@@ -796,6 +782,20 @@
   
   <url>
     <loc>https://7ma.github.io/tags/%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2025-03-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/%E5%8A%A8%E8%AF%8D%E6%B4%BB%E7%94%A8/</loc>
+    <lastmod>2025-03-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/%E5%8A%A9%E8%AF%8D/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
