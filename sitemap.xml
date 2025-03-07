@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/ida-abbreviation/</loc>
+    <loc>https://7ma.github.io/ktp-20230809/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/ktp-20230809/</loc>
+    <loc>https://7ma.github.io/ida-abbreviation/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -373,14 +373,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/sangnoksu-empire-of-the-dawn/</loc>
+    <loc>https://7ma.github.io/plum-driver/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/plum-driver/</loc>
+    <loc>https://7ma.github.io/sangnoksu-empire-of-the-dawn/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -464,14 +464,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/vue-beginning/</loc>
+    <loc>https://7ma.github.io/spring-beginning/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/spring-beginning/</loc>
+    <loc>https://7ma.github.io/vue-beginning/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -634,13 +634,6 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/Devlog/</loc>
-    <lastmod>2025-03-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://7ma.github.io/tags/Spring/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
@@ -649,6 +642,13 @@
   
   <url>
     <loc>https://7ma.github.io/tags/Java/</loc>
+    <lastmod>2025-03-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://7ma.github.io/tags/Devlog/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
