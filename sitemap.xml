@@ -23,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/categories/index.html</loc>
+    <loc>https://7ma.github.io/tags/index.html</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/tags/index.html</loc>
+    <loc>https://7ma.github.io/categories/index.html</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/ktp-20230809/</loc>
+    <loc>https://7ma.github.io/ida-abbreviation/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/ida-abbreviation/</loc>
+    <loc>https://7ma.github.io/ktp-20230809/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -359,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/xynsia-glass-flavored-candy/</loc>
+    <loc>https://7ma.github.io/crest-lovely-girl/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/crest-lovely-girl/</loc>
+    <loc>https://7ma.github.io/xynsia-glass-flavored-candy/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -387,14 +387,14 @@
   </url>
   
   <url>
-    <loc>https://7ma.github.io/make-a-smile-in-korean/</loc>
+    <loc>https://7ma.github.io/hyun-my-life-is-for-you/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
   </url>
   
   <url>
-    <loc>https://7ma.github.io/hyun-my-life-is-for-you/</loc>
+    <loc>https://7ma.github.io/make-a-smile-in-korean/</loc>
     
     <lastmod>2025-01-22</lastmod>
     
@@ -634,6 +634,13 @@
   </url>
   
   <url>
+    <loc>https://7ma.github.io/tags/Devlog/</loc>
+    <lastmod>2025-03-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://7ma.github.io/tags/Spring/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
@@ -642,13 +649,6 @@
   
   <url>
     <loc>https://7ma.github.io/tags/Java/</loc>
-    <lastmod>2025-03-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://7ma.github.io/tags/Devlog/</loc>
     <lastmod>2025-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
